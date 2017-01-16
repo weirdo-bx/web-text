@@ -1,0 +1,244 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #f5f5f5;
+	font-family: Verdana,"Lantinghei SC","Hiragino Sans GB","Microsoft Yahei",Helvetica,arial,\5b8b\4f53,sans-serif;
+}
+
+ul,li{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: #000;
+}
+
+a, dd, div, dl, i, img, input, li, p, span, ul {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+/*底部*/
+
+#footer{
+	width: 100%;
+	min-width: 1000px;
+	height: 300px;
+	border-top: 1px solid #e4e4e4;
+	background: #fff;
+	margin-top: 40px;
+}
+
+.footer-block{
+	background: #fff;
+}
+
+.footer-block .block-one{
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+	height: 215px;
+	border-bottom: 1px solid #f5f5f5;
+	padding-left: 225px;
+	padding-top: 25px;
+	box-sizing: border-box;
+}
+
+.footer-block .block-one .jk-logo{
+	position: absolute;
+	left: 0;
+	top: 25px;
+	display: inline-block;
+	width: 160px;
+}
+
+.footer-block .block-one .jk-logo img{
+	width: 109px;
+	height: 40px;
+	display: block;
+}
+
+.footer-block .block-one .jk-logo p{
+	font-size: 12px;
+	color: #999;
+	margin-top: 20px;
+}
+
+.footer-block dl{
+	width: 135px;
+	color: #808080;
+	float: left;
+}
+
+.footer-block dt{
+	font-size: 14px;
+	line-height: 30px;
+}
+
+.footer-block dl dd{
+	font-size: 12px;
+	line-height: 30px;
+}
+
+.footer-block dl dd a{
+	color: #999999;
+}
+
+.footer-block dl dd a:hover{
+	color: #35b558;
+}
+
+.jk-contact{
+	position: absolute;
+	right: 0;
+	top: 25px;
+	display: inline-block;
+	width: 175px;
+	text-align: left;
+}
+
+.jk-contact p{
+	color: #808080;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+.contact{
+	position: relative;
+	display: inline-block;
+	width: 140px;
+	height: 30px;
+	line-height: 30px;
+	color: #808080;
+	font-size: 12px;
+	border: 1px solid #eeeeee;
+	margin-bottom: 10px;
+	padding-left: 40px;
+	cursor: pointer;
+}
+.ios-block{
+	background: url(http://e.jikexueyuan.com/headerandfooter/images/icon-down-ios.png)no-repeat 0 0;
+	background-size: 30px 30px;
+}
+
+.and-block{
+	background: url(http://e.jikexueyuan.com/headerandfooter/images/icon-down-and.png)no-repeat 0 0;
+	background-size: 30px 30px;
+}
+
+.contact img{
+	display: block;
+	width: 115px;
+	height: 153px;
+	position: absolute;
+	top: -157px;
+	left: 12px;
+}
+
+.ios-block img{
+	display: none;
+}
+
+.and-block img{
+	display: none;
+}
+
+.ios-block:hover img{
+	display: block;
+}
+
+.and-block:hover img{
+	display: block;
+}
+
+/*注册信息*/
+
+.registered-footer {
+	font-size: 12px;
+	color: #999;
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 15px 0;
+}
+
+.registered-footer a{
+	color: #999;
+	font-weight: 400;
+}
+
+.registered-footer a:hover{
+	color: #35b558;
+}
+
+.registered-footer .weib{
+	background: url(http://e.jikexueyuan.com/headerandfooter/images/icon-down-sina.png)no-repeat 0 0;
+	background-size: 18px 15px;
+	float: right;
+	width: 20px;
+	height: 15px;
+	margin-left: 10px;
+}
+
+.registered-footer .weix{
+	background: url(http://e.jikexueyuan.com/headerandfooter/images/icon-down-wechat.png)no-repeat 0 0;
+	background-size: 18px 15px;
+	float: right;
+	width: 20px;
+	height: 15px;
+}
+
+.registered-footer .jk-cx{
+	display: block;
+	margin: 15px auto 0;
+}
+
+/*置顶*/
+
+.go-top{
+	position: fixed;
+	left: 50%;
+	margin-left: 510px;
+	bottom: 50px;
+	width: 34px;
+	text-align: center;
+	z-index: 2000;
+}
+
+.go-top .top{
+	display: block;
+	background: url(http://e.jikexueyuan.com/headerandfooter/images/gotop.jpg) 0 0 no-repeat;
+	background-size: 34px 103px;
+	width: 34px;
+	height: 34px;
+	cursor: pointer;
+}
+
+.go-top .app-xz{
+	display: block;
+	background: #f7f7f7 url(http://e.jikexueyuan.com/headerandfooter/images/phone-1.png) center center no-repeat;
+	background-size: 12px 24px;
+	width: 34px;
+	height: 34px;
+	border: 1px solid #e0e0e0;
+}
+
+.go-top .app-xz:hover{
+	background: #f7f7f7 url(http://e.jikexueyuan.com/headerandfooter/images/phone-2.png) center center no-repeat;
+	background-size: 12px 24px;
+}
+
+.go-top .weixin{
+	display: block;
+	background: #f7f7f7 url(http://ubmcmm.baidustatic.com/media/v1/0f000KgpXJ8j8WftMJ-UZf.jpg) center center no-repeat;
+	background-size: 34px 34px;
+	width: 34px;
+	height: 34px;
+	border: 1px solid #e0e0e0;
+	border-top:0px; 
+}

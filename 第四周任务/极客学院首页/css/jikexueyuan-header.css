@@ -1,0 +1,558 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #f5f5f5;
+	font-family: Verdana,"Lantinghei SC","Hiragino Sans GB","Microsoft Yahei",Helvetica,arial,\5b8b\4f53,sans-serif;
+}
+
+ul,li{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: #000;
+}
+
+/* Web大前端 */
+.web-banner{
+	height: 80px;
+	width: 100%;
+	min-width: 1000px;/*最小宽度定义1000px*/
+	background: url(../img/web-banner.jpg) no-repeat center;
+	background-size: 1920px 80px;/*定义图片尺寸*/
+}
+
+.web-wraper{
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+	padding-top: 18px;
+}
+
+.web-wraper ul{
+	width: 1000px;
+}
+
+.web-wraper ul li{
+	float: left;
+	width: 178px;
+	height: 49px;
+	background: url(../img/btn.png) no-repeat center;
+	list-style: none;
+	margin-left: 5px;
+	position: relative;
+	left: 200px;
+	cursor: pointer;/*光标*/
+	transition: all .5s;/*hover的过渡*/
+}
+
+.web-wraper ul li a{
+	text-decoration: none;/*a标签去掉下划线*/
+	font-size: 18px;
+	display:inline-block;
+	width: 178px;
+	height: 49px;
+	text-align: center;
+	line-height: 49px;
+	color: #1e5294;
+}
+
+.web-wraper ul li .new-icon{
+	width: 34px;
+	height: 34px;
+	display: list-item;
+	position: absolute;
+	top: 0px;
+	left: 1px;
+}
+
+.web-wraper ul li:hover{
+	background: url(../img/btn-hover.png);
+}
+
+/* 极客学院头部导航条 */
+#header{
+	min-width: 1000px;
+	padding: 0;
+	margin: 0;
+	height: 60px;
+	background: #fff;
+	border-bottom: 1px solid #ececec;
+}
+
+#header .content{
+	width: 1000px;
+	margin: 0 auto;
+	height: 60px;
+	line-height: 60px;
+	position: relative;
+}
+
+#header .logo{
+	width: 115px;
+	display: inline-block;
+	height: 60px;
+	float: left;
+	/*margin-left: 60px;*/
+	padding-top: 10px;
+}
+/*导航文字*/
+#header nav{
+	height: 60px;
+	display: inline-block;
+	float: left;
+}
+
+.header-nav li{
+	float: left;
+	font-size: 14px;
+	display: inline-block;
+	margin-right: 55px;
+	position: relative;
+	left: 50px;
+	cursor: pointer;/*光标*/
+}
+/*箭头*/
+.arrow{
+	width: 8px;
+	height: 8px;
+	display: inline-block;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	transform: rotate(-135deg);
+	-webkit-transform: rotate(-135deg);
+	-moz-transform: rotate(-135deg);
+	-o-transform: rotate(-135deg);
+}
+
+.header-nav li .arrow{
+	margin-left: 5px;
+	margin-bottom: 2px;
+}
+/*导航文字hover*/
+.header-nav li:hover{
+	color: #35b558;
+	cursor: pointer;
+}
+/*箭头hover及动画效果兼容*/
+.header-nav li:hover b.arrow{
+	margin-bottom: -2px;
+	border-top: 1px solid #35b558;
+	border-left: 1px solid #35b558;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	animation: arrow 1s ease normal;
+	-webkit-animation: arrow 1s ease normal;
+	-moz-animation: arrow 1s ease normal;
+	-o-animation: arrow 1s ease normal;
+}
+   
+@keyframes arrow{
+	form,to{}
+		100%{
+			transform: rotate(360deg);
+		}
+}
+
+@-webkit-keyframes arrow{
+	form,to{}
+		100%{
+			transform: rotate(360deg);
+		}
+}
+
+@-moz-keyframes arrow{
+	form,to{}
+		100%{
+			transform: rotate(360deg);
+		}
+}
+
+@-o-keyframes arrow{
+	form,to{}
+		100%{
+			transform: rotate(360deg);
+		}
+}
+
+/*二级菜单的隐藏显示*/
+#header nav .arrow-submit{
+	display: none;
+	width: 280px;
+	position: absolute;
+	z-index: 1000;
+	top: 60px;
+	left: 0px;
+	background: #fff;
+	font-size: 12px;
+	color: #666;
+}
+
+#li-hover:hover .arrow-submit{
+	display: block;
+}
+
+/*下拉a标签及a:hover*/
+#header nav .arrow-submit a{
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 15px;
+	color: #666;
+}
+#header nav .arrow-submit a:hover{
+	color: #35b558;
+	cursor: pointer;
+}
+
+/*职业学院下拉*/
+#header nav .arrow-submit h3{
+	margin: 10px 0;
+	padding: 0 15px;
+	background: #fafafa;
+	height: 28px;
+	line-height: 28px;
+	font-weight: 300;/*字体粗细*/
+}
+
+/*会员课程and社区下拉*/
+#header nav .arrow-botton-vip {
+	padding: 10px 0;
+}
+
+#header nav .arrow-botton-vip a{
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	color: #666;
+}
+
+/*下拉中的图标*/
+.arrow-botton-web b,.arrow-botton-vip b{
+	background: url(../img/allicon.png) 0 0 no-repeat;
+	background-size: 64px 64px;
+	height: 14px;
+	width: 14px;
+	display: inline-block;
+	margin-right: 10px!important;
+	margin-bottom: -2px;
+}
+
+.arrow-botton-web .python-icon,
+.arrow-botton-web .go-icon,
+.arrow-botton-web .ios-icon{
+	background: url(../img/allicon3.png) 0 0 no-repeat;
+	background-size: 16px 128px;
+}
+
+.arrow-botton-web .web-icon{/*web前端工程师图标*/
+	background-position: -15px -27px;
+}
+
+.arrow-botton-web .python-icon{/*python web工程师图标*/
+	background-position: 0px 0px;
+}
+
+.arrow-botton-web .go-icon{/*go语言工程师*/
+	background-position: 0px -32px;
+}
+
+.arrow-botton-web .ios-icon{/*ios工程师*/
+	background-position: 0px -70px;
+}
+
+.arrow-botton-vip .kck-icon{/*课程库*/
+	background-position: 0px -12px;
+}
+
+.arrow-botton-vip .zy-icon{/*职业路径图*/
+	background-position: -45px 0px;
+}
+
+.arrow-botton-vip .zs-icon{/*知识体系图*/
+	background-position: -29px -12px;
+}
+
+.arrow-botton-vip .xl-icon{/*系类课程*/
+	background: url(../img/xlkc2.png) no-repeat 0 0;
+	background-size: 12px 12px;
+}
+
+.arrow-botton-vip .kc-icon{/*课程标签*/
+	background-position: -13px -12px;
+}
+
+.arrow-botton-vip .vip-icon{/*vip会员购买*/
+	background-position: -14px 0px;
+}
+
+.arrow-botton-vip .jswd-icon{/*技术问答*/
+	background-position: 0px -25px;
+}
+
+.arrow-botton-vip .wiki-icon{/*wiki*/
+	background-position: -28px -25px;
+}
+
+.arrow-botton-vip .sq-icon{/*社群*/
+	background-position: 0px 2px;
+}
+
+.arrow-botton-vip .zyxz-icon{/*资源下载*/
+	background-position: -28px 2px;
+}
+
+#header nav .arrow-botton-vip span{
+	float: right;
+	color: #bbb;
+}
+
+/*右侧图标栏*/
+#header .icon-box{
+	float: right;
+	text-align: right;
+	width: 150px;
+	height: 60px;
+	margin-right: 15px;
+}
+
+#header .icon-box span{
+	width: 17px;
+	height: 60px;
+	display: inline-block;
+	cursor: pointer;
+	margin-left: 25px;
+}
+
+#header .ss-icon{/*搜索图标*/
+	background: url(../img/ss-icon.png) 0 0 no-repeat;
+	background-size: 17px 17px;
+	background-position: 0px 25px;
+}
+
+#header .ss-icon:hover{/*搜索图标hover*/
+	background: url(../img/ss-icon-hover.png) 0 0 no-repeat;
+	background-size: 17px 17px;
+	background-position: 0px 25px;
+}
+
+#header .app-icon{/*app下载图标*/
+	background: url(../img/app-icon.png) 0 0 no-repeat;
+	background-size: 17px 17px;
+	background-position: 0px 25px;
+}
+
+#header .app-icon:hover{/*app下载图标hover*/
+	background: url(../img/app-icon-hover.png) 0 0 no-repeat;
+	background-size: 17px 17px;
+	background-position: 0px 25px;
+}
+
+#header .personal-data-icon{/*登陆资料*/
+	background: url(../img/login-icon.png) 0 0 no-repeat;
+	background-size: 17px 17px;
+	background-position: 0px 25px;
+}
+
+/*app下拉二维码*/
+#header .app-submit{
+	display: none;
+	width: 115px;
+	height: 160px;
+	position: absolute;
+	top: 60px;
+	right: 15px;
+	z-index: 1;
+}
+
+#app-hover:hover .app-submit{
+	display: block;
+}
+
+/*app下拉箭头*/
+#header .app-arrow{
+	width: 15px;
+	height: 15px;
+	display: block;
+	background: #fff;
+	border-top: 1px solid #ececec;
+	border-left: 1px solid #ececec;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	position: absolute;
+	top: -8px;
+	left: 50px;
+}
+
+/*账号登陆下拉*/
+#header .personal-data-submit{
+	display: none;
+	width: 120px;
+	position: absolute;
+	z-index: 1200;
+	top: 61px;
+	right: 10px;
+	background: #fff;
+	font-size: 12px;
+	color: #666;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#personal-data-hover:hover .personal-data-submit{
+	display: block;
+}
+
+#header .personal-data-submit dd{
+	text-align: left;
+	font-size: 12px;
+	line-height: 35px;
+	margin: 0;
+	padding-left: 10px;
+}
+
+/*登陆下拉箭头*/
+#header .personal-data-arrow{
+	width: 15px;
+	height: 15px;
+	display: block;
+	background: #fff;
+	border-top: 1px solid #ececec;
+	border-left: 1px solid #ececec;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	position: absolute;
+	top: -9px;
+	left: 98px;
+}
+
+/*登陆下拉图标*/
+#header .personal-data-submit dd b{
+	background: url(../img/allicon2.png) no-repeat 0 0;
+	background-size: 64px 64px;
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	margin-right: 8px;
+}
+
+#header .personal-data-submit .xxzx-icon{/*学习中心*/
+	background-position: -15px -13px;
+}
+
+#header .personal-data-submit .grzy-icon{/*个人主页*/
+	background-position: -44px -0px;
+}
+
+#header .personal-data-submit .xxtz-icon{/*消息通知*/
+	background-position: -14px -28px;
+}
+
+#header .personal-data-submit .zhsz-icon{/*账号设置*/
+	background-position: -28px 1px;
+}
+/*登陆下拉a，dd的hover*/
+#header .personal-data-submit a{
+	color: #666;
+	display: block;
+	height: 35px;
+}
+
+#header .personal-data-submit a:hover{
+	color: #35b558;
+	background: #ececec;
+}
+
+#header .personal-data-submit dd:hover{
+	background: #ececec;
+}
+
+/*注册&登陆*/
+
+#header .personal-data-submit .zc{
+	display: inline-block;
+}
+
+#header .personal-data-submit .dl{
+	display: inline-block;
+}
+
+#header .personal-data-submit .a-center{
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+/*搜索栏*/
+#header .ss-submit{
+	display: none;
+	width: 840px;
+	min-width: 600px;
+	height: 60px;
+	background: #fff;
+	position: absolute;
+	left: 150px;
+}
+
+/*#ss-hover:hover .ss-submit{
+	display: block;
+}*/
+
+#header .ss-submit b{
+	display: inline-block;
+	width:17px;
+	height: 60px; 
+}
+
+/*搜索框*/
+#header .ss-submit input{
+	min-width: 450px;
+	height: 30px;
+	outline: 0;
+	font-size: 14px;
+	float: left;
+	position: relative;
+	top: 15px;
+	left: 30px;
+	border: 0;
+}
+/*搜索图标*/
+#header .input-ss{
+	background: url(../img/ss-icon.png) 0 0 no-repeat;
+	background-size: 17px 17px;
+	background-position: 0px 22px;
+	float: left;
+}
+
+/*x图标*/
+#header .input-del{
+	background: url(../img/close-icon.png) 0 0 no-repeat;
+	background-size: 17px 17px;
+	background-position: 0px 20px;
+}
+
+/*android.ios.html5图标*/
+
+#header .a-icon{
+	width: 200px;
+	height: 60px;
+	position: absolute;
+	top: 0px;
+	left: 550px;
+}
+
+#header .a-icon a{
+	color: #808080;
+	font-size: 12px;
+	background: #f5f5f5;
+	margin-left: 10px;
+}

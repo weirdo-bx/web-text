@@ -1,0 +1,165 @@
+
+body{
+	font-family:"Microsoft Yahei";
+}
+ul,li{
+	margin:0;padding:0;
+}
+body nav a{
+	color:#fff!important;
+}
+
+body nav{
+	background: #e37000!important;
+	border-bottom: #e37000!important;
+}
+
+
+.navbar-inverse .navbar-toggle {
+    border-color: #fff!important;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: #d26700!important;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #d26700!important;
+}
+
+ul,li{
+	list-style: none;
+}
+
+.left{
+	background: #e37000;
+	position: fixed;
+    top: 51px;
+    bottom: 0;
+    right: : 0;
+}
+
+.left ul li{
+	height:50px;
+	line-height: 40px;
+} 
+
+.left a{
+	color: #Fff;
+}
+
+.right{
+	position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+	background: #ff9c3c;
+}
+
+
+.right .right-center h1{
+	font-weight: 500;
+	padding-top: 15px; 
+	padding-left: 15px;
+	color: #fff;
+}
+
+.right .right-center h1 span{
+	color: #f1f1f1;
+}
+
+
+.right .download{
+	width: 100%;
+	margin: 0 auto;
+	height: 30px;
+	display: block;
+	margin-top: 10px;
+}
+
+.right .download a{
+	display: block;
+	float: left;
+	width:80px;
+	height: 28px;
+	border: 1px solid #f1f1f1;
+	margin-left: 15px;
+	line-height: 28px;
+	text-align: center;
+	border-radius: 5px;
+	color: #f1f1f1;
+}
+
+.right .download a:hover{
+	border: 1px solid #f1f1f1;
+	background: #f5b06d;
+	color: #fff;
+}
+
+.right .solid{
+	width: 100%;
+	height: 0px;
+	border-top: 1px solid #f5b06d;
+	border-bottom: 0.5px solid #ccc;
+	margin: 0 auto;
+	margin-top: 15px;
+	border-radius: 5px;
+}
+
+.right .music dl{
+	float: left;
+	cursor: pointer;
+	margin-top: 10px;
+	color: #fff;
+}
+
+
+.right .music dd{
+	font-size: 14px;
+	text-align: left;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+}
+
+.right .music-1{
+	width: 30%;
+	margin-left: 25px;
+}
+
+.right .music-2{
+	width: 20%;
+}
+
+.right .music-3{
+	width: 20%;
+}
+
+.right .music-4{
+	width: 20%;
+}
+
+@media screen and (max-width:768px){
+	.left{
+		display: none;
+	}
+	.right{
+		width:100%;
+		padding:20px 0;
+	}
+
+	.right form{
+		display: none;
+	}
+
+}
+
+@media screen and (max-width:320px){
+	.right .download-a{
+		display: none;
+	}
+	.music-4{
+		display: none;
+	}
+
+}

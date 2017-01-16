@@ -1,0 +1,461 @@
+@charset "utf-8";
+body,div,p,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,img,input,textarea,select{
+	margin:0;padding:0;
+}
+input{
+	outline:none;
+}
+ul li{
+	list-style:none;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float: right;
+}
+.cl{
+	clear: both;
+}
+@media screen and (min-width:801px){
+/*当前屏幕大于801px 的使用该样式*/
+	html{
+		height:100%;
+	}
+	
+	body{
+		font:13px "Microsoft Yahei";
+		height:100%;
+	}
+	
+	.minTop{
+		display:none;
+	}
+	.container{
+		position:relative;
+		min-width:810px;
+		height:100%;
+		min-height:600px;
+		_height:600px;
+	}
+	.head .nav{/*页面头部*/
+		position: relative;
+		height:24px;
+		padding:20px 15px 0 0 ;
+	}
+	.head .nav a{
+		float:left;
+		height:24px;
+		line-height:24px;
+		color:#000;
+		font-size:13px;
+		font-family:"宋体";
+		margin-left:20px;
+		font-weight:bold;
+	}
+	.head .nav a:hover{
+	color: #2d78f4;
+	}
+	.head .nav .no_bold{
+		font-weight:normal;
+	}
+	/*设置下来菜单*/
+	.setting_menu{
+		position:absolute;
+		width:46px;height: 24px;
+		right:95px;
+	}
+
+	.baidu_setting{
+		width: 70px;
+	    position: absolute;
+	    top: 25px;
+	    left:0\9;
+	    border:1px solid #ccc;
+	    box-shadow:3px 3px 7px  #ccc;
+	    display:none;
+	}
+	.baidu_setting a{
+		display:inline-block;
+		*display:line;
+		*zoom:1;
+		width:100%;
+		text-align:center;
+		margin:0!important;
+		font-size:13px;
+		font-weight:normal!important;
+		text-decoration:none;
+	}
+	.baidu_setting a:hover{
+		color:#fff!important;
+		background: #3385ff;
+	}
+
+	.setting_icon{/*设置下来菜单的小三角*/
+		position:absolute;
+		top:-11px;left:28px;
+		width: 0;height: 0;
+		border:5px solid transparent;
+		border-style:dashed dashed solid dashed;
+		border-bottom-color: #d8d8d8;
+	}
+	.setting_icon:after{/**/
+		content:"";
+		position:absolute;
+		top:-4px;left:-5px;
+		width: 0;height: 0;
+		border:5px solid transparent;
+		border-style:dashed dashed solid dashed;
+		border-bottom-color: #fff;
+	}
+	/*更多产品*/
+	.head .more_cp{
+		width:64px;text-align:center;
+		background:#3385ff;
+		font-weight:normal!important;
+		color:#fff!important;
+		margin-left:60px!important;
+		text-decoration:none;
+	}
+	/*更多产品侧栏*/
+	.more_product{
+		display:none;
+		position:absolute;
+		top:0;right:0;z-index: 999;
+		width:85px;height: 100%;
+		min-height:600px;
+		border-left:1px solid #ddd;
+		background: #f9f9f9;
+	}
+	.more_product ul{
+		padding: 20px 5px 0 5px;
+		text-align:center;
+	}
+	.more_product ul li{
+		position:relative;
+		height:70px;
+		border-bottom:1px solid #ddd;
+	}
+	.more_product ul a{
+		color:#000;
+		font-size:13px;
+		text-decoration:none;
+	}
+	.more_product ul a:hover{
+		text-decoration:underline;
+	}
+	.more_product .ul_more_block:hover{
+		text-decoration:none;
+	}
+	.more_sub {/*公共背景小图片的位置*/
+		display: block;
+		width:36px;height:36px;
+		margin:15px auto 5px;
+	}
+	.more_product ul .one{
+		background-image:url(../imgs/hide-imgs.png);
+		background-repeat:no-repeat;
+		background-position: -74px 0;
+	}
+	.more_product ul .two{
+		background-image:url(../imgs/hide-imgs.png);
+		background-repeat:no-repeat;
+		background-position:-112px 0;
+	}
+	.more_product ul .three{
+		background-image:url(../imgs/hide-imgs.png);
+		background-repeat:  no-repeat;
+		background-position:-36px 0;
+	}
+	.more_product ul .four{
+		background-image:url(../imgs/hide-imgs.png);
+		background-repeat:  no-repeat;
+		background-position:-146px 0 ;
+	}
+	.more_product ul .five{
+		background:url(../imgs/hide-imgs.png);
+		background-repeat:  no-repeat;
+		background-position:-182px 0;
+	}
+	.more_product .ul_first{
+		height:30px;
+	}
+	.more_product .ul_last{
+		height:30px!important;line-height:30px;border:none;
+	}
+	/*页面主体*/
+	.main{
+		width:642px;
+		position:relative;top:50px;
+		left:50%;margin-left:-321px;
+		text-align:center;
+	}
+	.main .main_logo{
+		width:280px;margin:0 auto;
+	}
+	.main form{
+		position:relative;top:50px;
+		width:100%;height:36px;
+	}
+	/*搜索框*/
+	.main form #searchTxt{
+		width: 531px;
+		height:34px;
+	    border:1px solid #e8e8e8;
+	    position: absolute;
+	    left: 10px;
+	    top: 0;
+	    text-indent:1em;
+	}
+
+	.main form #searchTxt:hover{
+		border-color:#ccc;
+	}
+	.main form #searchTxt:focus{
+		border-color:#3385ff;
+	}
+	/*搜索按钮*/
+	.main form button{
+		position:absolute;
+		right:-1px;
+		width:100px;height:36px;
+		border:none;color:#fff;
+		background: #3385ff;
+	}
+	.main form button:hover{
+		background-color:#1a76ff;
+	}
+	.main form a{ /*小相机的位置*/
+		position:absolute;top:10px;right:114px;
+		display:block;
+		width:18px;height:18px;
+		background-image:url(../imgs/camera.png);
+		background-repeat:no-repeat;
+		background-position:0 0;
+	}
+	.main form a:hover{
+		background-image:url(../imgs/camera.png);
+		background-repeat:no-repeat;
+		background-position:0 -20px;
+	}
+	nav{
+		display:none;
+	}
+	.information{
+		display:none;
+	}
+	/*页面底部*/
+	.min-foot{
+		display:none;
+	}
+	.foot{
+		height: 120px;
+		position: absolute;
+		bottom: 23px;
+		width: 100%;
+		min-width:810px;
+	}
+	.ft_con{
+		width:660px;
+		margin:0 auto;
+	}
+	.qrcode_baidu_img{
+		width:60px;height:60px;
+		background:url(../imgs/zbios_a4b2d86f.png) 0 0 no-repeat;
+	}
+	.qrcode_nuomi_img{
+		width:60px;height:60px;margin-left:33px;
+		background:url(../imgs/nuomi_510f7472.png) 0 0 no-repeat;
+	}
+	.qrcode_text{
+		line-height:23px;
+		color:#999;
+		margin: 8px 0 0 10px;
+	}
+
+	.ft_bt{
+	    line-height: 22px;
+	    position: relative;
+	    top: -4px;left: 20px;
+	    font-size:12px;
+	    color:#999;
+	}
+	.ft_bt p{
+		padding-bottom:5px;
+	}
+	.ft_bt_p a{
+		margin-right:15px;
+	}
+	.ft_bt a{
+		color:#999;
+	}
+	.small_picture{
+		width: 14px;
+	    height: 17px;
+	    display: inline-block;
+	    *display:inline;
+	    *zoom: 1;
+	}
+	.foot .top{
+	    background-image: url(../imgs/icons_0e814c16.png);
+	    background-repeat:no-repeat;
+	}
+	.foot .bot{
+		background-image: url(../imgs/icons_0e814c16.png);
+		background-repeat:no-repeat;
+		background-position:-22px 0 ;
+	}
+}
+@media screen and (max-width:800px){
+	/*当前屏幕的宽度不超过800px的时候使用该样式*/
+    body{
+    	font-family:"Microsoft Yahei"
+    }
+    .minTop{
+    	display:block;
+    	width:90%;
+    	height:40px;
+    	margin:0 auto;
+    	padding:10px;
+    }
+
+	.container{
+		min-width:398px;
+	}
+	.head,.more_product{
+		display:none;
+	}
+	.main{
+		width:90%;
+		margin:0 auto;
+		text-align:center;
+	}
+	.foot{
+		display:none;
+	}
+   .minTop img{
+   	   width:30px;height:30px;
+   }
+   .minTop .temperature{
+   	font-size:26px;
+   	color:#999;
+   }
+   .city-weather{
+   	padding:0 20px;
+   	font-size:12px;
+   	line-height:1.8;
+   	color:#999;
+   }
+   .city-weather span{
+   	margin-left:10px;
+   }
+	article form{
+		width:100%;
+	}
+	article form input{
+		float:left;
+		width:79%;
+		min-width:238px;
+		height:34px;
+		border:1px solid #e8e8e8;
+		text-indent:1em;
+	}
+	article form input:hover{
+		border-color:#ccc;
+	}
+	article form input:focus{
+		border-color:#3385ff;
+	}
+	article form button{
+		float:left;
+		width:20%;
+		min-width:73px;
+		height:36px;
+		color:#fff;
+		border:0;
+		background: #3385ff;
+	}
+	nav{
+		clear: both;
+		width:90%;
+		margin:65px auto 50px;
+	}
+	nav ul {
+		width:100%;
+	}
+	nav ul li{
+		float:left;
+		width:16%;
+	}
+	nav ul li a{
+		display:block;
+		width:100%;
+		height:43px;
+		text-align:center;
+		text-decoration:none;
+		color: #666;
+		font-size:14px;
+	}
+	nav ul li a:hover{
+		color:#3385ff;
+	}
+	nav ul li a span{
+		display:block;
+		
+	}
+	nav .image{
+		width:22px;height:22px;
+		position:relative;
+		left:50%;
+		margin-left:-11px;
+	}
+	nav .image01{
+		background:url(../imgs/ns_diff_color_v2.png) no-repeat;
+		background-size:22px;
+	}
+	nav .image02{
+		background:url(../imgs/ns_diff_color_v2.png) 0 -132px no-repeat;
+		background-size:22px;
+	}
+	nav .image03{
+		background:url(../imgs/ns_diff_color_v2.png) 0 -66px no-repeat;
+		background-size:22px;
+	}
+	nav .image04{
+		background:url(../imgs/ns_diff_color_v2.png) 0 -198px no-repeat;
+		background-size:22px;
+	}
+	nav .image05{
+		background:url(../imgs/ns_diff_color_v2.png) 0 -154px no-repeat;
+		background-size:22px;
+	}
+	nav .image06{
+		background:url(../imgs/ns_diff_color_v2.png) 0 -66px no-repeat;
+		background-size:22px;
+	}
+	.information{
+		clear: both;
+		width:100%;
+		margin:130px auto;
+		padding:20px;
+	}
+	.information p{
+		color:#666;
+		padding-bottom:20px;
+	}
+	.information img{
+		width:32%;
+	}
+	.information span,.information time{
+		color:#bababa;
+	}
+	.min-foot{
+		width:100%;
+		text-align:center;
+	}
+	.min-foot p{
+		padding:10px 0 0;
+		color:#999;
+	}
+
+}

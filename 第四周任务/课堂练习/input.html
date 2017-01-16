@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>input美化</title>
+	<style type="text/css">
+		.text2{
+			border: 1px solid red;
+			color: #009dd6;
+		}
+
+		.text3{
+			border: 2px solid green;
+			height: 30px;
+			width: 220px;
+			font-family: 华文行楷;
+			font-weight: bolder;
+			font-size: 20px;
+		}
+
+		.text4{
+			border: 2px solid #ce1c9e;
+			height: 30px;
+			width: 200px;
+			background: #f991dd url(input_1.png) no-repeat right center;
+			background-size: 25px 25px;
+		}
+
+		.text5{
+			border: 2px solid #f67f00;
+			height: 30px;
+			width: 200px;
+			background: #fff url(tubiao.gif) no-repeat 3px center;
+			background-size: 25px 25px;
+		}
+		.text6{
+			background: #fff url(text6.png) no-repeat right bottom;
+			background-size: 120px 40px;
+		}
+		select{
+			border: 1px solid #f60;
+			background: #ff9;
+			height: 30px;
+			border-radius: 5px;
+		}
+
+		.submit{
+			background: linear-gradient(red,#ce741c,#0382ad);/*线性渐变*/
+			border: 0;#ce741c,
+			outline: 0; /*去掉光标*/
+			border-radius: 5px;/*%比较适用于正圆形*/
+		}
+		.submit:hover{
+			background: linear-gradient(#bbce1c,#ce741c);/*线性渐变*/
+		}
+
+
+	</style>
+</head>
+<body>
+<p>
+	<input type="text" name="text" size="25" />
+	这是默认样式s
+</p>
+<p>
+	<input type="text" name="text2" size="25" class="text2" />
+	这是改变边框的样式和颜色
+</p>
+<p>
+	<input type="text" name="text3" class="text3" />
+	这是改变边框并设置宽度和字体大小样式
+</p>
+<p>
+	<input type="text" name="text3" class="text4" />
+	这是增加背景图片实例
+</p>
+<p>
+	<input type="text" name="text3" class="text5" />
+	这是增加动态背景图片实例
+</p>
+<p>
+	<textarea name="textarea" cols="50" rows="10" class="text6"></textarea>
+</p>
+<p>
+	<select name="select">
+		<option value="请选择" selected="selected">请选择————</option>
+		<option value="标准之路">标准之路</option>
+	</select>
+</p>
+<p>
+	<input type="submit" name="button" value="渐变按钮" class="submit">
+</p>
+</body>
+</html>

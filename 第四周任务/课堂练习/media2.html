@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;"name="viewport"/>
+	<meta charset="utf-8"/>
+	<title>css响应式</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		.left{
+			float: left;
+			width: 20%;
+			height: 500px;;
+			-webkit-transition: width 1s ease;/*宽度拉伸的动画变化*/
+			background: #7fb80e;
+		}
+		.middle{
+			float: left;
+			width: 55%;
+			margin: 0 5px 0 5px;
+			height: 800px;
+			-webkit-transition: width 1s ease;/*宽度拉伸的动画变化*/
+			background: #426ab3;
+		}
+		.right{
+			float: left;
+			width: 20%;
+			height: 500px;
+			-webkit-transition: width 1s ease;/*宽度拉伸的动画变化*/
+			background: #f391a9;
+		}
+		.container{
+			margin: 5px;
+		}
+		@media only screen and (max-width:1024px){/*宽度小于600px时，应用下面的样式*/
+			.，container{
+				width: 1000px;
+				background:red;
+				overflow: hidden;
+				margin: auto;
+			}
+		}
+
+		@media only screen and (min-width:400px) and (max-width:1020px){
+			.right{
+				width: 0;
+			}
+			.left{
+				width: 30%;
+			}
+			.middle{
+				width: 65%;
+			}
+		}
+
+		@media only screen and (max-width: 400px){
+			.left,.middle,.right{
+				width: 98%;
+				height: 300px;
+			}
+			.middle{
+				margin: 5px 0 5px 0;
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="left">
+		我是左边
+	</div>
+
+	<div class="middle">
+		我是中间
+	</div>
+
+	<div class="right">
+		我是右边
+	</div>
+</div>
+</body>
+</html>

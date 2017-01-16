@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>css美化表单</title>
+	<style type="text/css">
+		div{
+			height: 300px;
+			width: 300px;
+			background: red url(link.jpg);
+			background-size: 300px 300px;/*里面图像显示的尺寸*/
+		}
+
+		a{
+			display: block;/*转成块级元素*/
+			width: 110px;/*全部完成之后，宽度随意调整，圆角也不会消失了。这里没园角。。自己设置的圆角,不美观*/
+			height: 25px;
+			margin-top: 10px;
+			background: blue url(按钮-滑动门.png) no-repeat 0 0;
+			border-radius: 5px;
+			text-align: center;
+			line-height: 25px;
+			text-decoration: none;/*去掉下划线*/
+			font-size: 12px;
+			font-weight: bolder;
+			padding-left: 5px;/*像左挤5像素*/
+		}
+		a:hover{
+			background-position: 0 -25px;
+		}
+		a span{
+			display: block;
+			height: 25px;
+			background: blue url(按钮-滑动门.png) no-repeat right 0;
+			padding-right: 5px;/*像右挤5像素*/
+			border-radius: 5px;
+		}
+		a span:hover{
+			background-position: right -25px;
+		}
+
+	</style>
+</head>
+<body>
+<!-- 背景图 -->
+<div></div>
+<!-- 按钮滑动门 -->
+<a href="#">
+	<span>
+		点我啊点我啊
+	</span>
+</a>
+</body>
+</html>

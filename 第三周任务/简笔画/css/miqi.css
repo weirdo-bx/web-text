@@ -1,0 +1,398 @@
+/*body{
+	height: 100%;
+	width: 100%;
+}*/
+
+/*整体居中*/
+#juz{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -150px;
+	margin-top: -150px;
+}
+/*头*/
+.tou{
+	width: 260px;
+	height: 300px;
+	background-color: #000;
+	border-radius: 50%;
+}
+
+/*脸上轮廓*/
+.lian_1{
+	width: 100px;
+    height: 190px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    margin: -270px 0 0 40px;
+    transform: rotate(-5deg);
+}
+
+.lian_2{
+	width: 100px;
+    height: 190px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    margin: -190px 0 0 120px;
+    transform: rotate(5deg);
+}
+/*眼睛*/
+.yan_1{
+	width: 40px;
+    height: 100px;
+    /*background: red;*/
+    border-radius: 50%;
+    border-top: 5px solid #000;
+    border-bottom: 5px solid #000;
+    border-left: 2px solid #000;
+    border-right: 4px solid #000;
+    position: relative;
+    top: 50px;
+    left: 34px;
+}
+
+.yan_2{
+	width: 40px;
+    height: 100px;
+    /*background: red;*/
+    border-radius: 50%;
+    border-top: 5px solid #000;
+    border-bottom: 5px solid #000;
+    border-left: 4px solid #000;
+    border-right: 2px solid #000;
+    position: relative;
+    top: 50px;
+    right: -19px;
+}
+/*眼珠*/
+.yanzhu_1{
+	width: 20px;
+	height: 45px;
+	background: #000;
+	border-radius: 50%;
+	position: relative;
+    top: 55px;
+    left: 15px;
+}
+
+.yanzhu_2{
+	width: 20px;
+	height: 45px;
+	background: #000;
+	border-radius: 50%;
+	position: relative;
+    top: 55px;
+    left: 5px;
+}
+/*脸下轮廓*/
+.zui_left{
+	width: 80px;
+	height: 160px;
+	background: #ffffff;
+	border-top: 5px solid #000;
+    /*border-bottom: 5px solid #000;*/
+    border-left: 4px solid #000;
+    /*border-right: 2px solid #000;*/
+	border-radius: 50%;
+	transform: rotate(-60deg);
+	position: relative;
+	top: -65px;
+	left: 10px;
+}
+
+.zui_right{
+	width: 80px;
+	height: 160px;
+	background: #ffffff;
+	border-top: 5px solid #000;
+    /*border-bottom: 5px solid #000;
+    border-left: 4px solid #000;*/
+    border-right: 4px solid #000;
+	border-radius: 50%;
+	transform: rotate(60deg);
+	position: relative;
+	top: -230px;
+	left: 165px;
+}
+
+.zui_booten{
+	width: 130px;
+	height: 150px;
+	background: #ffffff;
+	border-radius: 50%;
+    border-bottom: 5px solid #000;
+	position: relative;
+	top: -357px;
+	left: 65px;
+}
+/*嘴巴*/
+.zui_1{
+	width: 160px;
+	height: 80px;
+	background: #FFF;
+	border-radius: 50%;
+	border-bottom: 5px solid #000;
+	position: relative;
+	left: 50px;
+	top: -628px;
+}
+/*嘴角*/
+.zuij_1{
+	width: 20px;
+	height: 15px;
+	/*background: #fff;*/
+	border-radius: 50%;
+	border-bottom: 5px solid #000;
+	transform: rotate(135deg);
+	position: relative;
+	left: -5px;
+	top: 40px;
+}
+
+.zuij_2{
+	width: 20px;
+	height: 15px;
+	/*background: #fff;*/
+	border-radius: 50%;
+	border-bottom: 5px solid #000;
+	transform: rotate(-135deg);
+	position: relative;
+	left: 145px;
+	top: 20px;
+}
+/*嘴型*/
+.zuix{
+	width: 100px;
+	height: 120px;
+	background: #000;
+	border-radius: 50%;
+	position: relative;
+	left: 77px;
+	top:-500px;
+	border: 3px solid #000;
+	overflow: hidden;
+	z-index: 0;
+}
+
+/*舌头*/
+.shet_1{
+	width: 40px;
+	height: 50px;
+	background: red;
+	border-radius: 45%;
+	border: 3px solid #000;
+	position: relative;
+	top:30px;
+	left: 15px;
+	transform: rotate(15deg);
+}
+.shet_2{
+	width: 30px;
+	height: 50px;
+	background: red;
+	border-radius: 45%;
+	border: 3px solid #000;
+	position: relative;
+	top:90px;
+	left: 50px;
+	transform: rotate(-25deg);
+}
+
+/*鼻子*/
+.biz_1{
+	width: 85px;
+	height: 50px;
+	background: #000;
+	position: relative;
+	top: -700px;
+	left: 88px;
+	border-top-left-radius: 40px;
+	border-top-right-radius: 40px;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	transform: rotate(0deg);
+}
+
+.biz_2{
+	width: 30px;
+	height: 15px;
+	background: #fff;
+	border-radius: 50%;
+	position: relative;
+	left: 40px;
+	top: 8px;
+	transform: rotate(5deg);
+}
+
+/*皱纹*/
+.zw{
+	width: 90px;
+	height: 50px;
+	/*background: red;*/
+	border-radius: 50%;
+	border-top: 7px solid #000;
+	position: relative;
+	left: 85px;
+	top: -770px;
+	transform: rotate(3deg);
+}
+
+/*耳朵*/
+.erd_left{
+	width: 140px;
+	height: 140px;
+	background: #000;
+	border-radius: 50%;
+	position: relative;
+	top: 210px;
+	left: -60px;
+}
+
+.erd_right{
+	width: 140px;
+	height: 140px;
+	background: #000;
+	border-radius: 50%;
+	position: relative;
+	top: 70px;
+	left: 180px;
+}
+
+/*动画效果*/
+
+..dongh{
+	-webkit-animation: Ed 3S ease infinite;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform-origin: 120px 270px 0px;
+    /*w3c*/
+    animation: Ed 3S ease infinite;
+    transform-style: preserve-3d;
+    transform-origin: 120px 270px 0px;
+    /*moz*/
+    -moz-animation: Ed 3S ease infinite;
+    -moz-transform-style: preserve-3d;
+    -moz-transform-origin: 120px 270px 0px;
+    /*opera*/
+    -o-animation: Ed 3S ease infinite;
+    -o-transform-style: preserve-3d;
+    -o-transform-origin: 120px 270px 0px;
+    /*ms*/
+    -ms-animation: Ed 3S ease infinite;
+    -ms-transform-style: preserve-3d;
+    -ms-transform-origin: 120px 270px 0px;
+}
+
+@-webkit-keyframes Ed{
+	from,to{}
+	15% {
+    -webkit-transform: translateZ(180px);
+	}
+	30% {
+    -webkit-transform: rotateY(-100deg)rotateZ(0deg);
+	}
+	45% {
+    -webkit-transform: rotateY(100deg)rotateZ(0deg);
+	}
+	60% {
+    -webkit-transform: rotateY(100deg)rotateX(0deg);
+	}
+	75% {
+    -webkit-transform: rotateX(100deg)rotateY(0deg);
+	}
+	90% {
+    -webkit-transform: rotateX(-100deg);
+	}
+}
+
+/*w3c*/
+@keyframes Ed{
+	from,to{}
+	15% {
+    -webkit-transform: translateZ(180px);
+	}
+	30% {
+    -webkit-transform: rotateY(-100deg)rotateZ(0deg);
+	}
+	45% {
+    -webkit-transform: rotateY(100deg)rotateZ(0deg);
+	}
+	60% {
+    -webkit-transform: rotateY(100deg)rotateX(0deg);
+	}
+	75% {
+    -webkit-transform: rotateX(100deg)rotateY(0deg);
+	}
+	90% {
+    -webkit-transform: rotateX(-100deg);
+	}
+}
+
+/*moz*/
+@-moz-keyframes Ed{
+	from,to{}
+	15% {
+    -moz-transform: translateZ(180px);
+	}
+	30% {
+    -moz-transform: rotateY(-100deg)rotateZ(0deg);
+	}
+	45% {
+    -moz-transform: rotateY(100deg)rotateZ(0deg);
+	}
+	60% {
+    -moz-transform: rotateY(100deg)rotateX(0deg);
+	}
+	75% {
+    -moz-transform: rotateX(100deg)rotateY(0deg);
+	}
+	90% {
+    -moz-transform: rotateX(-100deg);
+	}
+}
+
+/*opera*/
+@-o-keyframes Ed{
+	from,to{}
+	15% {
+    -o-transform: translateZ(180px);
+	}
+	30% {
+    -o-transform: rotateY(-100deg)rotateZ(0deg);
+	}
+	45% {
+    -o-transform: rotateY(100deg)rotateZ(0deg);
+	}
+	60% {
+    -o-transform: rotateY(100deg)rotateX(0deg);
+	}
+	75% {
+    -o-transform: rotateX(100deg)rotateY(0deg);
+	}
+	90% {
+    -o-transform: rotateX(-100deg);
+	}
+}
+
+/*ms*/
+@-ms-keyframes Ed{
+	from,to{}
+	15% {
+    -ms-transform: translateZ(180px);
+	}
+	30% {
+    -ms-transform: rotateY(-100deg)rotateZ(0deg);
+	}
+	45% {
+    -ms-transform: rotateY(100deg)rotateZ(0deg);
+	}
+	60% {
+    -ms-transform: rotateY(100deg)rotateX(0deg);
+	}
+	75% {
+    -ms-transform: rotateX(100deg)rotateY(0deg);
+	}
+	90% {
+    -ms-transform: rotateX(-100deg);
+	}
+}

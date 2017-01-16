@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>浏览器的兼容</title>
+<style type="text/css">
+	body,div{
+		margin: 0;
+		padding: 0;
+		color: #fffffb;
+	}
+	.menu{
+		height: 200px;
+		width: 150px;
+		background-color: orange;
+		float: left;
+		_margin-right: -3px;/*前面加上这个下划线这个样式只会在IE6里面生效*/
+	}
+
+	.content{
+		height: 300px;
+		background-color: green;
+		/*padding-left: 50px;*/
+		padding-left: 200px;
+	  /*padding-left: 50px \9;/*\9只对IE生效,不包括IE8,没有一种单独的办法去设置IE8,可单独设置IE6,7*/
+		/*_padding-left: 50px;/*IE6*/
+		/*+padding-left: 50px;/*IE7*/
+		*padding-left: 50px;/*IE6,7同时应用*/
+	}
+</style>
+</head>
+<body>
+<div class="menu">
+	左侧
+</div>
+<div class="content">
+	右侧
+</div>
+</body>
+</html>

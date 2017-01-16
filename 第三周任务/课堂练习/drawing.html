@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS绘制特殊图像</title>
+<style type="text/css">
+	div{
+		height: 300px;
+		width: 300px;
+		background-color: #b2d235;
+		border: 30px solid;
+    	border-left-color: #f137da;
+    	border-bottom-color: #b1122f;
+    	border-right-color: #6ff50b;
+    	border-top-color: #0006bf;
+    	margin-top: 10px;
+	}
+	.dengyao{
+	    height: 0px;
+	    width: 0px;
+	    background-color: transparent;
+	    border: 30px solid;
+	    border-left-color: transparent;
+	    border-bottom-color: #b1122f;
+	    border-right-color: transparent;
+	    border-top-color: transparent;
+	}
+
+	.zhijiao{
+	    height: 0;
+	    width: 0;
+	    background-color: transparent;
+	    border: 30px solid #4f71b3;
+	    border-left-color: #f137da;
+	    border-bottom-color: #b1122f;
+	    border-right-color: #20e854;
+	    border-top-color: transparent;
+	    margin-top: 20px;
+	    border-bottom: 0px;
+	    border-left: 0px;
+	}
+
+	.tixing{
+		height: 0px;
+	    width: 300px;
+	    background-color: transparent;
+	    border: 30px solid;
+	    border-left-color: transparent;
+	    border-bottom-color: #b1122f;
+	    border-right-color: transparent;
+	    border-top-color: transparent;
+	}
+
+	.yuan{
+		/* border-top-left-radius: 50%; */
+	    /* border-top-right-radius: 50%; */
+	    /* border-bottom-left-radius: 50%; */
+	    /* border-bottom-right-radius: 50%; */
+	    border-radius: 50%;/*简写*/
+	    width: 100px;
+	    height: 100px;
+	    border: 0px;
+	}
+
+	.tuoyuan{
+		width: 100px;
+		height: 60px;
+		border: 0px;
+		background-color: #ffc800;
+		/*border-top-right-radius: 50px;
+		border-top-left-radius: 50px;
+		border-bottom-left-radius: 30px;
+		border-bottom-right-radius: 30px;*/
+		border-top-right-radius: 50%;
+		border-top-left-radius: 50%;
+		border-bottom-left-radius: 50%;
+		border-bottom-right-radius: 50%;
+	}
+</style>
+</head>
+<body>
+<div class="dengyao"></div>
+<div class="zhijiao"></div>
+<div class="tixing"></div>
+<div class="yuan"></div>
+<div class="tuoyuan"></div>
+</body>
+</html>

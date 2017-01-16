@@ -1,0 +1,250 @@
+/*整体*/
+#mof{
+    width: 300px;  
+    height: 300px;  
+    margin: 80px auto 0 auto;
+}
+
+#mof h2{
+    text-align: center;
+}
+
+#box{
+	/*webkit*/
+    -webkit-animation: Mof 15S ease-in-out infinite;/*名称,持续时间,过渡类型,无限循环*/
+    /*-webkit-animation-duration: 15S;/*持续时间*/
+    /*-webkit-animation-timing-function: ease-in-out;/*过渡类型*/
+    /*-webkit-animation-iteration-count: infinite;/*无限循环*/
+    -webkit-transform-style: preserve-3d;/*3d模式*/
+    -webkit-transform-origin: 150px 150px 0px;/*旋转中心点*/
+    /*w3c*/
+    animation: Mof 15S ease-in-out infinite;/*名称,持续时间,过渡类型,无限循环*/
+    transform-style: preserve-3d;/*3d模式*/
+    transform-origin: 150px 150px 0px;/*旋转中心点*/
+    /*moz*/
+    -moz-animation: Mof 15S ease-in-out infinite;/*名称,持续时间,过渡类型,无限循环*/
+    -moz-transform-style: preserve-3d;/*3d模式*/
+    -moz-transform-origin: 150px 150px 0px;/*旋转中心点*/
+    /*opera*/
+    -o-animation: Mof 15S ease-in-out infinite;/*名称,持续时间,过渡类型,无限循环*/
+    -o-transform-style: preserve-3d;/*3d模式*/
+    -o-transform-origin: 150px 150px 0px;/*旋转中心点*/
+    /*ms*/
+    -ms-animation: Mof 15S ease-in-out infinite;/*名称,持续时间,过渡类型,无限循环*/
+    -ms-transform-style: preserve-3d;/*3d模式*/
+    -ms-transform-origin: 150px 150px 0px;/*旋转中心点*/
+}
+@-webkit-keyframes Mof{
+	from,to{}
+	15% {  
+        -webkit-transform: rotateY(-130deg);  
+    }  
+    30% {  
+        -webkit-transform: rotateY(-90deg)rotateZ(130deg);   
+    }  
+    45% {  
+        -webkit-transform: rotateY(220deg)rotateZ(130deg);  
+    }  
+    60% {  
+        -webkit-transform: rotateY(130deg)rotateX(130deg);  
+    }  
+    75% {  
+        -webkit-transform: rotateX(130deg)rotateY(220deg);  
+    }  
+    90% {  
+        -webkit-transform: rotateX(-130deg);  
+    } 
+}
+/*W3C*/
+@keyframes Mof{
+	from,to{}
+	15% {  
+        -webkit-transform: rotateY(-130deg);  
+    }  
+    30% {  
+        -webkit-transform: rotateY(-90deg)rotateZ(130deg);   
+    }  
+    45% {  
+        -webkit-transform: rotateY(220deg)rotateZ(130deg);  
+    }  
+    60% {  
+        -webkit-transform: rotateY(130deg)rotateX(130deg);  
+    }  
+    75% {  
+        -webkit-transform: rotateX(130deg)rotateY(220deg);  
+    }  
+    90% {  
+        -webkit-transform: rotateX(-130deg);  
+    } 
+}
+/*moz*/
+@-moz-keyframes Mof{
+	from,to{}
+	15% {  
+        -webkit-transform: rotateY(-130deg);  
+    }  
+    30% {  
+        -webkit-transform: rotateY(-90deg)rotateZ(130deg);   
+    }  
+    45% {  
+        -webkit-transform: rotateY(220deg)rotateZ(130deg);  
+    }  
+    60% {  
+        -webkit-transform: rotateY(130deg)rotateX(130deg);  
+    }  
+    75% {  
+        -webkit-transform: rotateX(130deg)rotateY(220deg);  
+    }  
+    90% {  
+        -webkit-transform: rotateX(-130deg);  
+    } 
+}
+/*opera*/
+@-o-keyframes Mof{
+	from,to{}
+	15% {  
+        -webkit-transform: rotateY(-130deg);  
+    }  
+    30% {  
+        -webkit-transform: rotateY(-90deg)rotateZ(130deg);   
+    }  
+    45% {  
+        -webkit-transform: rotateY(220deg)rotateZ(130deg);  
+    }  
+    60% {  
+        -webkit-transform: rotateY(130deg)rotateX(130deg);  
+    }  
+    75% {  
+        -webkit-transform: rotateX(130deg)rotateY(220deg);  
+    }  
+    90% {  
+        -webkit-transform: rotateX(-130deg);  
+    } 
+}
+/*ms*/
+@-ms-keyframes Mof{
+	from,to{}
+	15% {  
+        -webkit-transform: rotateY(-130deg);  
+    }  
+    30% {  
+        -webkit-transform: rotateY(-90deg)rotateZ(130deg);   
+    }  
+    45% {  
+        -webkit-transform: rotateY(220deg)rotateZ(130deg);  
+    }  
+    60% {  
+        -webkit-transform: rotateY(130deg)rotateX(130deg);  
+    }  
+    75% {  
+        -webkit-transform: rotateX(130deg)rotateY(220deg);  
+    }  
+    90% {  
+        -webkit-transform: rotateX(-130deg);  
+    } 
+}
+#box div{
+	width: 300px;  
+    height: 300px;  
+    position: absolute;  
+    /*border: 1px solid #00F;  
+    background-color: rgba(255,200,100,0.5);*/  
+    display: block;  
+}
+
+/*魔方每个面的位置*/
+
+#box .one{
+	-webkit-transform: translateZ(150px);/*z轴向前平移80像素*/
+	transform: translateZ(150px);
+}
+#box .two{
+	-webkit-transform: rotateX(-90deg) translateZ(150px);/*x轴旋转角度-90度并且向前平移80像素*/
+	transform: rotateX(-90deg) translateZ(150px);
+}
+#box .three{
+	-webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(150px);
+	transform: rotateY(90deg) rotateX(90deg) translateZ(150px);
+}
+#box .four{
+	-webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(150px);
+	transform: rotateY(180deg) rotateZ(90deg) translateZ(150px);
+}
+#box .five{
+	-webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(150px);
+	transform: rotateY(-90deg) rotateZ(90deg) translateZ(150px);
+}
+#box .six{
+	-webkit-transform: rotateY(90deg) translateZ(150px);
+	transform: rotateY(90deg) translateZ(150px);
+}
+
+/*魔方每个面内的小方块*/
+
+#box .one div,
+#box .two div,
+#box .three div,
+#box .four div,
+#box .five div,
+#box .six div{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	border-radius: 10%;/*圆角*/
+	/*border: 2px solid red;*/
+}
+
+/*确定魔方六个面内的每个小方块的位置*/
+/*nth-child   css伪类选择器*/
+
+#box div div:nth-child(1) {
+}
+#box div div:nth-child(2) {
+	left: 100px;
+}
+#box div div:nth-child(3) {
+	left: 200px;
+}
+#box div div:nth-child(4) {
+	bottom: 100px;
+}
+#box div div:nth-child(5) {
+	bottom: 100px;
+	left: 100px;
+}
+#box div div:nth-child(6) {
+	bottom: 100px;
+	left: 200px;
+}
+#box div div:nth-child(7) {
+	top: 200px
+}
+#box div div:nth-child(8) {
+	top: 200px;
+	left: 100px;
+}
+#box div div:nth-child(9) {
+	top: 200px;
+	left: 200px;
+}
+
+/*确定魔方六个面内的每个小方块的颜色*/
+
+#box .one div{
+	background: #ffe600;
+}
+#box .two div{
+	background: #009ad6;
+}
+#box .three div{
+	background: #c77eb5;
+}
+#box .four div{
+	background: #ed1941;
+}
+#box .five div{
+	background: #7fb80e;
+}
+#box .six div{
+	background: #f36c21;
+}

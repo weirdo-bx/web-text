@@ -1,0 +1,68 @@
+*{
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+body{
+	min-width: 810px;
+}
+.header{
+	background-color: #7fb80e;
+	height: 130px;
+	text-align: center;
+	line-height: 130px;
+}
+
+.atricle{
+	min-height: 410px;
+  	overflow: hidden;/*超出隐藏*/
+  	margin-top: 5px;
+}
+
+.footer{
+	background-color: #7fb80e;
+	height: 120px;
+	margin-top: 5px;
+	line-height: 120px;
+	text-align: center;
+}
+
+.atricle .left{
+	background-color: #7fb80e;
+	float: left;
+	width: 250px;
+	margin-bottom: -9999px;
+	padding-bottom: 9999px;/*隐藏高度设置无线高，多出隐藏，永远与.atricle等高*/
+	margin-left: -100%;
+	line-height: 45px;
+	text-align: center;
+}
+
+.atricle .middle{
+	float: left;
+	width: 100%;
+	margin-bottom: -9999px;
+	padding-bottom: 9999px;/*隐藏高度设置无线高，多出隐藏，永远与.atricle等高*/
+}
+
+.atricle .right{
+	background-color: #7fb80e;
+	float: left;
+	width: 200px;
+	margin-left: -200px;
+   	margin-bottom: -9999px;
+	padding-bottom: 9999px;/*隐藏高度设置无线高，多出隐藏，永远与.atricle等高*/
+	line-height: 40px;
+	text-align: center;
+}
+
+.inner{
+	/*min-width: 810px;*/
+	background: #7fb80e;
+	margin-left: 255px;
+	margin-right: 205px;
+	margin-bottom: -9999px;
+	padding-bottom: 9999px;/*隐藏高度设置无线高，多出隐藏，永远与.atricle等高*/
+	line-height: 50px;
+	text-align: center;
+}

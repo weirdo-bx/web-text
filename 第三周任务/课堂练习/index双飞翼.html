@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>div+css的双飞翼布局</title>
+<style type="text/css">
+
+	*{
+		margin: 0;
+		padding: 0;
+	}
+
+	.header{
+		background-color: #ef5b9c;
+		height: 150px;
+	}
+
+	.atricle{
+		background-color: #7fb80e;
+		height: 390px;
+		/*padding-left: 150px;
+  	    padding-right: 100px;*/
+  	    overflow: hidden;/*超出隐藏*/
+  	    margin-top: 5px;
+	}
+
+	.footer{
+		background-color: #ffc20e;
+		height: 120px;
+		margin-top: 5px;
+	}
+
+	.atricle .left{
+		background-color: #4e72b8;
+		float: left;
+		width: 150px;
+		margin-bottom: -9999px;
+		padding-bottom: 9999px;/*隐藏高度设置无线高，多出隐藏，永远与.atricle等高*/
+		margin-left: -100%;
+	}
+
+	.atricle .middle{
+		background-color: #57fff7;
+		float: left;
+		width: 100%;
+		margin-bottom: -9999px;
+		padding-bottom: 9999px;/*隐藏高度设置无线高，多出隐藏，永远与.atricle等高*/
+
+	}
+
+	.atricle .right{
+		background-color: #7d5886;
+		float: left;
+		width: 100px;
+		margin-left: -100px;
+    	margin-bottom: -9999px;
+		padding-bottom: 9999px;/*隐藏高度设置无线高，多出隐藏，永远与.atricle等高*/
+	}
+
+	.inner{
+		margin-left: 155px;
+		margin-right: 105px;
+		margin-bottom: -9999px;
+		padding-bottom: 9999px;/*隐藏高度设置无线高，多出隐藏，永远与.atricle等高*/
+	}
+</style>
+</head>
+<body>
+<div class="header">
+	我是头
+</div>
+<div class="atricle">
+	<div class="middle">
+		<div class="inner">
+			我在中间
+		</div>
+	</div>
+	<div class="left">
+		我在左边
+	</div>
+	<div class="right">
+		我在右边
+	</div>
+</div>
+<div class="footer">
+	我是尾部 版权所有©
+</div>
+</body>
+</html>

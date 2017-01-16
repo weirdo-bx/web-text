@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>CSS 3D魔方</title>
+	<style type="text/css">
+		#box div{
+			position: absolute;
+			height: 160px;
+			width: 160px;
+			border: 3px solid #000;
+			background: rgba(250,105,0,0.5);/*RGB颜色色值 A是RGB模型附加的额外的信息,颜色的透明度*/
+			text-align: center;/*居中*/
+			font-size: 150px;
+		}
+		#box{
+			-webkit-animation-name: animation;/*为对象设置所应用的动画名称*/
+			-webkit-animation-timing-function: ease-in-out;/*设置对象动画的过渡类型,这里设置的是由慢到快再到慢*/
+			-webkit-animation-iteration-count: infinite;/*设置对象动画的循环次数,这里是无限循环*/
+			-webkit-animation-duration: 3s;/*设置对象动画持续的时间*/
+			-webkit-transform-style: preserve-3d;/*设置对象动画按照3D模型进行渲染*/
+			-webkit-transform-origin: 80px 80px 0;/*设置对象动画的视角,依次是x轴,y轴,z轴;2d只有两个值,也可以同百分比设置,用像素设置总和以宽度为准*/
+			
+			animation: animation 3s infinite;  
+    		transform-style: preserve-3d;  
+    		transform-origin: 80px 80px 0px;
+		}
+		#box .one{
+			-webkit-transform: translateZ(80px);/*z轴向前平移80像素*/
+			transform: translateZ(80px);
+		}
+		#box .two{
+			-webkit-transform: rotateX(-90deg) translateZ(80px);/*x轴旋转角度-90度并且向前平移80像素*/
+			transform: rotateX(-90deg) translateZ(80px);
+		}
+		#box .three{
+			-webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(80px);
+			transform: rotateY(90deg) rotateX(90deg) translateZ(80px);
+		}
+		#box .four{
+			-webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(80px);
+			transform: rotateY(180deg) rotateZ(90deg) translateZ(80px);
+		}
+		#box .five{
+			-webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(80px);
+			transform: rotateY(-90deg) rotateZ(90deg) translateZ(80px);
+		}
+		#box .six{
+			-webkit-transform: rotateY(90deg) translateZ(80px);
+			transform: rotateY(90deg) translateZ(80px);
+		}
+
+
+		@-webkit-keyframes animation{
+			from,to{}
+			15%{-webkit-transform:rotateY(-90deg);}
+			35%{-webkit-transform:rotateY(-90deg) rotateZ(135deg);}
+			50%{-webkit-transform:rotateY(225deg) rotateZ(135deg);}
+			65%{-webkit-transform:rotateY(135deg) rotateZ(135deg);}
+			85%{-webkit-transform:rotateX(135deg);}
+		}
+		@keyframes animation{
+			from,to{}
+			15%{-webkit-transform:rotateY(-90deg);}
+			35%{-webkit-transform:rotateY(-90deg) rotateZ(135deg);}
+			50%{-webkit-transform:rotateY(225deg) rotateZ(135deg);}
+			65%{-webkit-transform:rotateY(135deg) rotateZ(135deg);}
+			85%{-webkit-transform:rotateX(135deg);}
+		}
+	</style>
+	<script type="text/javascript">
+		function init()
+		{
+			document.addEventListener("touchstart",function(event){event.preventDefault();},false);
+		}
+		window.onload=init();
+	</script>
+</head>
+<body>
+<h2 align="center">CSS 3D魔方</h2>
+<div id="view" style="width: 160px; height: 160px; margin: 80px auto 0 auto;">
+	<div id="box">
+		<div class="one">A</div>
+		<div class="two">B</div>
+		<div class="three">C</div>
+		<div class="four">D</div>
+		<div class="five">E</div>
+		<div class="six">F</div>
+	</div>
+</div>
+</body>
+</html>

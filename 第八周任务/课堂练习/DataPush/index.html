@@ -1,0 +1,16 @@
+<meta charset="utf-8" />
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<h1>测试</h1>
+<script type="text/javascript">
+function conn() {
+    $.ajax({
+        url: "data.php", //链接地址
+        detaType: "josn", //请求类型
+        success: function(data) {
+                console.log(data);
+                conn();
+            } //回调
+    });
+}
+conn();
+</script>

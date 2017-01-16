@@ -1,0 +1,110 @@
+/*清除浮动效果*/
+.cf::before,
+.cf::after{
+	content: "";
+	display: block;
+	clear: both;
+} 
+html{
+	font-size: 62.5%;/*10px*/
+	/*1rem=10px   0.1rem=1px;*/
+	font-family: arial,sans-serif;
+	height: 100%;
+}
+body{
+	height: 100%;
+}
+.container{
+	height: 100%;
+	width: 100%;
+}
+a{
+	text-decoration: none;
+}
+/*reset end*/
+header{
+	background: #4182f1 url("../img/bg-news-logo_344ce44.png") no-repeat center;
+	background-size: 7rem;
+	border-bottom: .1rem solid #5898f0;
+}
+header a{
+	display: block;
+	height: 4.5rem;
+	line-height: 4.5rem;
+	color: #fff;
+	margin: 0 1rem;
+}
+header a:nth-child(1),
+header a:nth-child(2){
+	float: left;
+}
+header a:nth-child(3),
+header a:nth-child(4){
+	float: right;
+}
+header a .iconfont{
+	font-size: 2rem;
+}
+/*导航标题*/
+nav{
+	background: #4182f1;
+}
+nav ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+}
+nav ul li {
+	display: inline-block;
+	font-size: 1.44rem;
+	text-align: center;
+	width: 16.66%;
+}
+nav a {
+	display:inline-block;
+	padding: 1rem 0;
+	color: #fff;
+}
+nav ul i{
+	display: inline-block;
+	height: 2rem;
+	float: right;
+	border-right: 1px solid #5898f0;
+	position: relative;
+	top: 0.7rem;
+}
+/*主体内容*/
+.news-lists{
+	margin: 1rem 0 0;
+	padding: 0 1.3rem;
+	list-style: none;
+}
+.news-lists h1{
+	font-size: 1.3rem;
+}
+.news-list{
+	display: flex;
+	border-bottom: 1px solid #e6e6e6;
+	margin-top: 1rem;
+}
+.newsimg{
+	flex: 1;/*图片占据1*/
+}
+.newscontent{
+	flex: 2;/* 内容占据2 */
+	padding: 0 0.8rem;
+}
+.newsimg img{
+	width: 100%;
+	height: auto;
+}
+.newscontent span{
+	display: inline-block;
+}
+.newscontent span:nth-child(2){
+	margin-left: 0.8rem;
+	border: 1px solid #ff0000;
+	border-radius: 3px;
+	color: #ff0000;
+}

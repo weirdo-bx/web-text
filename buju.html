@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>div+css布局</title>
+</head>
+<style type="text/css">
+
+	*{
+		margin: 0;
+		padding: 0;
+	}
+
+	div{
+	
+	}
+
+	.header{
+		background-color: #ef5b9c;
+		height: 150px;
+	}
+
+	.atricle{
+		background-color: #7fb80e;
+		height: 300px;
+		/*padding-left: 150px;
+  	    padding-right: 100px;*/
+  	    overflow: hidden;/*超出隐藏*/
+	}
+
+	.footer{
+		background-color: #ffc20e;
+		height: 100px;
+	}
+
+	.atricle .left{
+		background-color: #4e72b8;
+		float: left;
+		width: 150px;
+		/*height: 18.29px;*/
+		margin-bottom: -9999px;
+		padding-bottom: 9999px;/*隐藏高度设置无线高，多出隐藏，永远与.atricle等高*/
+		margin-left: -100%;
+		/*position: relative;
+   		left: -150px;*//*不使用relative定位添加双飞翼布局 .inner*/
+
+	}
+
+	.atricle .middle{
+		background-color: #57fff7;
+		float: left;
+		width: 100%;
+		margin-bottom: -9999px;
+		padding-bottom: 9999px;/*隐藏高度设置无线高，多出隐藏，永远与.atricle等高*/
+	}
+
+	.atricle .right{
+		background-color: #7d5886;
+		float: left;
+		width: 100px;
+		/*height: 18.29px;*/
+		margin-left: -100px;
+		/*position: relative;
+    	right: -100px;*//*不使用relative定位添加双飞翼布局 .inner*/
+    	margin-bottom: -9999px;
+		padding-bottom: 9999px;/*隐藏高度设置无线高，多出隐藏，永远与.atricle等高*/
+	}
+
+	.inner{
+		margin-left: 150px;
+		margin-right: 100px;
+	}
+</style>
+<body>
+<div class="header">
+	我是头
+</div>
+<div class="atricle">
+	<div class="middle">
+		<div class="inner">
+			我在中间
+			<p>我是中间</p><p>我是中间</p><p>我是中间</p><p>我是中间</p><p>我是中间</p>
+		</div>
+	</div>
+	<div class="left">
+		我在左边
+	</div>
+	<div class="right">
+		我在右边
+	</div>
+</div>
+<div class="footer">
+	我是尾部 版权所有©
+</div>
+</body>
+</html>

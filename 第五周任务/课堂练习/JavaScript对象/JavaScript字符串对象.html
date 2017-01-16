@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Document</title>
+	<script type="text/javascript">
+		// //声明字符串对象
+		// var str = new String('Hello!');
+		// var str = 'Hello!';
+		// var str = "Hello!";
+
+		// alert(str.length);//length获取字符串的长度
+
+		// alert(str.toUpperCase());//大写
+		// alert(str.toLowerCase());//小写
+
+		// var msg = "你好，jikexueyuan";
+		// var temp = msg.replace("jikexueyuan","极客学院");//replace()替换文本
+		// document.write(temp);
+
+		// var abc = "How are you !";//"h,i,j,k,l";
+		// var arr = abc.split(" ");//(",");    //split字符串分隔
+		// for(var va in arr){
+		// 	alert(arr[va]);
+		// }
+
+		// var str1 = "你脑子";
+		// var str2 = "是不是";
+		// var str3 = "进咸鱼了";
+		// var str4 = "!!!";
+		// var str5 = str1.concat(str2,str3,str4);//concat()链接字符串
+		// alert(str5);
+
+
+
+		//查找字符串：indexOf();
+		var str1 = "Hey, Hello Jackie, Hello Maggie!"//索引下标从0开始
+		document.write(str1.indexOf("Hello"));//返回5，从左至右第一个
+		//查找字符串：lastIndexOf();
+		document.write(str1.lastIndexOf("Hello"));//返回19,从右至左第一个
+
+		//截取字符串：substring(fromIndex(第一个索引),toIndex(最后一个索引));
+		var str2 = str1.substring(5,10);//截取索引为5-10,包括form  不包括to
+		document.write(str2);
+		//截取字符串：substr(formIndex(索引),length(长度));
+		var str3 = str1.substr(5, 5);//截取索引为5的开头至后面的第五个
+		document.write(str3);
+
+		//查找截取适配着用，例子
+		var idx = str1.indexOf("Hello");
+		var temp = str1.substring(idx);
+		document.write(temp);//得到从左到右第一个hello至之后所有的
+
+		var idx = str1.indexOf("Hello");
+		var end = str1.lastIndexOf("Hello");
+		var temp = str1.substring(idx,end);
+		document.write(temp);//截取Hello Jackie,
+
+		var msg = "     你 好，世 界，  巴拉巴拉小魔仙。。 ";
+		document.write(msg.trim());//去掉两边的空格去掉，中间的不起作用。
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

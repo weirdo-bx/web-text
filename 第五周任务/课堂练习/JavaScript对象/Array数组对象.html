@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Document</title>
+	<script type="text/javascript">
+	// //数组的创建
+	// //1,常规方式
+	// var arr = new Array();
+	// arr[0] = "A1";
+	// arr[1] = "B2";
+	// arr[2] = "C3";
+	// //2,简洁方式
+	// var arr1 = new Array("A1","B2","C3");
+	// //3,直接赋值
+	// var arr2 = ["A1","B2","C3"];
+
+
+	// var arr3 = ["A1","B2","C3"];
+	// document.write(arr3.length);//     length   3  有几个元素
+	// document.write(arr3.toString());//  toString() 把数组转变成字符串
+
+	// var idx = arr3.indexOf("C3");
+	// document.write(idx);//  indexOf 获取数组的下标。C3 -- 2
+
+	// var arr4 = ["D4","E5","F6"];
+	// var temp = arr3.concat(arr4);//  concat 合并两个或多个数组
+	// //document.write(temp);
+
+	// var tpArr = arr3.join(" and ");//  join 数组的分隔符
+	// document.write(tpArr);
+
+	//map()方法，通过指定函数处理数组的每个元素，并返回处理后的数组
+	var arr5 = ["A1","B2","C3"];
+	var tmpMapArr = arr5.map(function (item, index ,arry) {
+		return item+"999";
+	});
+	document.write(tmpMapArr);
+
+	//forEach()方法：遍历
+	arr5.forEach(function (item, index ,arry) {
+		document.write(item+"<br>");
+	});
+
+	//reverse()方法：反转
+	document.write(arr5.reverse()+"<br>");//C3,B2,A1
+
+	//sort()方法：排序
+	var arr5 = [7,2,1,5,3,22];
+	document.write(arr5.sort()+"<br>");//1,2,22,3,5,7
+
+	document.write(arr5.sort(function (a,b) {
+		return a-b;//1,2,3,5,7,22   利用函数升系排列;    b-a  降序
+	}));
+	
+
+
+
+	
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function calculate(){
+			//var i = 1;
+			//var j = 2;
+			//j += 3;//j=j+3
+			//var s = i + j;
+
+			var i = parseInt(document.getElementById('num1').value);//parsInt转换成数字
+			var j = parseInt(document.getElementById('num2').value);
+			var s = i + j;
+			document.getElementById('sum').innerText=s;
+		}
+	</script>
+</head>
+<body>
+	var i = <input type="text" id="num1"><br>
+	j = <input type="text" id="num2"><br>
+	结果：<span id="sum"></span>
+	<button onclick="calculate()">计算</button>
+</body>
+</html>

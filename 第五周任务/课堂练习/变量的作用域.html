@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var sum = 20;//全局变量,在任意地方可以使用
+		function test(i,j){//i,j是局部变量
+			var num = 2;//局部变量,只能在函数体内内部使用
+			// alert(num);
+			//var sum = 5;//局部变量==5;
+			x = 3;//这是一个全部变量
+			//alert(sum);
+		}
+		test();
+		alert(x);
+		//alert(sum);//==20;获取到的是全局变量
+		// alert(num);
+	</script>
+</head>
+<body>
+</body>
+</html>

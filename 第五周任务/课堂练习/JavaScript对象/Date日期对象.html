@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Document</title>
+	<script type="text/javascript">
+	// //Date对象
+	// var today = new Date();//获取当前日期
+	// document.write(today);
+
+	// var day = new Date("2017-11-25");//指定日期字符串
+	// document.write("<br>"+day);
+
+	// var day2 = new Date("2018-12-01");//指定日期字符串,函数里月份是0-11  
+	// document.write("<br>"+day2);
+
+
+	//setXXX设置时间
+	var date3 = new Date();
+	date3.setFullYear(2014);//setFullYear设置时间  年份
+	date3.setMonth(2);//三月，月份0-11
+	date3.setDate(9);//日期  1-31
+	document.write(date3+"<br>");
+
+	//getXXX获取时间
+	var date4 = new Date();
+	document.write(date4.getFullYear());
+	document.write(date4.getMonth()+1);//月份是0-11，所以这里+1显示当月
+	document.write(date4.getDate());//日期  1-31
+
+	//toLocaleString()
+	var date5 = new Date();
+	document.write(date5.toLocaleString()+"<br>");//获取当前本地日期   2016/11/2 上午10:00:29
+	document.write(date5.toLocaleDateString()+"<br>");//货取日期   2016/11/2
+	document.write(date5.toLocaleTimeString()+"<br>");//货期时间   上午10:00:29
+
+
+	//2017-2-14 11:23:25  此类格式的时间
+	function setTime(){
+		var date6 = new Date();
+		var y = date6.getFullYear();//年
+		var m = date6.getMonth()+1;//月
+		var day = date6.getDate();//天
+		var s = date6.getHours();//时
+		var f = date6.getMinutes();//分
+		var miao = date6.getSeconds();//秒
+		m = checkTime(m);//函数调用
+		day = checkTime(day);
+		s = checkTime(s);
+		f = checkTime(f);
+		miao = checkTime(miao);
+		var dateStr = y+"-"+m+"-"+day+"  "+s+":"+f+":"+miao;
+		document.write(dateStr);
+	}
+
+	function checkTime(j){
+		if (j<10) {
+			return "0"+j;//j小于10时在前面加一个0
+		}else{
+			return j;//不小于10则返回j
+		}
+	}
+	setTime();
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

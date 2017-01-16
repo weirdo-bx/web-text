@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		//直接创建对象
+		var person = new Object();
+		person.name = "咸鱼";
+		person.age = 5;
+		alert('姓名：'+person.name+",年龄"+person.age);
+
+		var person2 = {name:"咸鱼2号",age:10};//与Object()等价
+		alert('姓名：'+person2.name+",年龄"+person2.age);
+		alert('姓名：'+person2["name"]+",年龄"+person2["age"]);//与上同等
+
+
+		//使用对象构造器的方式：函数的方式
+		function person3(name,age,height){
+			this._name = name;
+			this._age = age;
+			this._height = height;
+			this.sleeping = sleep;
+			function sleep(){
+				alert('正在睡觉。。。');
+			}
+		}
+		var myBrother = new person3("张三",23,182);
+		//var myXx = new person3("李四",33,172);//用函数的方式可以多个调用
+		alert('姓名：'+myBrother._name+"，年龄："+myBrother._age+"，身高："+myBrother._height);
+		myBrother.sleeping();
+
+
+		//for in遍历对象属性
+		for(var temp in myBrother){
+			document.write(myBrother[temp]);
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

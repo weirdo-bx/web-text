@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// function sum(){
+		// 	var i = 10;
+		// 	var j = 12;
+		// 	var s = i+j;
+		// 	return s;//return会返回一个值，同时终止程序的执行
+		// 	alert('hello!');
+		// }
+		// var total = sum();
+		// alert(total);
+		function calc(){
+			var num1 = parseInt(document.getElementById('num1').value);
+			var num2 = parseInt(document.getElementById('num2').value);
+			var op = document.getElementById('op').value;
+			var sum = jishuan(num1,num2,op);
+			//alert(sum);
+			document.getElementById('result').innerText = sum;
+		}
+		function jishuan(n1,n2,oper){
+			switch(oper){
+				case'+'://oper==='+'
+					return n1+n2;
+				case'-'://oper==='-'
+					return n1-n2;
+				case'*'://oper==='*'
+					return n1*n2;
+				case'/'://oper==='/'
+					return n1/n2;
+				default:
+					return "未知操作符";
+			}
+		}
+	</script>
+</head>
+<body>
+
+
+num1:<input type="text" id="num1">
+
+<select id="op">
+	<option value="+">+</option>
+	<option value="-">-</option>
+	<option value="*">*</option>
+	<option value="/">/</option>
+</select>
+
+num2:<input type="text" id="num2">
+
+=<span id="result"></span>
+<button onclick="calc()">计算</button>
+
+
+
+
+</body>
+</html>

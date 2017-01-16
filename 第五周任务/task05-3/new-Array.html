@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+	var arr   = ["a","x","b","d","m","a","k","m","p","j","a"];
+    var count = {};
+    var pos   = {};
+    //遍历arr，统计每个字母出现次数且记录位置
+    arr.forEach(function(value, index){
+        if(count[value]){
+            count[value] ++;
+            pos[value] += ","+index; 
+        } else {
+            count[value] = 1;
+            pos[value]   = ""+index;
+        }
+    });
+    console.log(count);
+    console.log(pos);
+    
+    //获取出现最多的字母
+    var max = 0;
+    var letter;
+    for(i in count){
+        if(count[i] > max ){
+            max    = count[i];
+            letter = i; 
+        }
+    }
+ 
+    console.log("最多的是：" + letter);
+    console.log("位置分布：" + pos[letter]);
+
+
+//  var arr = ['a', 'x', 'b', 'd', 'm', 'm', 'a', 'k', 'm', 'p', 'p', 'p', 'p', 'j', 'a', 'a'];
+// //计数
+// var count = {};
+// //索引
+// var pos = {};
+// //遍历原数组并且生成新数组
+// for (var i = 0; i < arr.length; i++) {
+//     var char = arr[i];
+//     if (count[char]) {
+//         count[char] += 1;
+//         pos[char] += ',' + i;
+//     } else {
+//         count[char] = 1;
+//         pos[char] = i;
+//     }
+// }
+// // console.log(count);
+// // console.log(pos);
+
+// //返回出现次数最多的字母的次数（降序排列后取第一个数字）
+// var max = count[Object.keys(count).sort(function(a, b) {
+//     return count[a] <= count[b];
+// })[0]];
+// // console.log(max);
+
+// //出现次数最多的字母如果有多个，全部写入arr_pu数组中，并输出
+// var arr_pu = [];
+
+// for (i in count) {
+//     if (count[i] >= max) {
+//         //将最大值给max
+//         max = count[i];
+//         //将出现最多的字母放到arr_pu数组中
+//         arr_pu.push(i);
+//         console.log(arr_pu)
+//     }
+// }
+// document.write('出现次数最多的字母是:' + arr_pu + '<br>');
+
+// //将出现最多的字母的次数输出
+// for (var i = 0; i < arr_pu.length; i++) {
+//     key = arr_pu[i];
+//     document.write(key + '出现的次数为:' + count[key] + '<br>');
+//     document.write(key + '的位置分别为:' + pos[key] + '<br>');
+// }
+</script>
+</body>
+</html>

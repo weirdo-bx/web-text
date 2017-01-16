@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// var i=4;
+		// var j=5;
+		// var sum = i+j;
+		// alert(sum);
+		// function plus(i,j) {
+		// 	var sum = i+j;
+		// 	alert(sum);
+		// }
+		// plus(2,5);
+		//============================================
+		//函数的定义1
+		// function sendMessage(){//1.function关键字开头 2.大小写敏感 3.最好动词开头的单词 4.驼峰命名法
+		// 	var message = "世界你好";
+		// 	alert(message);
+		// }
+		// sendMessage();
+		//函数的定义2
+		// var sendMessage = function(){
+		// 	var message = '世界你好';
+		// 	alert(message);
+		// }
+		// sendMessage();
+		//============================================
+		//函数调用
+	</script>
+
+</head>
+<body>
+<!-- 二、在HTML中调用函数 -->
+<button onclick="plus()">点击</button>
+<a href="javascript:plus();">点击</a>
+<script type="text/javascript">
+	//一、JavaScript <script>标签体内进行调用
+	//1.普通函数调用
+	function plus(){
+		var a=3;
+		var b=4;
+		var sum = a+b;
+		alert(sum);
+	}
+	// plus();
+	//2.表达式函数的调用
+	/*var plus2 = function(){
+		var a=3;
+		var b=4;
+		var sum = a+b;
+		alert(sum);
+	}
+	plus2();
+	//3.对象内部方法的调用
+	var obj = {
+		name:"张三",
+		sayHi:function(){
+			alert('hello!');
+		}
+	}
+	obj.sayHi();
+	//4.声明的同时进行调用，用的较少
+	(function plus3(){
+		var a=3;
+		var b=4;
+		var sum = a+b;
+		alert(sum);
+	})
+	();*/
+</script>
+</body>
+</html>

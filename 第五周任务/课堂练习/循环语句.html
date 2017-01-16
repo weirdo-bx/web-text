@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		//while循环,打印出1-100的数
+		// var i = 1;
+		// while( i <= 100){ //如果为true则执行
+		// 	//代码块
+		// 	document.write(i+'<br/>');
+		// 	i++;
+		// }
+		//do/while语句,打印出1-100的数
+		// var i = 1;
+		// do{//最少总会这执行一次
+		// 	//代码块
+		// 	document.write(i+'<br/>');
+		// 	i++;
+		// }while( i <= 100);
+		//for循环
+		// var sum = 0;
+		// var i,j;
+		// for(var i = 1, j = 10; i <= 10; i++,j--){
+		// 	//代码块
+		// 	sum += i*j;//sum=sum+i;
+		// }
+		// alert(sum);
+		//for/in循环
+		// var a = ['张三','李四','王二麻子']
+		// for(var b in a){
+		// 	//代码块
+		// 	document.write(a[b]);
+		// }
+		// //break语句
+		// var i = 1;
+		// while( i <= 100){ //如果为true则执行
+		// 	//代码块
+		// 	document.write(i+'<br/>');
+		// 	i++;
+		// 	if(i==50){//当i==50时，终止循环，终止程序操作
+		// 		break;
+		// 	}
+		// }
+		//continue语句
+		// var a = 1;
+		// for(var i=0; i<=100; i++){ 
+		// 	if(i==50){
+		// 		continue;//当i==50时,不打印出来,继续执行下一循环
+		// 	}
+		// 	document.write(i+'<br/>');
+		// }
+		//return语句
+		function sum() {
+			var s = 0;
+			for(var i=0; i<=100;i++){
+				s+=i;
+				if (s>100) {
+					return s;//终止语句,返回一个值
+				}
+			}
+
+		}
+		document.write(sum());
+	</script>
+
+</head>
+<body>
+	
+</body>
+</html>

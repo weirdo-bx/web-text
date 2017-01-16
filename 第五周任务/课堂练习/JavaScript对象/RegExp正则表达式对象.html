@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Document</title>
+	<script type="text/javascript">
+		// var patt = new RegExp(pattern,modifiers);
+		// 或者：
+		// var patt = /pattern/modifiers;
+		// 例子：
+		// var patt = new RegExp('\\w+','i');
+		// var patt = /\w+/i;
+
+		// //var reg = new RegExp('hello',"gi");//第一种方法  +i不区分大小写的匹配,+g全文的搜索
+		// var reg = /hello/i;//第二种方法,+i不区分大小写的匹配,+g全文的搜索
+		// var str = "Hi, Hello jikexueyuan, Hello world!";
+		// document.write(reg.test(str));//返回true
+		// document.write(reg.exec(str));//exec  返回找到的值
+
+		// ("^[a-zA-Z]\w{5,15}$") 
+		// 正确格式："[a-z][A-Z]_[0-9]"组成,并且第一个字必须为字母6-16位
+		// ("^(\\d{3,4}-)\\d{7,8}$") 
+		// 正确格式：xxx/xxxx-xxxxxxx/xxxxxxxx
+		// ("^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"); 
+
+
+		//用户名校验列子
+		var username = "Fantasy";
+		//4-20位，字母，数字，下划线
+		var regex = /^\w{4,20}$/;//  \w  ==> [A-Za-z0-9_]  \d ==>[0-9]
+		if (regex.test(username)) {
+			alert("你的用户名可用");
+		}else{
+			alert('你的用户名不可用，必须是4-20位，字母，数字，下划线');
+		}
+
+		//xxx@qq.com  xxxxx@163.com
+		var email = "Fantasy@163.com";
+		//4-20位，字母，数字，下划线
+		var regex2 = /^\w+@\w+\.\w+$/;// 
+		if (regex2.test(email)) {
+			alert("你的邮箱可用");
+		}else{
+			alert('你的邮箱不可用');
+		}
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

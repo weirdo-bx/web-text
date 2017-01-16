@@ -1,0 +1,10 @@
+tbody tr td{
+    width: 55px;
+	text-align: center;
+}
+
+.h{
+	font-size:25px;
+	font-weight:bold;
+	line-height:50px;
+}

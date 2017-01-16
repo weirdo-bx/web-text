@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<p id="p1">hello</p>
+<p id="p2">hello 极客学院</p>
+<input type="text" id="i3" value="hello"><br>
+<button id="btn1">点我1</button>
+<button id="btn2">点我2</button>
+<button id="btn3">点我3</button>
+
+<br>
+<a href="http://www.baidu.com" id="aid" name="baidu">百度链接点击变极客</a>
+<button id="btn4">点我4</button>
+
+<p id="p5">第五个P元素</p>
+<button id="btn5">点我5</button>
+
+<script type="text/javascript" src="script/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#btn1").click(function(){
+			$("#p1").text("极客学院");//text修改id为p1里面的内容
+		});
+
+		$("#btn2").click(function(){
+			$("#p2").html("<a href='http://jikexueyuan.com'>极客学院</a>");//html增加标签和文字内容
+		});
+
+		$("#btn3").click(function(){
+			$("#i3").val("极客学院");//val修改文字内容
+		});
+
+		$("#btn4").click(function(){
+			$("#aid").attr("href","http://jikexueyuan.com");//attr修改属性
+			// $("#aid").attr({
+			// 	"href":"http://jikexueyuan.com",
+			// 	"name":"jikexueyuan"
+			// });//attr修改多个属性
+		});
+
+		$("#btn5").click(function(){
+			$("#p5").text(function(i,ot){
+				return "原来的文本："+ot+" , 这是新的内容："+("极客学院");//返回值，修改内容
+			});//val修改文字内容
+		});
+
+	});
+</script>
+</body>
+</html>

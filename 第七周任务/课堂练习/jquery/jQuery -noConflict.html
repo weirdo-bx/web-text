@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Hello!</div>
+    <button id="btn">点我</button>
+
+    <script type="text/javascript" src="script/jquery.min.js"></script>
+    <script type="text/javascript">
+        var myjq = $.noConflict();//消除美元符号对jQuery的缩写
+        myjq(document).ready(function() {
+            myjq("#btn").on("click",function(){
+                myjq("div").text("jquery,Hello!");
+            })
+        });
+    </script>
+</body>
+
+</html>

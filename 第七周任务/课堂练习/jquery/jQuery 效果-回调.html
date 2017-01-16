@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+	<button>点击</button>
+	<p>hello,world!</p>
+
+    <script type="text/javascript" src="script/jquery.min.js"></script>
+    <script type="text/javascript">
+	    $(document).ready(function() {
+			$("button").click(function(){
+				// $("p").hide(1000,function(){
+				// 	alert("动画结束,这个方法被称为回调");
+				// });
+				$("p").css("color","blue").slideUp(1000).slideDown(1000);//可以连写执行多个动画
+			});
+	    });
+    </script>
+</body>
+</html>

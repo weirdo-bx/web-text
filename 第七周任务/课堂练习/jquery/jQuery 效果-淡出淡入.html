@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+	<button id="fadeIn">淡入</button>
+	<button id="fadeOut">淡出</button>
+	<button id="fadeToggle">淡入淡出</button>
+	<button id="fadeTo">淡入</button>
+	<br>
+    <div id="div1" style="width: 100px;display: none;height: 100px;background: green;"></div>
+    <div id="div2" style="width: 100px;display: none;height: 100px;background: yellow;"></div>
+    <div id="div3" style="width: 100px;display: none;height: 100px;background: blue;"></div>
+
+    <script type="text/javascript" src="script/jquery.min.js"></script>
+    <script type="text/javascript">
+	    $(document).ready(function() {
+			$("#fadeIn").on("click",function(){
+				$("#div1").fadeIn(1000);//淡入显示
+				$("#div2").fadeIn(1000);
+				$("#div3").fadeIn(1000);
+			});
+
+			$("#fadeOut").on("click",function(){
+				$("#div1").fadeOut(1000);//淡出消失
+				$("#div2").fadeOut(1000);
+				$("#div3").fadeOut(1000);
+			});
+
+			$("#fadeToggle").on("click",function(){
+				$("#div1").fadeToggle(1000);//淡入淡出消失隐藏
+				$("#div2").fadeToggle(1000);
+				$("#div3").fadeToggle(1000);
+			});
+
+			$("#fadeTo").on("click",function(){
+				$("#div1").fadeTo(1000,0);//1000是动画时间，0是透明度
+				$("#div2").fadeTo(1000,0.5);
+				$("#div3").fadeTo(1000,1);
+			});
+	    });
+    </script>
+</body>
+</html>

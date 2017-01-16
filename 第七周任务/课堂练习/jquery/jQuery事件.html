@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="clickMeBtn">click me</button>
+
+<!-- 	<div style="width: 300px;height: 300px;background: blue;">
+		<ul>
+			<li>A</li>
+			<li>B</li>
+			<li>C</li>
+			<li>D</li>
+		</ul>
+	</div> -->
+	<script type="text/javascript" src="script/jquery.min.js"></script>
+	<script type="text/javascript">
+		// $(document).ready(function() {//加载完成
+		// 	// $("button").click(function(){//单击
+		// 	// $("button").dblclick(function(){//双击
+		// 	// $("button").mouseenter(function(){//鼠标移上隐藏
+		// 	$("button").mouseleave(function(){//鼠标移走隐藏
+		// 		$(this).hide();
+		// 	});
+		// });
+
+
+
+		//  $(document).ready(function(){
+		//  	// $("#clickMeBtn").click(function(){
+		//  	// 	alert('hello');
+		//  	// });
+		//  	$("#clickMeBtn").bind("click",a)//绑定事件，可绑定多个//on
+		//  	$("#clickMeBtn").unbind("click",a)//解除绑定，可指定解除//off
+		// });
+
+		//  function a(e){
+		//  	console.log("hello");
+		//  }
+
+
+		// $(document).ready(function(){
+		// 	$("body").bind("click",bodyHello);
+		// 	$("div").bind("click",divHello);
+		// 	$("div").bind("click",divHello2);
+		// });
+		// function bodyHello(event) {
+		// 	console.log(event);
+		// }
+		// function divHello(event) {
+		// 	console.log(event);
+		// 	event.stopPropagation();//阻止副级事件
+		// 	// event.stopImmediatePropagation();//阻止所有事件
+		// }
+		// function divHello2(event) {
+		// 	console.log(event);
+		// }
+
+		//自定义事件对象
+		var clickMeBtn;
+		$(document).ready(function() { 
+			clickMeBtn = $("#clickMeBtn")
+			clickMeBtn.click(function(){
+				var e = jQuery.Event("MyEvent");
+				clickMeBtn.trigger(e);
+			});
+
+			clickMeBtn.bind("MyEvent",function(event) {
+				console.log(event);
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+	
+    </style>
+</head>
+<body>
+	<input type="text" id="nameValue" name="">
+	<br>
+	<button id="btn">Send</button>
+	结果：<span id="resultd"></span>
+
+    <script type="text/javascript" src="script/jquery.min.js"></script>
+    <script type="text/javascript">
+	    $(document).ready(function(){
+	    	$("#btn").on("click",function(){
+	    		$("#resultd").text("请求数据中,请稍后...");
+	    		$.get("jQuery AJAX 异步访问.php",{name:$("#nameValue").val()},function(data){
+	    			alert("我就是看看请求数据");
+		    		$("#resultd").text(data);
+		    	}).error(function(){
+		    		$("#resultd").text("没有连接服务器,看毛线的结果呢?");
+		    	});
+		    	// $.post("jQuery AJAX 异步访问.php",{name:$("#nameValue").val()},function(data){
+		    	// 	$("#resultd").text(data);
+		    	// });
+
+	    	});
+	    });
+    </script>
+</body>
+</html>

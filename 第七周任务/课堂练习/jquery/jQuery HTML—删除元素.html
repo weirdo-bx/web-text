@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div" style="background: green;width: 300px;height: 300px;color: #fff;border: 1px solid blue;">
+        this is my div
+        <p id="p1">hello,world</p>
+        <p id="p1">hello,极客学院</p>
+    </div>
+    <button id="del">删除</button>
+    <script type="text/javascript" src="script/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        //remove       empty
+        $("#del").click(function() {
+            $("#div").remove(); //全部删除，包括自身
+            // $("#div").empty();//删除全部子元素，不包括自身
+        });
+    });
+    </script>
+</body>
+
+</html>

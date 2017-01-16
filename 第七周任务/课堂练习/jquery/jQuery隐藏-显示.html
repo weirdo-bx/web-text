@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+	    div {
+	        background: blue;
+	        width: 100px;
+	        height: 100px;
+	        margin: 10px;
+	        float: left;
+	    }
+    </style>
+</head>
+<body>
+    <p id="p1">hello</p>
+    <button id="hide">隐藏</button>
+    <button id="show">显示</button>
+    <button id="toggle">隐藏/显示</button>
+    <br>
+
+    <script type="text/javascript" src="script/jquery.min.js"></script>
+    <script type="text/javascript">
+	    $(document).ready(function() {
+	        $("#hide").click(function() {
+	            $("#p1").hide(2000); //隐藏
+	        });
+
+	        $("#show").click(function() {
+	            $("#p1").show(2000); //隐藏
+	        });
+	        $("#toggle").click(function() {
+	            $("#p1").toggle(1000); //隐藏/显示
+	        });
+	    });
+    </script>
+    <script type="text/javascript">
+	    for (var i = 0; i < 5; i++) {
+	        $("<div>").appendTo(document.body);
+	    };
+	    $("div").click(function() {
+	        $(this).hide(2000,function(){//隐藏
+	        	$(this).remove();//移除
+	        });
+	        
+	    });
+    </script>
+</body>
+</html>

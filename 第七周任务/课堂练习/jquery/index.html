@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery基础应用</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.text{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			margin: 10px;
+		}
+		p{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+		.tet{
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+<div class="text" data-name="第1个">
+</div>
+
+<div class="text" data-name="第2个">
+</div>
+
+<input type="button" name="" value="点我" id="btn"/>
+<img id="mydiv" src="http://img6.bdstatic.com/img/image/smallpic/touxiang1115.jpg">
+
+<script type="text/javascript" src="script/jquery.min.js"></script>
+<script type="text/javascript">
+	// alert($);
+	//ready =>html骨架准备完成
+	//onload =>整个页面加载完毕了
+	//$() => array
+	// $(document).ready(function () {
+	// 	var mydiv = $('.text');//变成原声对象的mydiv[0],把原声对象变成jquery $()
+	// 	console.log(mydiv);
+	// });
+
+	// $(function(){
+	// 	alert($('#mydiv').length);
+	// });
+
+	//$(选择器/对象).动作();
+	$(function(){
+		// $('.text').click(function(e){
+		// 	console.log(e);//获取类
+		// });
+
+		// $('.text').on('click',function(){
+		// 	alert(1);//获取类
+		// });
+
+		$('.text').on('click','#myp',function(){
+			alert('我是新加入的myp');
+		});
+
+		$('#btn').on('click',function(){
+			$('.text').append('<p id="myp">hello</p>');//插入元素
+			
+			// $('.text').css({
+			// 	color:'#fff',
+			// 	background:'red'//操作css
+			// });
+
+			$('.text').toggleClass('tet');//操作类名
+		});
+
+		$('.text').each(function(){
+			console.log($(this).attr('data-name'));
+		});
+
+	});
+</script>
+</body>
+</html>

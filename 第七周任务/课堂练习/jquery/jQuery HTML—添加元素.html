@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<p id="p1">hello,world</p>
+<button id="btn1">点击</button>
+<p id="p2">hello,world</p>
+<button id="btn2">点击</button>
+<br>
+<button onclick="appendText()">点击</button>
+
+<script type="text/javascript" src="script/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//append 在被选择元素的结尾插入内容
+		//prepend 在被选择元素的开头插入内容
+		//after 在被选择元素的结尾插入内容
+		//before 在被选择元素的开头插入内容
+		$("#btn1").click(function(){
+			// $("#p1").append(",this id my p");//在被选择元素的结尾插入内容
+			$("#p1").prepend("this id my p,");//在被选择元素的开头插入内容
+		});
+
+		$("#btn2").click(function(){
+			// $("#p2").after(",this id my p");//在被选择元素的结尾插入内容，会换行添加
+			$("#p2").prepend("this id my p,");//在被选择元素的开头插入内容
+		});
+	});
+
+	function appendText(){
+		//html  jQuery  DOM
+		var text1 = "<p>HTML添加元素</p>";//html
+		var text2 = $("<p></p>").text("jQuery添加元素");//jQuery
+		var text3 = document.createElement('p');
+		text3.innerHTML = "DOM添加元素";//DOM
+		$("body").append(text1,text2,text3);
+	}
+</script>
+</body>
+</html>

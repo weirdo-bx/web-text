@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+		#div1{
+			width: 100px;
+			height: 100px;
+			margin:  30px;
+			padding: 50px;
+			background: #393939;
+			border: 2px solid #ff0000
+		}
+    </style>
+</head>
+<body>
+	<div id="div1"></div>
+
+    <script type="text/javascript" src="script/jquery.min.js"></script>
+    <script type="text/javascript">
+	    $(document).ready(function() {
+	    	// alert($("#div1").height());//直接的高度，不包括其他，还可以进行设置宽度
+	    	// alert($("#div1").innerHeight());//包括padding的高度在内
+	    	alert($("#div1").outerHeight(true));//包括padding,border的高度在内。如果添加了值true,就会包含margin
+	    });
+    </script>
+</body>
+</html>

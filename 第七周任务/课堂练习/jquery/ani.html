@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery基础应用</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.text{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			margin: 10px;
+			/*display: none;*/
+		}
+		p{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+		.tet{
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+<div class="text" data-name="第1个">
+	测试
+</div>
+<input type="button" id="btn" value="动画测试" name="">
+
+<script type="text/javascript" src="script/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#btn').click(function(){
+			// $('.text').hide();//隐藏
+			//$('.text').show(1000);//显示，参数（显示时间）
+			//$('.text').toggle(1000);//点一下显示点一下隐藏
+			//$('.text').slideDown(1000);//向下出现，需要设置display: none;
+			// $('.text').slideToggle(1000);//点下上去，点下下来
+			//$('.text').slideUp(1000);//向上消失
+			$('.text').animate({
+				width:'20%',
+				height:'30%',
+				fontSize:"15px"
+			});
+		});
+	});
+</script>
+</body>
+</html>

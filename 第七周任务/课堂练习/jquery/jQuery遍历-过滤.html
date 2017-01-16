@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+		#div1 *{
+			display: block;
+			border: 3px solid #ff0000;
+			color: #000;
+			margin: 15px;
+			padding: 5px;
+		}	
+    </style>
+</head>
+<body>
+	<div>
+		<p>div1</p>
+	</div>
+	<div>
+		<p class="pclass">div2</p>
+	</div>
+	<div>
+		<p>div3</p>
+	</div>
+	<div>
+		<p>div4</p>
+	</div>
+	
+    <script type="text/javascript" src="script/jquery.min.js"></script>
+    <script type="text/javascript">
+	    // first()
+	    // last()
+	    // eq()
+	    // filter()
+	    // not()
+	    $(document).ready(function(){
+			// $("div p").first().css("background","#ff0000");//第一个
+			// $("div p").last().css("background","#ff0000");//最后一个
+			// $("div p").eq(0).css("background","#ff0000");//下标索引指定
+			$("div p").filter(".pclass").css("background","#ff0000");//指定元素中某一个元素的样式
+			// $("div p").not(".pclass").css("background","#ff0000");//指定元素中除了某一个元素其他元素的样式
+
+	    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>读取和改变HTML内容</title>
+
+</head>
+<body>
+	<div id="container">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</div>
+	<button onclick="output()">点我</button>
+	<script type="text/javascript">
+		// //1
+		// function output(){
+		// 	//document.write();可覆盖HTML标签
+		// 	document.write('<p>hello!</p>');
+		// }
+
+		// //2.innerHTML,outerHTML读取&改变HTML内容
+		// alert(document.getElementById('container').innerHTML);//读取，不包括自身标签内容
+		// alert(document.getElementById('container').outerHTML);//读取，包括自身标签内容
+
+		// document.getElementById('container').innerHTML = "<p>hellow!</p>";//改变，不包括自身标签内容
+		// document.getElementById('container').outerHTML = "<p>hellow!</p>";//改变，包括自身标签内容
+
+		//3.innerHTML,outerHTML读取&改变元素内的文本   存在兼容问题，不太建议使用
+		alert(document.getElementById('container').innerText);//读取，不包括自身标签文本内容
+		alert(document.getElementById('container').outerText);//读取，包括自身标签文本内容
+
+		document.getElementById('container').innerText = "你好！";//改变，不包括自身标签内容
+		document.getElementById('container').outerText = "你好！";//改变，包括自身标签内容
+	</script>
+</body>
+</html>

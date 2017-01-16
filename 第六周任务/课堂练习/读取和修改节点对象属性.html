@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>读取和修改节点对象属性</title>
+</head>
+<body>
+<div id="container" class="myDiv" style="background-color: red;">
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+</div>
+<img src="https://www.baidu.com/img/bd_logo1.png" id="img1">
+
+<script type="text/javascript">
+	//获取HTML元素属性：
+	//1.1  document.getElementById("id").attribute;//id,className等等
+	alert(document.getElementById("container").id);//id
+	alert(document.getElementById("container").className);//class
+	alert(document.getElementById("container").style.backgroundColor);//style
+	//1.2  document.getElementById("id").getAttribute(name);
+	alert(document.getElementById("container").getAttribute("style"));//可以直接写name
+	alert(document.getElementById("container").getAttribute("class"));
+	alert(document.getElementById("container").getAttribute("id"));
+
+	//改变HTML元素属性：
+	//2.1 document.getElementById("id").attribute = new value;
+	document.getElementById("container").style = "background-color:#00c;";
+	document.getElementById("img1").src = "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4155302816,1201715785&fm=116&gp=0.jpg";//改变图片
+	//2.2 document.getElementById("id").setAttribute(name,value);
+	document.getElementById("container").setAttribute("class","myDiv-1");
+
+
+	//移除HTML元素属性
+	// document.getElementById("id").removeAttribute(name);
+	document.getElementById("container").removeAttribute("style");
+</script>
+</body>
+</html>

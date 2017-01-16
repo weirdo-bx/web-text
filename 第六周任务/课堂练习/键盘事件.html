@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>键盘事件</title>
+</head>
+<body>
+
+<input type="text" onkeyup="keyCodeText(event)">
+	<script type="text/javascript">
+		function keydownHandler() {
+			console.log('onkeydown任意按键被按下');
+		}
+		function keypressHandler() {
+			console.log('onkeypress字符按键被按下');
+		}
+		function keypressUp() {
+			console.log('onkeyup按键被释放');
+		}
+
+		function keyCodeText(event) {
+			console.log(event.keyCode);//键盘编码
+			if (event.keyCode==13) {//回车键编码13
+				alert('按回车键提交');
+			}else{
+				alert('你按的不是回车键');
+			}
+		}
+	</script>
+</body>
+</html>

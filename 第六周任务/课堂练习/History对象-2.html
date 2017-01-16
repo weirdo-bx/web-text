@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>History-2</title>
+	<script type="text/javascript">
+		function backPage(){
+			window.history.back();
+		}
+
+		function goPage(){
+			window.history.go(-1);//回到前面用负数
+		}
+	</script>
+</head>
+<body>
+	第二页
+	<button onclick="backPage()">back回到前一页</button>
+	<button onclick="goPage()">go回到前一页</button>
+</body>
+</html>

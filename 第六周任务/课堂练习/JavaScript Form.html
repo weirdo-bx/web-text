@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<form action="https://www.baidu.com/s" id="myForm" onsubmit="">
+	<input type="text" name="word" id="word" onchange="changeHandler()">
+	<input type="password" name="password">
+	<input type="button" value="提交" onclick="toSubmit()">
+	<input type="button" value="重置" onclick="toReset()">
+	<input type="submit" value="submit提交"><!-- onsubmit自动提交 -->
+</form>
+
+<script type="text/javascript">
+	function changeHandler() {
+		alert('你输入的不是数字');//当文本框改变的时候触发--onchange
+	}
+	function toSubmit(){
+		var word = document.getElementById("word").value;
+		if (null == word || "" == word || "123" == word) {//表单为空
+			document.getElementById('word').focus();//表单为空，聚焦在上--focus()
+			document.getElementById('word').select();//表单123时，触发自动选中文本--select()
+			event.preventDefault();//取消默认行为--提交
+		}else{
+			document.getElementById('myForm').submit();//手动提交
+		}
+	}
+	function toReset(){
+		document.getElementById('myForm').reset();//手动重置
+	}
+</script>
+</body>
+</html>

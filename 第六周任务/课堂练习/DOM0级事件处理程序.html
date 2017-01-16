@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM0级事件处理程序</title>
+</head>
+<body>
+<!-- HTML事件处理程序 begin -->
+<!-- <button onclick="alert('你好！傻蹦');">点击1</button>
+<button onclick="sayHi()">点击2</button>
+<form>
+	<input type="text" name="username" value="傻逼"><!-- 要获取表单同级的其他元素可以通过name值获取value  前提是在同一form中 -->
+	<input type="button" name="btn1" onclick="alert(username.value);" value="点击3"><!-- 通过this关键字获取 -->
+</form>
+
+<script type="text/javascript">
+	function sayHi() {
+		alert('更不上，傻了吧');
+	}
+</script> -->
+<!-- HTML事件处理程序 end -->
+
+<!-- DOM0级事件处理程序 begin -->
+<!-- <button id="btnDom0">点击4（DOM0级事件处理程序）</button>
+<script type="text/javascript">
+	var btnDom0 = document.getElementById('btnDom0');
+	btnDom0.onclick = function(){
+		alert('傻逼，又hello');
+		alert(this.id);//通过this指定id获取id
+	}
+	btnDom0.onclick = null;//删除事件处理程序 
+</script> -->
+<!-- DOM0级事件处理程序 end -->
+<!-- 0级事件处理程序只能绑定一个值 -->
+
+
+</body>
+</html>

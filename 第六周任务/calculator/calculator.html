@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>计算器</title>
+	<link rel="stylesheet" type="text/css" href="css/calculator.css">
+</head>
+<body>
+	<form>
+		<table >
+			<tbody>
+				<!-- 输出结果 -->
+				<tr>
+					<td colspan="4">
+						<input type="text" name="number" class="result" id="Result">
+					</td>
+				</tr>
+				<!-- 第一行 -->
+				<tr>
+					<td>
+						<input type="button" name="button" value="C" onclick="inputXx(this)" class="color-1">
+					</td>
+					<td>
+						<input type="button" name="button" value="+/-" onclick="inputXx(this)" class="color-1">
+					</td>
+					<td>
+						<input type="button" name="button" value="←" onclick="inputXx(this)" class="color-1">
+					</td>
+					<td>
+						<input type="button" name="button" value="÷" onclick="inputOper(this)" class="color">
+					</td>
+				</tr>
+				<!-- 第二行 -->
+				<tr>
+					<td>
+						<input type="button" name="botton" value="7" onclick="inputEvent(this)">
+					</td>
+					<td>
+						<input type="button" name="botton" value="8" onclick="inputEvent(this)">
+					</td>
+					<td>
+						<input type="button" name="botton" value="9" onclick="inputEvent(this)">
+					</td>
+					<td>
+						<input type="button" name="button" value="*" onclick="inputOper(this)" class="color">
+					</td>
+				</tr>
+				<!-- 第三行 -->
+				<tr>
+					<td>
+						<input type="button" name="botton" value="4" onclick="inputEvent(this)">
+					</td>
+					<td>
+						<input type="button" name="botton" value="5" onclick="inputEvent(this)">
+					</td>
+					<td>
+						<input type="button" name="botton" value="6" onclick="inputEvent(this)">
+					</td>
+					<td>
+						<input type="button" name="button" value="-" onclick="inputOper(this)" class="color">
+					</td>
+				</tr>
+				<!-- 第四行 -->
+				<tr>
+					<td>
+						<input type="button" name="botton" value="1" onclick="inputEvent(this)">
+					</td>
+					<td>
+						<input type="button" name="botton" value="2" onclick="inputEvent(this)">
+					</td>
+					<td>
+						<input type="button" name="botton" value="3" onclick="inputEvent(this)">
+					</td>
+					<td>
+						<input type="button" name="button" value="+" onclick="inputOper(this)" class="color">
+					</td>
+				</tr>
+				<!-- 第五行 -->
+				<tr>
+					<td>
+						<input type="button" name="botton" value="0" onclick="inputEvent(this)">
+					</td>
+					<td>
+						<input type="button" name="button" value="." onclick="inputEvent(this)">
+					</td>
+					<td colspan="2">
+						<input type="button" name="button" value="=" class="equal" onclick="inputEquel(this)">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+<script type="text/javascript" src="JavaScript/calculator.js"></script>
+</body>
+</html>

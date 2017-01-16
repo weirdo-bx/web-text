@@ -1,0 +1,310 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	font-family: Arial, "Microsoft YaHei";
+	font-size: 14px;
+	/*background-color: #f7f7f8;*/
+}
+
+a{
+	text-decoration: none;
+	cursor: pointer;
+}
+/*头部*/
+#header{
+	widows: 100%;
+	height: 60px;
+	border-bottom: 1px solid #f1f1f1;
+}
+#header a{
+	color: #999;
+	font-size: 14px;
+}
+#header .header-W1000{
+	width: 1000px;
+	height: 60px;
+	margin: 0 auto;
+	/*border: 1px solid red;*/
+}
+
+/*天猫广告图标*/
+.banner-Tm{
+	float: left;
+	width: 190px;
+	height: 60px;
+	vertical-align: middle;
+	margin-right: 30px;
+	cursor: pointer;
+}
+/*天气日期模块*/
+.weather-date{
+	display: inline-block;
+	height: 60px;
+	float: left;
+	line-height: 60px;
+	cursor: pointer;
+}
+
+.weather-date .col1,
+.weather-date .col2{
+	padding-right: 8px;
+}
+/*箭头*/
+.arrow{
+	width: 7px;
+	height: 7px;
+	display: inline-block;
+	border-top: 1px solid #999;
+	border-left: 1px solid #999;
+	transform: rotate(-135deg);
+	-webkit-transform: rotate(-135deg);
+	-moz-transform: rotate(-135deg);
+	-o-transform: rotate(-135deg);
+	position: relative;
+	top: -2px;
+	left: 2px;
+}
+/*天气图标*/
+.weather-date .col2 img{
+	position: relative;
+    top: 5px;
+    margin-right: 2px;
+}
+/*温度*/
+.weather-date .col2 .temp{
+	margin-left: 5px;
+	font-size: 13px;
+}
+/*登陆*/
+.login{
+	float: left;
+	display: inline-block;
+	height: 60px;
+	line-height: 60px;
+	padding: 0 5px 0 5px;
+}
+.login a{
+	margin-left: 10px;
+}
+/*点击背景颜色*/
+.skin-color{
+	display: inline-block;
+	float: right;
+	height: 100%;
+}
+.skin-color button{
+	display: inline-block;
+	border: 0px;
+	outline: 0;
+	width: 20px;
+	height: 20px;
+	/*background: #00c;*/
+	float: left;
+	margin-left: 10px;
+	position: relative;
+    top: 20px;
+    font-size: 10px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+}
+/*点击更换信息栏背景色*/
+.red-1{
+	background: red;
+	color: #fff;
+}
+.blue-1{
+	background: blue;
+	color: red;
+}
+.yellow-1{
+	background: yellow;
+	color: #00c;
+}
+.orange-1{
+	background-color: orange;
+	color: #000;
+}
+.gray-1{
+	background-color: gray;
+	color: #fff;
+}
+.pink-1{
+	color: #fff;
+	background-color: pink;
+}
+.violet-1{
+	color: #fff;
+	background-color: violet;
+}
+/*搜索框*/
+.seek {
+	margin-top: 30px;
+	display: block;
+    margin: 0 auto;
+    width: 1000px;
+    height: 80px;
+    cursor: pointer;
+}
+.seek .seek-box{
+	width: 772px;
+    margin: auto;
+    margin-top: 10px;
+}
+.seek .baidu-logo{
+	float: left;
+
+}
+.seek .seek-input{
+	float: left;
+    position: relative;
+    top: 30px;
+}
+.seek .seek-input input{
+	width: 500px;
+	height: 37px;
+	outline: 0;
+	padding: 0 10px 0 10px;
+	font-size: 14px;
+	border: 1px solid #ccc;
+}
+.seek .seek-input button{
+	width: 100px;
+    height: 39px;
+    position: relative;
+    left: -5px;
+    font-size: 14px;
+    background: #3385ff;
+    border: 0px;
+    border-bottom: 1px solid #2d78f4;
+    color: #fff;
+    letter-spacing: 1px;
+}
+.seek .seek-input input[type="text"]:focus{
+	border-color: #38f;
+}
+.seek .seek-input input[type="text"]:hover{
+	border-color: #8e8e8e;
+}
+.seek .seek-input button:hover{
+	background-color: #1269ea;
+	border-bottom: 1px solid #0d5cd2;
+}
+/*导航栏*/
+.nav-box{
+	margin-top: 30px;
+	display: block;
+}
+.nav-box .nav-headline,
+.nav-box .nav-subtitle{
+	width: 1000px;
+	display: block;
+	height: 38px;
+	/*border: 1px solid red;*/
+	margin: 0 auto;
+}
+/*主标题边框*/
+.nav-box .nav-headline{
+	border-top: 2px solid green;
+}
+/*副标题边框*/
+.nav-box .nav-subtitle{
+	border:1px solid green;
+	border-top: 1px solid #ccc;
+}
+.nav-box .nav-headline ul li,
+.nav-box .nav-subtitle ul li{
+	margin: 0px;
+	padding: 0px;
+	display: block;
+    float: left;
+    width: 9.09%;
+	/*background-color: #00c;*/
+	text-align: center;
+	line-height: 38px;
+	color: #000;
+}
+.nav-box .nav-subtitle ul li{
+	width: 6.25%;
+}
+.nav-box .nav-headline ul li a,
+.nav-box .nav-subtitle ul li a{
+	display: block;
+	color: #000;
+}
+.nav-box .nav-headline ul li a:hover{
+	background-color: green;
+	color: #fff;
+}
+.nav-box .nav-headline ul li a:hover .headline-j{
+	display: none;
+}
+/*主标题文字*/
+.nav-box .nav-headline ul li{
+	font-size: 15px;
+	font-weight: bold;
+	position: relative;
+}
+.nav-box .nav-headline ul li .headline-j{
+	display: inline-block;
+	width: 1px;
+	height: 20px;
+	position: absolute;
+	right: 0px;
+	top: 9px;
+	background-color: #ccc; 
+}
+/*副标题文字*/
+.nav-box .nav-subtitle ul li{
+	font-size: 14px;
+}
+.container{
+	width: 1000px;
+	/*border: 1px solid red;*/
+	margin: 0 auto;
+	margin-top: 20px;
+	height: 230px;
+	display: block;
+}
+.container .img{
+	width: 250px;
+	height: 80px;
+	background-color: green;
+	display: block;
+	text-align: center;
+	line-height: 80px;
+	color: #fff;
+	margin-bottom: 10px;
+}
+.container .news{
+	display: block;
+	width: 250px;
+	height: 140px;
+	background-color: green;
+	text-align: center;
+	line-height: 140px;
+	color: #fff;
+}
+.container .left-1{
+	margin-right: 10px;
+	float: left;
+}
+.container .URL{
+	float: left;
+	width: 740px;
+	height: 230px;
+	background-color: green;
+	text-align: center;
+	line-height: 230px;
+	color: #fff;
+}
+
+
+
+
+
+
+

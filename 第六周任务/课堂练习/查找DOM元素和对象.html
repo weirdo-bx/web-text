@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>查找DOM元素和对象</title>
+</head>
+<body>
+	<div id="div1">
+		hello!
+	</div>
+	<div id="div2">
+		hello!
+	</div>
+	<div id="div3">
+		hello!
+	</div>
+
+	<p class="container">你好</p>
+	<p class="container">你好</p>
+	<p class="container">你好</p>
+	<p class="container">你好</p>
+</body>
+	<script type="text/javascript">
+		// // getElementById()//返回带有指定id的元素
+		// var obj = document.getElementById('div1').innerHTML;
+		// alert(obj);
+
+		// // getElementsByTagName()//返回包含带有指定标签名称的所有元素的节点列表(集合/节点数组)
+		// var obj = document.getElementsByTagName('div');
+		// alert(obj.length);
+
+		// getElementsByClassName()//返回包含带有指定类名的所有元素的节点列表
+		var obj = document.getElementsByClassName('container');
+		alert(obj.length);
+	</script>
+</html>

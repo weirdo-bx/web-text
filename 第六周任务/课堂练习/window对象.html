@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var width = window.innerWidth;
+		var height = window.innerHeight;
+		//window.document.write('宽度：'+width+'，高度：'+height);//页面可见宽高，不包括任务栏
+
+		var outerWidth = window.outerWidth;
+		var outerHeight = window.outerHeight;
+		//window.document.write('<br>总宽度：'+outerWidth+'，总高度：'+outerHeight);//整个页面可见宽高，包括任务栏
+
+
+		//打开窗口
+		function openWin(){
+			//window.open("http://www.baidu.com","MyWindow","width=20,height=20,left=50,top=300");
+			//用都好分隔，可以设置链接，名称，窗口宽高等等
+			var myW = window.open("http://www.baidu.com","MyWindow","width=20,height=20,left=50,top=300");
+			myW.document.write('这是一个窗口的内容');
+		}
+
+		//关闭窗口
+		function closeWin(){
+			window.close();
+		}
+
+		//打印窗口
+		function printWin(){
+			window.print();
+		}
+	</script>
+</head>
+<body>
+	<button onclick="openWin()">打开窗口</button>
+	<button onclick="closeWin()">关闭窗口</button>
+	<button onclick="printWin()">打印窗口</button>
+</body>
+</html>

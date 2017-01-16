@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML事件处理程序</title>
+</head>
+<body>
+	
+<button onclick="alert('你好！傻蹦');">点击1</button>
+<button onclick="sayHi()">点击2</button>
+<form>
+	<input type="text" name="username" value="傻逼"><!-- 要获取表单同级的其他元素可以通过name值获取value  前提是在同一form中 -->
+	<input type="button" name="btn1" onclick="alert(username.value);" value="点击3"><!-- 通过this关键字获取 -->
+</form>
+
+<script type="text/javascript">
+	function sayHi() {
+		alert('更不上，傻了吧');
+	}
+</script>	
+</body>
+</html>

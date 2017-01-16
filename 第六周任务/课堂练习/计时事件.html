@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计时事件</title>
+	<script type="text/javascript">
+	//setTimeout()定时事件，只执行一次
+		// var st;
+		// function start() {
+		// 	st = setTimeout(function() {
+		// 		alert('Hello!');
+		// 	},3000);//单位是毫秒,1000毫秒=1秒,只执行一次
+		// }
+		
+		// function stop() {
+		// 	clearTimeout(st);//语法
+		// }
+
+	//setInterval()定时时间，无限循环执行
+		var stint = null;
+		function start(){
+			stint = setInterval(function(){
+				var date = new Date();
+				var str = date.toLocaleString();
+				document.getElementById("clock").innerText=str;
+			},1000)
+		}
+
+		function stop(){
+			clearInterval(stint);//传参数   语法
+		}
+	</script>
+</head>
+<body>
+	时钟：<span id="clock"></span>
+	<button onclick="start()">开始</button>
+	<button onclick="stop()">停止</button>
+</body>
+</html>

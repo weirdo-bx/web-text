@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM中的事件对象</title>
+</head>
+<body>
+<div id="myDiv">
+	<button onclick="alert(event.type);">event.type点击1</button><!-- 返回ckick  被触发的事件的类型 -->
+	<button onclick="alert(event.target);">event.target点击2</button><!-- 返回button  事件目标 -->
+	<button id="btn0">event.type点击3  0级事件</button><!-- 返回ckick  被触发的事件的类型 -->
+	<button id="btn2">event.target点击4  2级事件</button><!-- 这里返回id  事件目标 -->
+
+	<a href="http://www.baidu.com" id="myLink">百度</a>
+</div>
+
+<script type="text/javascript">
+	var btn0 = document.getElementById('btn0');
+	btn0.onclick = function (event) {
+		alert(event.type);//0级事件
+	}
+
+	var btn2 = document.getElementById('btn2');
+	btn2.addEventListener('click',function () {
+		alert(event.target.id);//2级事件.event.target==>this  可以通过它获取其他值
+		event.stopPropagation();//点击按钮4时，阻止时间冒泡继续传播，这里就不触发div
+	},false);
+
+	var myLink = document.getElementById('myLink');
+	myLink.onclick = function (event) {
+		alert(event.type);
+		event.preventDefault();//取消默认行为，跳转
+	}
+
+	var myDiv = document.getElementById('myDiv');
+	myDiv.addEventListener('click',function () {
+		alert('触发div');
+	},false);
+</script>
+</body>
+</html>

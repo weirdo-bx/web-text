@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标事件</title>
+</head>
+<body>
+<div id="div1" ondblclick="dblclickDiv(this)" onmousedown="changeBg(this,'yellow')" onmouseup="changeBg(this,'orange')">
+	你是猪你是猪你是猪你是猪你是猪你是猪
+</div>
+<button onmouseover="change(this)" onmouseout="normal(this)">按钮</button>
+	<script type="text/javascript">
+		function dblclickDiv(obj) {
+			obj.style.background="red";//双击对象时调用的事件
+		}
+		function change(obj) {
+			obj.style.border="2px solid green";//鼠标移到元素之上
+		}
+		function normal(obj) {
+			obj.style.border="0px";//鼠标从元素上移开
+		}
+		function normal(obj) {
+			obj.style.border="0px";//鼠标从元素上移开
+		}
+
+		function changeBg(obj,color) {
+			obj.style.background=color;//鼠标按键被松开&鼠标按键被按下
+		}
+	</script>
+</body>
+</html>

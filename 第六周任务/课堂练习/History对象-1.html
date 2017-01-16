@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>History-1</title>
+	<script type="text/javascript">
+		function forwardPage(){
+			window.history.forward();
+		}
+
+		function goPage(){
+			window.history.go(1);//前进多少页
+		}
+	</script>
+</head>
+<body>
+	第一页
+	<a href="History对象-2.html">跳转到第二页</a>
+	<button onclick="forwardPage()">forward前进</button>
+	<button onclick="goPage()">go前进</button>
+</body>
+</html>

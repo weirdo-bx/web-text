@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>焦点事件</title>
+</head>
+<body>
+	<input type="text" name="" onfocus="foucsText(this)" onblur="blurText(this)">
+	<script type="text/javascript">
+		function foucsText(obj) {
+			obj.style.background="red";//获得焦点时
+		}
+		function blurText(obj) {
+			obj.style.background="green";//失去焦点时
+			obj.value=obj.value.toUpperCase();//全部转换大写
+		}
+	</script>
+</body>
+</html>

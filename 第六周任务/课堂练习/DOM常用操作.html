@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM常用操作</title>
+</head>
+<body>
+<div id="myDiv"><p>1</p>
+	<p>2</p>
+	<p>3</p>
+	<div id="myDiv2"><p>0</p>
+		<p>4</p>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	// 创建新的HTML元素：
+	// var p = document.createElement('p');// createElement()  创建一个元素
+	// var txt = document.createTextNode('Hello!');// createTextNode()  创建一个纯文本
+	// //<p>Hello!</p>
+	// p.appendChild(txt);// appendChild(newltem)  插入一个新的元素
+
+	// var mydiv = document.getElementById('myDiv');
+	// mydiv.appendChild(p);
+
+	// var mydiv2 = document.getElementById('myDiv2');// cloneNode()  克隆
+	// var mydiv3 = mydiv2.cloneNode(true);//加true可以克隆子元素，不加则没有
+	// mydiv.appendChild(mydiv3);
+
+	var mydiv = document.getElementById('myDiv');
+	var mydiv2 = document.getElementById('myDiv2');
+	var node = mydiv2.firstChild;//firstChild  获取第一个元素; lastChild   获取最后一个元素
+	// mydiv.insertBefore(node, mydiv.childNodes[0]);// insertBefore(newltem,existingltem)  在...之前插入  新的元素,排列
+
+	// 删除HTML元素：
+	// removeChild()
+	mydiv2.removeChild(node);
+</script>
+</body>
+</html>

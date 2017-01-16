@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>UI事件（框架和对象事件）</title>
+</head>
+<body onunload="unloadPage()" onload="loadPage()" onresize="resizePage()"   onscroll="scrollPage()" style="width: 2000px;">
+<img src="http://img01.sogoucdn.com/net/a/04/link?appid=100520145&url=http%3A%2F%2Fimg01.sogoucdn.com%2Fapp%2Fa%2F100520093%2Fca86e620b9e623ff-e7ae36db714776c0-b5519fad890d08508a931b72740891cf.jpg" onload="loadimgs()">
+
+<input type="text" name="text" onselect="getSelect(this)">
+
+<script type="text/javascript">
+	function loadPage() {
+		alert('加载完毕');//onload="loadPage()"
+	}
+	function loadimgs() {
+		alert('图片加载完毕');
+	}
+
+	function unloadPage() {
+		//销毁资源的代码逻辑
+		console.log("卸载完毕！");
+	}
+
+	function getSelect(obj) {
+		alert('选中文本干哈');
+	}
+
+	function resizePage() {
+		alert('调整页面干哈');
+	}
+
+	function scrollPage() {
+		alert(document.body.scrollTop);//打印滚动的高度
+	}
+</script>	
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>常用DOM对象操作示例Table</title>
+</head>
+<body>
+<!-- 表格 -->
+<!-- 	<table border="1" width="800px">
+		<tbody>
+			<tr>
+				<td>1,1</td>
+				<td>1,2</td>
+			</tr>
+			<tr>
+				<td>2,1</td>
+				<td>2,2</td>
+			</tr>
+		</tbody>
+	</table> -->
+
+<script type="text/javascript">
+	// //1.创建表格
+	// var table = document.createElement('table');
+	// table.border = 1;
+	// table.width = "800px";
+
+	// //2.创建tbody
+	// var tbody = document.createElement('tbody');
+	// table.appendChild(tbody);
+
+	// //3.创建1行
+	// var tr1 = document.createElement('tr');
+	// tbody.appendChild(tr1);
+	// //4.创建第1列
+	// var td1 = document.createElement('td');
+	// tr1.appendChild(td1);
+	// //5.创建文本
+	// td1.appendChild(document.createTextNode('1,1'));
+	// //第2列
+	// var td2 = document.createElement('td');
+	// tr1.appendChild(td2);
+	// td2.appendChild(document.createTextNode('1,2'));
+
+	// //3.创建2行
+	// var tr2 = document.createElement('tr');
+	// tbody.appendChild(tr2);
+	// //4.创建第1列
+	// var td3 = document.createElement('td');
+	// tr2.appendChild(td3);
+	// //5.创建文本
+	// td3.appendChild(document.createTextNode('2,1'));
+	// //第2列
+	// var td4 = document.createElement('td');
+	// tr2.appendChild(td4);
+	// td4.appendChild(document.createTextNode('2,2'));
+
+	// //最后把表格附加给body
+	// document.body.appendChild(table);
+
+
+
+	// table对象提供的简易方法
+	//1.创建表格
+	var table = document.createElement('table');
+	table.border = 1;
+	table.width = "1000px";
+
+	//2.创建tbody
+	var tbody = document.createElement('tbody');
+	table.appendChild(tbody);
+
+	//3.创建1行
+	tbody.insertRow(0);//参数从0开始,表示第1行,从哪里开始,从哪里插入几行
+	tbody.rows[0].insertCell(0);//在第1行插入第1个单元格
+	tbody.rows[0].cells[0].appendChild(document.createTextNode("1,1"));//第1行插入的第1个单元格的内容
+	tbody.rows[0].insertCell(1);//在第1行插入第2个单元格
+	tbody.rows[0].cells[1].appendChild(document.createTextNode("1,2"));//第1行插入的第2个单元格的内容
+
+	//4.创建2行
+	tbody.insertRow(1);
+	tbody.rows[1].insertCell(0);//在第2行插入第1个单元格
+	tbody.rows[1].cells[0].appendChild(document.createTextNode("2,1"));//第2行插入的第1个单元格的内容
+	tbody.rows[1].insertCell(1);//在第1行插入第2个单元格
+	tbody.rows[1].cells[1].appendChild(document.createTextNode("2,2"));//第2行插入的第2个单元格的内容
+
+	//最后把表格附加给body
+	document.body.appendChild(table);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>IE中的事件对象</title>
+</head>
+<body>
+<div id="myDiv">
+<button id="btn0">event.type点击1</button><!-- 返回ckick  被触发的事件的类型 -->
+<a href="http://www.baidu.com" id="myLink">百度</a>
+</div>
+
+<script type="text/javascript">
+	var btn0 = document.getElementById('btn0');
+	btn0.onclick = function(){
+		alert(window.event.type);//事件类型
+	}
+
+	// btn0.attachEvent('onclick',function(){
+	// 	alert(window.event.srcElement);。。。不起作用
+	// });
+
+	// btn0.attachEvent("onclick",function(event){
+	// 	alert(event.srcElement);。。。不起作用
+	// });
+
+	var myLink = document.getElementById('myLink');
+	myLink.onclick = function(){
+		alert('你是猪吗');
+		window.event.returnValue = false;//取消默认行为，跳转。。。不起作用
+	}
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

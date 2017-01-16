@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BOM</title>
+</head>
+<body>
+<input type="button" name="" id="test" value="test" style="color: red;">
+<script type="text/javascript">
+// var style ={
+// 	color:"green"
+// }
+// window.test();
+// function test() {
+// 	alert(this.style.color);
+// }
+// document.getElementById('test').onclick=test;
+// this.a = 1000;
+// function test() {
+// 	this.a = 1;
+// }
+// test.prototype.geta = function() {
+// 	return this.a;
+// };
+
+// var p = new test;
+// console.log(p.geta());//1
+
+// function test() {
+// 	this.a = 1;
+// }
+// test.prototype.a = 100;
+// var p = new test;
+// console.log(p);
+
+// function test(num) {
+// 	var num = num + 4;//这里对num这个变量创建了一个内存副本，按值传递
+// 	return num;
+// }
+// var num = 1;
+// alert(test(num));//5
+
+function test(obj) {
+	//当前的obj对内存的这个地址指向同一个，按引用传递
+	obj.age = "20";
+	console.log('内部obj',obj);
+}
+var obj ={
+	name:"xiaoming"
+}
+test(obj);
+console.log('外部obj',obj);
+// js对象，object，array按引用操作
+//string，number，boolean按值操作
+
+
+
+//谁调用就指向谁
+	// this.m=100;
+	// function test() {
+	// 	alert(this.m);
+	// }
+	// window.test();
+
+	// this.m = 1000;
+	// var obj = {
+	// 	m:100,
+	// 	test:function () {
+	// 		alert(this.m);
+	// 		return function () {
+	// 			alert(this.m);//里面的这个funceion指向了外面的this.m = 1000,所以现在这个alert(this.m)==1000;
+	// 		}
+	// 	}
+	// };
+	// (obj.test())();//obj.test()==100;
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>操作HTML的css样式</title>
+	<style type="text/css">
+		header,article,footer{
+			font-size: 22px;
+			height: 200px;
+			text-align: center;
+		}
+
+
+		/*定义JavaScript切换class类名更换皮肤的属性*/
+		.skin-green{
+			background-color: green;
+
+		}
+		.skin-yellow{
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body class="myclass" id="color">
+	<!-- <div id="myDiv">
+		hello world!
+	</div> -->
+	
+	<!-- <button onclick="document.body.style.backgroundColor='green'"">点击切换绿色皮肤</button>
+	<button onclick="document.body.style.backgroundColor='yellow'"">点击切换黄色皮肤</button> -->
+
+	<button onclick="document.getElementById('color').className='skin-green'">点击切换绿色皮肤</button>
+	<button onclick="document.getElementById('color').className='skin-yellow'"">点击切换黄色皮肤</button>
+
+	<!-- 利用函数换肤 --><!-- 
+	<button onclick="changeSkin('skin-green')">点击切换绿色皮肤</button>
+	<button onclick="changeSkin('skin-yellow')">点击切换黄色皮肤</button> -->
+
+	<header>导航栏</header>
+	<article>正文</article>
+	<footer>底部</footer>
+
+	<script type="text/javascript">
+		// // 改变HTML样式：
+		// // document.getElementById("id").style.property = new style;
+		// document.getElementById("myDiv").style.color = "red";
+		// // document.getElementByld("id").className = class name;
+
+		// function changeSkin(skin){
+		// 	document.body.className=skin//利用函数换肤
+		// }
+
+	</script>                 
+</body>
+</html>

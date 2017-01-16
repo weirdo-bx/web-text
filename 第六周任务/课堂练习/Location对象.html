@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Location对象 </title>
+	<script type="text/javascript">
+	//重新载入新的页面
+	function assinNew(){
+		window.location.assign('http://www.baidu.com');
+	}
+	//重新载入当前页面
+	function reloadCur(){
+		window.location.reload();
+	}
+	//重新载入当前页面
+	function replaceNew(){
+		window.location.replace('http://www.jikexueyuan.com');
+	}
+	</script>
+</head>
+<body>
+	<button onclick="assinNew()">assign重新载入新的页面</button>
+	<button onclick="reloadCur()">reload重新载入当前页面</button>
+	<button onclick="replaceNew()">replace替换当前页面</button>
+</body>
+</html>

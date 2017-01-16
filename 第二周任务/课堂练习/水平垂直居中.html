@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8"/>
+	<title>水平垂直居中</title>
+	<style type="text/css">
+		#mycenter{
+			height: 300px;
+			width: 400px;
+			background-color:aquamarine;
+			/*line-height: 20px;*/
+			display: table;
+			text-align: center;
+			/*margin-left: auto;
+			margin-right: auto;*/
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left:-200px;
+			margin-top: -150px;
+		}
+		.inner{
+			display: table-cell;
+			vertical-align: middle;
+			/*width: 1000px;
+			height: 300px;*/
+			background-color: red;
+		}
+		/*#mycenter1{
+			height: 300px;
+			width: 400px;
+			background-color:red;
+			line-height: 300px;
+			text-align: center;
+			float: right;
+			margin: 50px;
+		}*/
+	</style>
+</head>
+<body>
+<div id="mycenter">
+	<div class="inner">
+		<img src="https://upd13.sogoucdn.com/nstatic/img/logo.png?v=2">
+	</div>
+</div>
+<!-- <div id="mycenter1">
+	
+	山盟海誓不过如此
+	
+</div> -->
+</body>
+</html>

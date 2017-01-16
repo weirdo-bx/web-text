@@ -1,0 +1,119 @@
+/*整体*/
+body{
+	background: url(../image/b.png);
+	background-repeat:repeat;
+}
+
+/*页面整体*/
+center{
+	border-radius:30px;
+	background-color: #FFFFFF;
+	margin:0px auto;
+	width: 800px;
+	height: auto ;
+}
+
+/*logo*/
+.logo_left{
+	float: left;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+/*导航*/
+.nav_right{
+	float: right;
+	margin-right: 30px;
+	margin-top: 80px;
+}
+.nav_right a:link,a:visited,a:active{
+	color: #FF1493;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.nav_right a:hover{
+	color: #228B22;
+	text-decoration: underline;
+}
+
+/*中间表单背景色*/
+.color{
+	background-color: #FFFFFF;
+}
+
+/*大标题*/
+.h{
+	font-size: 20px;
+	font-weight: bold;
+	line-height:40px;
+}
+
+/*注册说明*/
+.td_1{
+	font-size: 12px;
+	text-align: center;
+	background: url(../image/h.png);
+}
+
+/*小标题*/
+th{
+	font-size: 13px;
+	color: #003399;
+	font-weight: bold;
+	text-align: left;
+	background-color: #EEEEEE;
+}
+
+/*整个文档内容字体*/
+td{
+	font-size: 12px;
+	text-align: left;
+}
+textarea{
+	resize: none;/*不允许文本框拖动*/
+}
+
+/*辅导授课小标题*/
+.tableCheckbox{
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+}
+
+/*第一行td向右对齐*/
+.right{
+	text-align: right;
+	width: 120px;
+}
+
+/*所有红色字体*/
+span{
+	color: red;
+}
+
+/*所有蓝色字体*/
+.blue{
+	color: blue;
+}
+
+
+/*授课区域恢复默认字样*/
+label{
+	font-weight: normal;
+}
+
+/*提交按钮*/
+.submit{
+text-align: center;
+}
+
+/*底部*/
+.copyright{
+	font-size: 13px;
+}
+
+/*版权颜色*/
+.font_1{
+	color: #808080;
+}

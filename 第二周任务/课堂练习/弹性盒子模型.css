@@ -1,0 +1,19 @@
+/*.fleft{
+	float: left;
+	width: 300px;
+}
+
+.fright{
+	float: right;
+	width: 300px;
+	background-color: red;
+}*/
+
+.center{
+	height: 300px;
+	width: 300px;
+	background-color: orange;
+	display: -webkit-box;
+	-webkit-box-pack: center;/*水平居中*/ 
+	-webkit-box-align: center;/*垂直居中*/
+}

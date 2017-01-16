@@ -1,0 +1,103 @@
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+/*正常盒子模型*/
+/*pc端用的较多*/
+.xiezi{
+	width: 100px;
+	height: 100px;
+	background-color: orange;
+}
+
+.xiehe{
+	margin: 50px;
+	padding: 10px;
+	width: 100px;
+	height: 100px;
+	background-color: aqua;
+	border: 3px solid #8f8f8f;
+}
+/*怪异盒子模型*/
+/*手机端用的较多*/
+.xiezi_2{
+	width: 100px;
+	height: 100px;
+	background-color: orange;
+}
+
+.xiehe_2{
+	margin: 50px;
+	padding: 10px;
+	width: 126px;
+	height: 126px;
+	background-color: aqua;
+	border: 3px solid #8f8f8f;
+	box-sizing: border-box;
+}
+
+
+
+.col{
+	-webkit-column-count:4;/*分行数*/
+	-webkit-column-rule-style:dotted;
+}
+
+.center{
+	height: 300px;
+	width: 300px;
+	background-color: orange;
+	display: -webkit-box;/*设置元素为box*/
+	-webkit-box-pack: center;/*水平居中*/ 
+	-webkit-box-align: center;/*垂直居中*/
+}
+
+
+.con{
+	display: -webkit-flex;
+	/*display: -webkit-box;*/
+	width: 100%;
+	background-color: #ffc;
+}
+.first{
+	height: 100px;
+	-webkit-flex: 1;
+	background-color: orange;
+}
+.second{
+	height: 150px;
+	-webkit-flex: 1;
+	background-color: aquamarine;
+}
+.three{
+	height: 200px;
+	-webkit-flex: 1;
+	background-color: #E3FF7F;
+}
+
+.row{
+	display: -webkit-flex;
+	width: 100%;
+	background-color: #ff3;
+	flex-direction: column;
+}
+
+.first_1{
+	height: 100px;
+	-webkit-flex: 1;
+	background-color: orange;
+	order: 2;/*改变顺序*/
+}
+.second_2{
+	height: 100px;
+	-webkit-flex: 1;
+	background-color: aquamarine;
+	order: 3;/*改变顺序*/
+}
+.three_3{
+	height: 100px;
+	-webkit-flex: 1;
+	background-color: #E3FF7F;
+	order: 1;/*改变顺序*/
+}

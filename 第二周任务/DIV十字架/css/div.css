@@ -1,0 +1,73 @@
+/*整体*/
+div{
+	width: 100px;
+	height: 100px;
+}
+
+/*上面的正方形*/
+.top{
+	background-color: red;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -50px;
+	margin-top: -150px;
+	box-shadow: 7px 0px 15px rgba(0,0,0,.5);
+	/*(0,0,0,.5);这几个数值分别表示的是什么意思？
+	我有试过最后一个值，貌似是表示阴影的颜色深浅
+	这个阴影还不是很会使用，后面几个值没讲解，还请老师讲解一下
+	最大可使用值是多少呢？最后一个值我有设置很大，
+	但是和设置小一点好像也没什么区别
+	*/
+}
+
+/*右边的正方形*/
+.right{
+	background-color: gold;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: 50px;
+	margin-top: -50px;
+	box-shadow: 7px 0px 15px rgba(0,0,0,.5);
+}
+
+/*下面的正方形*/
+.bottom{
+	background-color: black;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -50px;
+	margin-top: 50px;
+	box-shadow: 0px 7px 15px rgba(0,0,0,.5);
+}
+
+/*左边的正方形*/
+.left{
+	background-color: #1E90FF;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -150px;
+	margin-top: -50px;
+	box-shadow: 0px 7px 15px rgba(0,0,0,.5);
+}
+
+/*中间的正方形*/
+.middle{
+	background-color: green;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -50px;
+	margin-top: -50px;
+
+
+}
+
+/*中间的图片居中*/
+.img{
+	padding: 18px;
+}
+	

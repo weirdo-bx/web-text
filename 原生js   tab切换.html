@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>tab切换</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 12px;
+    }
+    
+    .notice {
+        width: 298px;
+        height: 98px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        overflow: hidden;
+    }
+    
+    .notice-tit {
+        height: 27px;
+        position: relative;
+        background-color: #f7f7f7;
+    }
+    
+    .notice-tit ul {
+        position: absolute;
+        width: 301px;
+        left: -1px;
+    }
+    
+    .notice-tit li {
+        float: left;
+        width: 58px;
+        height: 26px;
+        line-height: 26px;
+        overflow: hidden;
+        border-bottom: 1px solid #eee;
+        text-align: center;
+        padding: 0 1px;
+        background: #eee;
+    }
+    
+    .notice-tit li.select {
+        border-bottom-color: #fff;
+        border-left: 1px solid #eee;
+        border-right: 1px solid #eee;
+        padding: 0;
+        background: #fff;
+        font-weight: bolder;
+    }
+    
+    .notice li a:link,
+    .notice li a:visited {
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .notice li a:hover {
+        color: #f90;
+    }
+    .notice-con .mod{
+    	margin: 10px 10px 10px 19px;
+    }
+    .notice-con .mod ul li{
+    	float: left;
+    	width: 134px;
+    	height: 25px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="notice" class="notice">
+        <div id="notice-tit" class="notice-tit">
+            <ul>
+                <li><a href="#">公告</a></li>
+                <li><a href="#">规则</a></li>
+                <li><a href="#">论坛</a></li>
+                <li><a href="#">安全</a></li>
+                <li class="select"><a href="#">公益</a></li>
+            </ul>
+        </div>
+        <div id="notice-con" class="notice-con">
+        	<div class="mod" style="display: none;">
+        		<ul>
+        			<li><a href="#">单线程模型1</a></li>
+        			<li><a href="#">单线程模型1</a></li>
+        			<li><a href="#">单线程模型1</a></li>
+        			<li><a href="#">单线程模型1</a></li>
+        		</ul>
+        	</div>
+        	<div class="mod" style="display: none;">
+        		<ul>
+        			<li><a href="#">单线程模型2</a></li>
+        			<li><a href="#">单线程模型2</a></li>
+        			<li><a href="#">单线程模型3</a></li>
+        			<li><a href="#">单线程模型4</a></li>
+        		</ul>
+        	</div>
+        	<div class="mod" style="display: none;">
+        		<ul>
+        			<li><a href="#">单线程模型3</a></li>
+        			<li><a href="#">单线程模型3</a></li>
+        			<li><a href="#">单线程模型3</a></li>
+        			<li><a href="#">单线程模型4</a></li>
+        		</ul>
+        	</div>
+        	<div class="mod" style="display: none;">
+        		<ul>
+        			<li><a href="#">单线程模型4</a></li>
+        			<li><a href="#">单线程模型4</a></li>
+        			<li><a href="#">单线程模型4</a></li>
+        			<li><a href="#">单线程模型4</a></li>
+        		</ul>
+        	</div>
+        	<div class="mod" >
+        		<ul>
+        			<li><a href="#">单线程模型5</a></li>
+        			<li><a href="#">单线程模型5</a></li>
+        			<li><a href="#">单线程模型5</a></li>
+        			<li><a href="#">单线程模型5</a></li>
+        		</ul>
+        	</div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    	function $(id){
+    		return typeof id === "string"?document.getElementById(id):id;
+    	}
+    	window.onload=function(){
+    		//获取鼠标划过或点击标签和要切换内容的元素
+    		var titles=$('notice-tit').getElementsByTagName('li'),//notice-tit下所有的li
+    			divs=$('notice-con').getElementsByTagName('div');//notice-mod下所有的div
+    		if (titles.length != divs.length){
+    			return;
+    		}
+    		//遍历titles下的所有li
+    		for (var i = 0; i < titles.length; i++) {
+    			titles[i].id=i;
+    			titles[i].onmouseover=function(){//onclick点击切换
+    				// alert(this.id);
+    				//清除所有li上的class
+    				for(var j=0;j<titles.length;j++){
+    					titles[j].className="";
+    					divs[j].style.display="none";
+    				}
+    				// 设置当前对高亮显示
+    				this.className="select";
+    				divs[this.id].style.display="block";
+    			}
+    		}
+    	}
+    </script>
+</body>
+
+</html>

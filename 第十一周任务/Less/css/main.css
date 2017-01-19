@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* 这个注释是被编译的 */
+.box {
+  width: 300px;
+  height: 300px;
+  background-color: #ee82ee;
+  border: solid 2px #00BFFF;
+}
+.border {
+  border: solid 2px #00BFFF;
+}
+.box2 {
+  width: 300px;
+  height: 300px;
+  background-color: #ee82ee;
+  border: solid 2px #00BFFF;
+  margin-left: 10px;
+}
+.border_width02 {
+  border: solid #7fff00 30px;
+}
+.border_width03 {
+  border: solid #7fff00 10px;
+  /* .border03(20px) */
+}
+.radius_test {
+  width: 200px;
+  height: 150px;
+  background-color: #FFD700;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+/* .sanjiao{
+	margin-top: 10px;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	border-width: 10px;
+	border-color: red transparent transparent transparent;
+	border-style: solid dashed dashed dashed;
+} */
+.sanjiao {
+  border-width: 20px;
+  border-color: #7fff00 transparent transparent transparent;
+  border-style: solid dashed dashed dashed;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+.pipei {
+  width: 200px;
+  height: 200px;
+  position: fixed;
+}
+.box3 {
+  width: 400px;
+}
+/* .list{}
+.list li{}
+.list a{}
+.list span{} */
+.list {
+  width: 600px;
+  margin: 30px auto;
+  padding: 0;
+  list-style: none;
+}
+.list li {
+  height: 30px;
+  line-height: 30px;
+  background-color: pink;
+  margin-bottom: 5px;
+  padding: 0 10px;
+}
+.list a {
+  float: left;
+}
+.list a:hover {
+  color: #ff0000;
+}
+.list span {
+  float: right;
+}
+.text_arguments {
+  border: 40px #ff0000 solid;
+}
+.test_03 {
+  width: calc(270px);
+  width: calc(300px-30px);
+}
+.test_imoirtant {
+  border: solid #7fff00 10px !important;
+}

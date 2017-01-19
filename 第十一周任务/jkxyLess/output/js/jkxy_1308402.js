@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".li-hover").each(function(s){var c=$(this),n=$(".hoverNav");c.hover(function(){n.eq(s).stop(!0,!0).css({display:"block"})},function(){n.eq(s).stop(!0,!0).css({display:"none"})})}),$("#input-ss").click(function(){$(".ss-submit").addClass("scale")}),$("#del-input").click(function(){$(".ss-submit").removeClass("scale")})});

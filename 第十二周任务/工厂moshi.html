@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script type="text/javascript">
+	var gongchang = {};
+	gongchang.chanyifu = function(argument) {
+	    this.gongren = 50;
+	    //alert('我们的工人有'+this.gongren);
+	};
+	gongchang.chanxie = function() {
+	    alert('产鞋子~');
+	};
+	gongchang.yunshu = function() {
+	    alert('运输~');
+	};
+	gongchang.changzhang = function(para) {
+	    //new  构造函数模式   单列模式
+	    return new gongchang[para]();
+	};
+	var me = gongchang.changzhang("chanyifu");
+	alert(me.gongren);
+
+
+
+
+    // 我的导航。星座。小说
+    $('#container-info').on('click', '.myNav .show,.myConstellation .show,.myNovel .show', function() {
+        var myTag = null;
+        switch (this.parentNode.className) {
+            case "myNav my":
+                myTag = $('.myNav .hide');
+                break;
+            case "myConstellation my":
+                myTag = $('.myConstellation .hide');
+                break;
+            case "myNovel my":
+                myTag = $('.myNovel .hide');
+                break;
+            default:
+                return;
+        }
+        myTag.slideToggle();
+        CDicon($(this).children("i")); //调用图片
+    });
+
+
+
+	function a(name, age, job) {
+	    this.name = name;
+	    this.age = age;
+	    this.job = job;
+	    this.syaName = function() {
+	        alert(this.name);
+	    };
+	}
+
+	var b = new a("傻逼",29,"蠢蛋");
+	var c = new a("傻逼2",292,"蠢蛋2");
+	console.log(b);
+	console.log(c);
+</script>
+
+</html>

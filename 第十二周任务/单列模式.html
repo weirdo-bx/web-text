@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script type="text/javascript">
+//1.独立的对象
+//2.独立的通讯
+var xiaowang = (function(argument) {
+    var xiaowangjia = function(message) {
+        this.menling = message;
+    }
+    var men;
+    var info = {
+        sendMessge: function(message) {
+            if (!men) {
+                men = new xiaowangjia(message);
+            };
+            return men;
+        }
+    };
+    return info;
+})();
+var xiaoli = {
+    callXiaowang: function(msg) {
+        var _xw = xiaowang.sendMessge(msg);
+        alert(_xw.menling);
+        _xw = null; //等待垃圾回收
+    }
+};
+xiaoli.callXiaowang("didi");
+</script>
+
+</html>

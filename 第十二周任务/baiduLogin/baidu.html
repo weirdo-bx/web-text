@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>百度一下，你就知道</title>
+    <link rel="stylesheet" type="text/css" href="css/baidu.css">
+    <link rel="stylesheet" type="text/css" href="css/switNav.css">
+    <link rel="shortcut icon" type="img/baidu.ico" href="img/baidu.ico">
+</head>
+
+<body onload="getPfColor()">
+    <div class="body">
+        <div class="switch-color">
+            <div class="switch-colorB">
+                <div class="skin-color">
+                    <button style="background: rgba(250, 250, 250, 0.5);" onclick="changeSkin('rgba(250,250,250,.5)')">默认</button>
+                    <button style="background: rgba(255, 178, 178, 0.5);" onclick="changeSkin('rgba(255, 178, 178, 0.5)')">红</button>
+                    <button style="background: rgba(167, 155, 255, 0.5);" onclick="changeSkin('rgba(167, 155, 255, 0.5)')">蓝</button>
+                    <button style="background: rgba(255,235,81,0.5);" onclick="changeSkin('rgba(255,235,81,0.5)')">黄</button>
+                    <button style="background: rgba(255,167,0,0.5);" onclick="changeSkin('rgba(255,167,0,0.5)')">橘</button>
+                    <button style="background: rgba(175, 175, 175, 0.5);" onclick="changeSkin('rgba(175, 175, 175, 0.5)')">灰</button>
+                    <button style="background: rgba(253,241,243,0.8);" onclick="changeSkin('rgba(253,241,243,0.8)')">粉</button>
+                    <button style="background: rgba(158, 0, 138, 0.42);" onclick="changeSkin('rgba(158, 0, 138, 0.42)')">紫</button>
+                    <button class="del">关闭</button>
+                </div>
+            </div>
+        </div>
+        <!-- 顶部导航 -->
+        <div class="head-nav">
+            <!-- 顶部左边天气信息 -->
+            <div class="head-left">
+                <a href="#" class="textNone">
+                    广州:
+                    <b class="tianqi"></b>
+                    19℃
+                    <span>良</span>
+                    70
+                    <b></b>
+                </a>
+                <a href="#">宝箱</a>
+                <a href="#" class="huanfu">换肤</a>
+                <a href="#">消息</a>
+            </div>
+            <!-- 顶部右边导航 -->
+            <div class="head-right">
+                <div class="head-navLonin">
+                    <div class="nav-URL">
+                        <a href="#">糯米</a>
+                        <a href="#">新闻</a>
+                        <a href="#">hao123</a>
+                        <a href="#">地图</a>
+                        <a href="#">视频</a>
+                        <a href="#">贴吧</a>
+                    </div>
+                    <!-- 登陆信息 -->
+                    <div class="login">
+                        <a href="#">Weirdo</a>
+                        <i class="setting_icon"></i>
+                        <ul>
+                            <li>
+                                <a href="#">我的VIP</a>
+                            </li>
+                            <li>
+                                <a href="#">个人中心</a>
+                            </li>
+                            <li>
+                                <a href="#">账号设置</a>
+                            </li>
+                            <li>
+                                <a href="#">一件反馈</a>
+                            </li>
+                            <li>
+                                <a href="#">退出</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 设置 -->
+                    <div class="set">
+                        <a href="#">设置</a>
+                        <i class="setting_icon"></i>
+                        <ul>
+                            <li>
+                                <a href="#">搜索设置</a>
+                            </li>
+                            <li>
+                                <a href="#">高级设置</a>
+                            </li>
+                            <li>
+                                <a href="#">关闭预测</a>
+                            </li>
+                            <li>
+                                <a href="#">搜索历史</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 更多产品 -->
+                <div class="more">
+                    更多产品
+                </div>
+                <!-- 隐藏的更多产品 -->
+                <div id="moreProduct" class="hide-more">
+                    <ul>
+                        <li class="ul_first">
+                            <a href="#" class="ul_more_block">更多产品</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="more_sub one"></span>音乐</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="more_sub two"></span>图片</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="more_sub three"></span>知道</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="more_sub four"></span>文库</a>
+                        </li>
+                        <li>
+                            <a href="#"><span class="more_sub five"></span>风云榜</a>
+                        </li>
+                        <li class="ul_last">
+                            <a href="#">更多产品&gt;&gt;</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 百度logo及搜索框 -->
+        <div class="middle">
+            <div class="logo">
+                <img src="img/baidu-logo.png" alt="百度一下，你就知道" title="百度一下，你就知道" width="270px" height="129px">
+            </div>
+            <form>
+                <span></span>
+                <input type="text" name="wd">
+                <button>百度一下</button>
+            </form>
+        </div>
+        <!-- 导航 -->
+        <div class="container" id="body">
+            <div class="centre-nav">
+                <!-- 切换的导航 -->
+                <div class="swit-block">
+                    <ul id="swit-nav">
+                        <li class="swit-color">
+                            <i class="i"></i>我的关注
+                        </li>
+                        <li>导航</li>
+                        <li>推荐</li>
+                        <li>小说</li>
+                        <li>视频</li>
+                        <li>购物</li>
+                    </ul>
+                </div>
+                <!-- 设置 -->
+                <div class="setting">
+                    <i class="set-icon"></i>
+                    <div class="set-list">
+                        <!-- 已订阅 -->
+                        <div class="Subscribed">
+                            <p>已订阅频道</p>
+                            <div class="Sub-tab">
+                                <span>我的关注</span>
+                                <span>导航</span>
+                                <span>推荐</span>
+                                <span>小说</span>
+                                <span>视频</span>
+                                <span>购物</span>
+                            </div>
+                        </div>
+                        <!-- 未订阅 -->
+                        <div class="Subscribed sub-right">
+                            <p>未订阅频道</p>
+                            <div class="Sub-tab">
+                                <span>体育</span>
+                            </div>
+                        </div>
+                        <div class="hide-Sub">
+                            <span>隐藏模块</span>
+                            <span>情景推荐</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 信息容器 -->
+            <div id="container-info">
+                <div id="mesg-info">
+                    <!-- 我的关注 -->
+                    <div class="attention disNone disBlock">
+                        <!-- 我的导航 -->
+                        <div class="myNav my">
+                            <div class="show">
+                                <i></i>
+                                <span>我的导航</span>
+                                <em>(0)</em>
+                            </div>
+                            <div class="hide">
+                                <p>你还没有关注任何网址，赶快去<a href="#">添加</a>吧！</p>
+                            </div>
+                        </div>
+                        <!-- 我的星座 -->
+                        <div class="myConstellation my">
+                            <div class="show">
+                                <i></i>
+                                <span>我的星座</span>
+                                <em>(12)</em>
+                            </div>
+                            <div class="hide">
+                                <ul>
+                                    <li>
+                                        太多了~我就写我的大双鱼好了~~~~老师不要打我!!!
+                                    </li>
+                                </ul>
+                                <div class="xzMessage">
+                                    <div class="hideImg">
+                                        <img src="img/shuangyu.png">
+                                        <p>2.19-3.20</p>
+                                    </div>
+                                    <div class="hideMes">
+                                        <div class="span">
+                                            <span>今日运势</span>
+                                            <span>明日运势</span>
+                                            <span>本周运势</span>
+                                        </div>
+                                        <div class="ul">
+                                            <ul>
+                                                <li>综合运势：<span>★★★</span></li>
+                                                <li>爱情运势：<span>★★★</span></li>
+                                                <li>健康指数：86</li>
+                                                <li>幸运颜色：红色</li>
+                                            </ul>
+                                            <ul>
+                                                <li>工作指数：<span>★★★</span></li>
+                                                <li>财运指数：<span>★★★</span></li>
+                                                <li>幸运数字：86</li>
+                                                <li>速配星座：水瓶座</li>
+                                            </ul>
+                                            <p>运势分析：按部就班做事才能顺顺利利，另外不能吊儿郎当，尤其是处理重要任务的时候。对赚钱特别特别感兴趣，花费不少精力却收获不多。多到热闹的地方看看，说不定会有美丽的邂逅呢！
+                                                <a href="#">更多运势</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 我的小说 -->
+                        <div class="myNovel my">
+                            <div class="show">
+                                <i></i>
+                                <span>我的小说</span>
+                                <em>(0)</em>
+                            </div>
+                            <div class="hide">
+                                <p>你还没有关注任何小说，赶快去<a href="#">添加</a>吧！</p>
+                            </div>
+                        </div>
+                        <!-- 自定义 -->
+                        <div class="custom my">
+                            <div class="show">
+                                <i></i>
+                                <span>自定义</span>
+                            </div>
+                            <div class="hide">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 导航 -->
+                    <div class="myNavs disNone">
+                        <div class="navLike">
+                            <h3>猜你喜欢</h3>
+                            <ul>
+                                <li>
+                                    <a href="#">百度糯米</a>
+                                </li>
+                                <li>
+                                    <a href="#">京东商城</a>
+                                </li>
+                                <li>
+                                    <a href="#">1号店</a>
+                                </li>
+                                <li>
+                                    <a href="#">苏宁易购</a>
+                                </li>
+                                <li>
+                                    <a href="#">唯品会</a>
+                                </li>
+                                <li>
+                                    <a href="#">当当网</a>
+                                </li>
+                                <li>
+                                    <a href="#">海贼王</a>
+                                </li>
+                                <li>
+                                    <a href="#">火影忍者</a>
+                                </li>
+                                <li>
+                                    <a href="#">web前端</a>
+                                </li>
+                                <li>
+                                    <a href="#">JavaScript</a>
+                                </li>
+                                <li>
+                                    <a href="#">淘宝网</a>
+                                </li>
+                                <li>
+                                    <a href="#">QQ音乐</a>
+                                </li>
+                                <li>
+                                    <a href="#">网络电台</a>
+                                </li>
+                                <li>
+                                    <a href="#">乐视TV</a>
+                                </li>
+                                <li>
+                                    <a href="#">很多很多</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="navLike">
+                            <h3>猜你喜欢</h3>
+                            <ul>
+                                <li>
+                                    <a href="#">百度糯米</a>
+                                </li>
+                                <li>
+                                    <a href="#">京东商城</a>
+                                </li>
+                                <li>
+                                    <a href="#">1号店</a>
+                                </li>
+                                <li>
+                                    <a href="#">苏宁易购</a>
+                                </li>
+                                <li>
+                                    <a href="#">唯品会</a>
+                                </li>
+                                <li>
+                                    <a href="#">当当网</a>
+                                </li>
+                                <li>
+                                    <a href="#">海贼王</a>
+                                </li>
+                                <li>
+                                    <a href="#">火影忍者</a>
+                                </li>
+                                <li>
+                                    <a href="#">web前端</a>
+                                </li>
+                                <li>
+                                    <a href="#">JavaScript</a>
+                                </li>
+                                <li>
+                                    <a href="#">淘宝网</a>
+                                </li>
+                                <li>
+                                    <a href="#">QQ音乐</a>
+                                </li>
+                                <li>
+                                    <a href="#">网络电台</a>
+                                </li>
+                                <li>
+                                    <a href="#">乐视TV</a>
+                                </li>
+                                <li>
+                                    <a href="#">很多很多</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 推荐 -->
+                    <div class="recommend disNone">
+                        <div class="news-1">
+                            <div class="h2">
+                                <h2><a href="#">罗尔等人致歉：将捐款全额捐出成立专项基金</a></h2>
+                                <p>搜狐新闻&nbsp;&nbsp;12-01&nbsp;&nbsp;17:34</p>
+                            </div>
+                            <div class="news-img">
+                                <a href="#">
+                                    <div class="div-img">
+                                        <img src="#">
+                                    </div>
+                                    <div class="div-h">
+                                        <h2>文学家发现“超级地球” 或可存在外星生命</h2>
+                                        <p>搜狐新闻&nbsp;&nbsp;12-01&nbsp;&nbsp;17:34</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="news-img">
+                                <a href="#">
+                                    <div class="div-img">
+                                        <img src="#">
+                                    </div>
+                                    <div class="div-h">
+                                        <h2>文学家发现“超级地球” 或可存在外星生命</h2>
+                                        <p>搜狐新闻&nbsp;&nbsp;12-01&nbsp;&nbsp;17:34</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="news-img">
+                                <a href="#">
+                                    <div class="div-img">
+                                        <img src="#">
+                                    </div>
+                                    <div class="div-h">
+                                        <h2>文学家发现“超级地球” 或可存在外星生命</h2>
+                                        <p>搜狐新闻&nbsp;&nbsp;12-01&nbsp;&nbsp;17:34</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="news-2">
+                            <h2>实时热点</h2>
+                            <ul>
+                                <li>
+                                    <a href="#">2岁萌娃追路人</a>
+                                </li>
+                                <li>
+                                    <a href="#">2岁萌娃追路人</a>
+                                </li>
+                                <li>
+                                    <a href="#">2岁萌娃追路人</a>
+                                </li>
+                                <li>
+                                    <a href="#">2岁萌娃追路人</a>
+                                </li>
+                                <li>
+                                    <a href="#">2岁萌娃追路人</a>
+                                </li>
+                                <li>
+                                    <a href="#">2岁萌娃追路人</a>
+                                </li>
+                                <li>
+                                    <a href="#">2岁萌娃追路人</a>
+                                </li>
+                                <li>
+                                    <a href="#">2岁萌娃追路人</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="#">2岁萌娃追路人</a>
+                                </li>
+                                <li>
+                                    <a href="#">2岁萌娃追路人</a>
+                                </li>
+                                <li>
+                                    <a href="#">2岁萌娃追路人</a>
+                                </li>
+                                <li>
+                                    <a href="#">2岁萌娃追路人</a>
+                                </li>
+                                <li>
+                                    <a href="#">2岁萌娃追路人</a>
+                                </li>
+                                <li>
+                                    <a href="#">2岁萌娃追路人</a>
+                                </li>
+                                <li>
+                                    <a href="#">2岁萌娃追路人</a>
+                                </li>
+                                <li>
+                                    <a href="#">2岁萌娃追路人</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 小说 -->
+                    <div class="novel disNone">
+                        <ul>
+                            <li>
+                                <div class="novel-img">
+                                    <a href="#">
+                                        <img src="#">
+                                    </a>
+                                </div>
+                                <div class="novel-z">
+                                    <p><a href="#">完美世界</a></p>
+                                    <p><a href="#">作者：辰东</a></p>
+                                    <p><a href="#">状态：连载中</a></p>
+                                    <p><a href="#">起点中文网&nbsp;&nbsp;更多搜索</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="novel-img">
+                                    <a href="#">
+                                        <img src="#">
+                                    </a>
+                                </div>
+                                <div class="novel-z">
+                                    <p><a href="#">完美世界</a></p>
+                                    <p><a href="#">作者：辰东</a></p>
+                                    <p><a href="#">状态：连载中</a></p>
+                                    <p><a href="#">起点中文网&nbsp;&nbsp;更多搜索</a></p>
+                                </div>
+                            </li>
+                            <li class="li">
+                                <div class="novel-img">
+                                    <a href="#">
+                                        <img src="#">
+                                    </a>
+                                </div>
+                                <div class="novel-z">
+                                    <p><a href="#">完美世界</a></p>
+                                    <p><a href="#">作者：辰东</a></p>
+                                    <p><a href="#">状态：连载中</a></p>
+                                    <p><a href="#">起点中文网&nbsp;&nbsp;更多搜索</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="novel-img">
+                                    <a href="#">
+                                        <img src="#">
+                                    </a>
+                                </div>
+                                <div class="novel-z">
+                                    <p><a href="#">完美世界</a></p>
+                                    <p><a href="#">作者：辰东</a></p>
+                                    <p><a href="#">状态：连载中</a></p>
+                                    <p><a href="#">起点中文网&nbsp;&nbsp;更多搜索</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="novel-img">
+                                    <a href="#">
+                                        <img src="#">
+                                    </a>
+                                </div>
+                                <div class="novel-z">
+                                    <p><a href="#">完美世界</a></p>
+                                    <p><a href="#">作者：辰东</a></p>
+                                    <p><a href="#">状态：连载中</a></p>
+                                    <p><a href="#">起点中文网&nbsp;&nbsp;更多搜索</a></p>
+                                </div>
+                            </li>
+                            <li class="li">
+                                <div class="novel-img">
+                                    <a href="#">
+                                        <img src="#">
+                                    </a>
+                                </div>
+                                <div class="novel-z">
+                                    <p><a href="#">完美世界</a></p>
+                                    <p><a href="#">作者：辰东</a></p>
+                                    <p><a href="#">状态：连载中</a></p>
+                                    <p><a href="#">起点中文网&nbsp;&nbsp;更多搜索</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="novel-img">
+                                    <a href="#">
+                                        <img src="#">
+                                    </a>
+                                </div>
+                                <div class="novel-z">
+                                    <p><a href="#">完美世界</a></p>
+                                    <p><a href="#">作者：辰东</a></p>
+                                    <p><a href="#">状态：连载中</a></p>
+                                    <p><a href="#">起点中文网&nbsp;&nbsp;更多搜索</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="novel-img">
+                                    <a href="#">
+                                        <img src="#">
+                                    </a>
+                                </div>
+                                <div class="novel-z">
+                                    <p><a href="#">完美世界</a></p>
+                                    <p><a href="#">作者：辰东</a></p>
+                                    <p><a href="#">状态：连载中</a></p>
+                                    <p><a href="#">起点中文网&nbsp;&nbsp;更多搜索</a></p>
+                                </div>
+                            </li>
+                            <li class="li">
+                                <div class="novel-img">
+                                    <a href="#">
+                                        <img src="#">
+                                    </a>
+                                </div>
+                                <div class="novel-z">
+                                    <p><a href="#">完美世界</a></p>
+                                    <p><a href="#">作者：辰东</a></p>
+                                    <p><a href="#">状态：连载中</a></p>
+                                    <p><a href="#">起点中文网&nbsp;&nbsp;更多搜索</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 视频 -->
+                    <div class="videos disNone">
+                        <div class="videos-div">
+                            <div class="div-1">
+                            </div>
+                            <div class="div-2">
+                            </div>
+                            <div class="div-3 divColor">
+                                <div class="div-3-1">
+                                </div>
+                                <div class="div-3-2 margindiv-f">
+                                </div>
+                            </div>
+                            <div class="div-4 margindiv divColor">
+                                <div class="div-4-1">
+                                </div>
+                                <div class="div-4-2 margindiv-f">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="videos-div">
+                            <div class="div-3 divColor">
+                                <div class="div-3-1">
+                                </div>
+                                <div class="div-3-2 margindiv-f">
+                                </div>
+                            </div>
+                            <div class="div-4  divColor">
+                                <div class="div-4-1">
+                                </div>
+                                <div class="div-4-2 margindiv-f">
+                                </div>
+                            </div>
+                            <div class="div-1">
+                            </div>
+                            <div class="div-2 margindiv">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 购物 -->
+                    <div class="videos disNone">
+                        <div class="videos-div">
+                            <div class="div-1 shoppingColor">
+                            </div>
+                            <div class="div-2 shoppingColor">
+                            </div>
+                            <div class="div-3 divColor">
+                                <div class="div-3-1 shoppingColor">
+                                </div>
+                                <div class="div-3-2 margindiv-f shoppingColor">
+                                </div>
+                            </div>
+                            <div class="div-4 margindiv divColor">
+                                <div class="div-4-1 shoppingColor">
+                                </div>
+                                <div class="div-4-2 margindiv-f shoppingColor">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="videos-div">
+                            <div class="div-3 divColor">
+                                <div class="div-3-1 shoppingColor">
+                                </div>
+                                <div class="div-3-2 margindiv-f shoppingColor">
+                                </div>
+                            </div>
+                            <div class="div-4  divColor">
+                                <div class="div-4-1 shoppingColor">
+                                </div>
+                                <div class="div-4-2 margindiv-f shoppingColor">
+                                </div>
+                            </div>
+                            <div class="div-1 shoppingColor">
+                            </div>
+                            <div class="div-2 margindiv shoppingColor">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部信息 -->
+        <div class="footer">
+            <p><a>设为首页</a> ©2016 Baidu <a>使用百度前必读</a> <a>意见反馈</a> 京ICP证030173号 </p>
+            <p><i></i>京公网安备11000002000001号</p>
+        </div>
+        <div id="get-top">
+            <a><i class="arrow"></i></a>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/baidu.js"></script>
+</body>
+
+</html>

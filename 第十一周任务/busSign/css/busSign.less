@@ -1,0 +1,137 @@
+@charset "UTF-8";
+@fontFamily: Verdana,
+"Lantinghei SC",
+"Hiragino Sans GB",
+"Microsoft Yahei",
+Helvetica,
+arial,
+sans-serif;
+.MP-0 {
+    margin: 0;
+    padding: 0;
+}
+
+@fontColor: #59796a;
+@borderColor: #3d8d52;
+@staBack: #b7d54f;
+@numColor: #4e6656;
+body {
+    .MP-0;
+    width: 100%;
+    height: 100%;
+    font-family: @fontFamily;
+}
+
+.conborder(@px: 1px, @c: #ccc) {
+    border: @px solid @c
+}
+
+.border {
+    border-top: 8px solid @borderColor;
+}
+
+.container {
+    width: 700px;
+    height: auto;
+    margin: auto;
+    .conborder();
+}
+
+.stop {
+    color: @fontColor;
+    text-align: center;
+    .headFont {
+        padding: 15px 0;
+    }
+    h1 {
+        letter-spacing: 10px;
+        font-size: 55px;
+        .MP-0;
+    }
+    h2 {
+        font-size: 25px;
+        .MP-0;
+    }
+}
+
+.yuan {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background-color: @staBack;
+    border-radius: 100%;
+}
+
+.content {
+    .border;
+    background: @staBack;
+    .plateNum {
+        display: inline-block;
+        padding: 5px 10px;
+        color: @staBack;
+        background-color: @numColor;
+        width: 25%;
+    }
+    .number {
+        text-align: center;
+        .span {
+            font-weight: bolder;
+            font-size: 18px;
+            display: inline-block;
+        }
+        .Num {
+            font-weight: bolder;
+            font-size: 55px;
+            color: #fff;
+            display: inline-block;
+            padding-left: 10px;
+        }
+    }
+    .reds {
+        clear: both;
+        font-size: 25px;
+        text-align: center;
+        color: #ff0000;
+        .MP-0;
+    }
+    .station {
+        padding-top: 10px;
+        i {
+            .yuan;
+            margin-right: 5px;
+        }
+        p {
+            font-size: 12px;
+            .MP-0;
+        }
+        h3 {
+            font-size: 15px;
+            .MP-0;
+            padding: 5px 0;
+        }
+    }
+}
+
+
+/* 经停站 */
+
+.arrive {
+    display: inline-block;
+    padding: 0px 5px;
+    .stopArr {
+        .MP-0;
+        list-style: none;
+    }
+}
+
+.stopArr {
+    li {
+        float: left;
+        width: 22px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bolder;
+        color: @fontColor;
+        line-height: 25px;
+    }
+}

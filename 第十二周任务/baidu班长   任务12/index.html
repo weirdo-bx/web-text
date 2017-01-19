@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>百度一下,你就知道</title>
+	<link rel="icon" type="text/css" href="imgs/bitbug_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="style/public.css">
+	<link rel="stylesheet" type="text/css" href="style/index.css">
+</head>
+<body>
+<!-- 背景区域 -->
+<div id="background">
+	
+</div>
+<header>
+	<div class="left fl">
+		<div href="#" class="weather">
+			<span>北京</span>
+			<span class="weather-icon"></span>
+			<span>1℃</span>
+			<div class="weather-wrap">
+				<div class="top">
+					<div class="time fl">
+						<span>12月28日</span>
+						<span class="nongli">农历十一月三十</span>
+						<a href="#">未来天气</a>
+					</div>
+					<div class="setting fr">
+						<span class="set-icon"></span>
+						设置
+					</div>
+				</div>
+				<div class="weather-cont">
+					<a href="#">
+						<span>今天(周三)</span>
+						<span class="weat-icon"></span>
+						<span>0℃</span>
+						<span>晴</span>
+						<span>微风</span>
+					</a>
+					<a href="#">
+						<span>明天(周四)</span>
+						<span class="weat-icon"></span>
+						<span>0℃</span>
+						<span>晴</span>
+						<span>微风</span>
+					</a>
+					<a href="#">
+						<span>后天(周五)</span>
+						<span class="weat-icon"></span>
+						<span>0℃</span>
+						<span>晴</span>
+						<span>微风</span>
+					</a>
+					<a href="#">
+						<span>周六</span>
+						<span class="weat-icon"></span>
+						<span>0℃</span>
+						<span>晴</span>
+						<span>微风</span>
+					</a>
+					<a href="#">
+						<span>周日</span>
+						<span class="weat-icon"></span>
+						<span>0℃</span>
+						<span>晴</span>
+						<span>微风</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<a href="#" title="宝箱">宝箱</a>
+		<a href="javascript:void(0)" id="changeSkin" title="换肤">换肤</a>
+		<a href="#" title="消息">消息</a>
+	</div>
+	<nav class="fr">
+		<a href="#">糯米</a>
+		<a href="#">新闻</a>
+		<a href="#">hao123</a>
+		<a href="#">地图</a>
+		<a href="#">视频</a>
+		<a href="#">贴吧</a>
+		<div href="javascript:void(0)" class="user menu">
+			用户:*****000
+			<div class="hide-menu user-menu">
+				<i></i>
+				<a href="#">我的VIP</a>
+				<a href="#">个人中心</a>
+				<a href="#">账户设置</a>
+				<a href="#">意见反馈</a>
+				<a href="#">退出</a>
+			</div>
+		</div>
+		<div href="#" class="setting menu">
+			设置
+			<div class="hide-menu set-menu">
+				<i></i>
+				<a href="#">搜索设置</a>
+				<a href="#">高级搜索</a>
+				<a href="#">关闭预测</a>
+				<a href="#">搜索历史</a>
+			</div>
+		</div>
+		<div href="javascript:void(0)" class="moreProduct fl" id="product">
+			更多产品
+			<div class="hide_product">
+				<a href="#">
+				    <span class="music"></span>
+					音乐
+				</a>
+				<a href="#">
+				    <span class="picture"></span>
+					图片
+				</a>
+				<a href="#">
+				   <span class="knowledge"></span>
+					知道
+				</a>
+				<a href="#">
+				    <span class="library"></span>
+					文库
+				</a>
+				<a href="#">
+				    <span class="ranking_list"></span>
+					排行榜
+				</a>
+				<a href="#">
+				    <span class="extend"></span>
+					百度推广
+				</a>
+				<a href="#" class="all_product">
+					全部产品&gt;&gt;
+				</a>
+			</div>
+		</div>
+	</nav>
+</header>
+<!-- 皮肤 -->
+<div id="skin">
+	<ul>
+		<li>
+			<img src="imgs/skin01.jpg" alt="">
+			<span>皮肤01</span>
+		</li>
+		<li>
+			<img src="imgs/skin02.jpg" alt="">
+			<span>皮肤02</span>
+		</li>
+		<li>
+			<img src="imgs/skin03.jpg" alt="">
+			<span>皮肤03</span>
+		</li>
+		<li>
+			<img src="imgs/skin04.jpg" alt="">
+			<span>皮肤04</span>
+		</li>
+		<li>
+			<img src="imgs/skin05.jpg" alt="">
+			<span>皮肤05</span>
+		</li>
+		<li>
+			<img src="imgs/skin06.jpg" alt="">
+			<span>皮肤06</span>
+		</li>
+		<li>
+			<img src="imgs/skin07.jpg" alt="">
+			<span>皮肤07</span>
+		</li>
+		<li>
+			<img src="imgs/skin08.jpg" alt="">
+			<span>皮肤08</span>
+		</li>
+	</ul>
+	<div class="btn">
+		<button id="confirm">确定</button>
+		<button id="cancel">取消</button>
+		<a href="javascript:void(0)" id="closeBlock">收起</a>
+		<a href="javascript:void(0)" id="noSkin">不使用皮肤</a>
+	</div>
+</div>
+
+<!-- logo -->
+<div class="logo clear">
+	<img src="imgs/bd_logo1.png" alt="logo" id="logoImg">
+</div>
+<!-- 搜索框 -->
+<div class="search" id="search">
+
+	<form action="#" method="get" id="searchForm">
+		<img src="imgs/logo_top.png" alt="" id="logo_top">
+		<input type="text" name="searchText" class="search_content" id="searchInput" />
+		<input type="submit" name="submit" class="submit_baidu" value="百度一下"/>
+		<i class="camera"></i>
+	</form>
+</div>
+<!-- 主体内容 -->
+<div class="main container" id="main">
+    <!-- 顶部导航 -->
+	<div class="top">
+		<ul id="navigation">
+			<li class="my-care">
+				<i class="personal"></i>
+				我的关注
+			</li>
+			<li class="active">推荐</li>
+			<li>导航</li>
+			<li>视频</li>
+			<li>购物</li>
+		</ul>
+		<span class="setting" title="设置"></span>
+	</div>
+	<!-- 我的关注 -->
+	<div class="careSelf page">
+		<img src="imgs/page01.jpg" alt="">
+	</div>
+	<!-- 推荐recommend -->
+	<div class="recommend page select_page">
+		<div class="left fl">
+			<span class="information">以下信息根据您的兴趣推荐</span>
+			<!-- 新闻列表 -->
+			<div class="news">
+				<a href="#">
+					<h2>央行：在岸人民币对美元汇率平稳运行 未“破7”_新浪新闻</h2>
+				</a>
+				<a href="#" class="newsSrc">新浪新闻</a>
+				<span>12-29&nbsp;&nbsp;01:22</span>
+				<span class="hot">热点</span>
+			</div>
+			<div class="news">
+				<a href="#">
+					<h2>郎咸平忠告:比特币大骗局就在你的亲人朋友身边</h2>
+				</a>
+				<a href="#" class="newsSrc">搜狐网</a>
+				<span>12-29&nbsp;&nbsp;01:22</span>
+			</div>
+			<div class="image-news news">
+				<a href="#" title="BBC：安倍刚访毕珍珠港 日本女防相参拜靖国神社">
+					<img src="newimgs/imgs01.jpeg" alt="BBC：安倍刚访毕珍珠港 日本女防相参拜靖国神社">
+				</a>
+				<div class="image-news-right">
+					<a href="#" title="BBC：安倍刚访毕珍珠港 日本女防相参拜靖国神社">
+						<h2>BBC：安倍刚访毕珍珠港 日本女防相参拜靖国神社</h2>
+					</a>
+					<a href="#">凤凰网</a>
+					<span>12-29&nbsp;&nbsp;10:56</span>
+				</div>
+			</div>
+			<div class="image-news news">
+				<a href="#" title="最高龄大熊猫盼盼去世 相当于人类百岁">
+					<img src="newimgs/imgs02.jpeg" alt="最高龄大熊猫盼盼去世 相当于人类百岁">
+				</a>
+				<div class="image-news-right">
+					<a href="#" title="最高龄大熊猫盼盼去世 相当于人类百岁">
+						<h2>最高龄大熊猫盼盼去世 相当于人类百岁</h2>
+					</a>
+					<a href="#">凤凰网</a>
+					<span>12-29&nbsp;&nbsp;10:56</span>
+					<span class="hot">热点</span>
+				</div>
+			</div>
+			<div class="image-news news">
+				<a href="#" title="外交部:敦促日本不要给中日关系制造新的干扰">
+					<img src="newimgs/imgs03.jpeg" alt="外交部:敦促日本不要给中日关系制造新的干扰">
+				</a>
+				<div class="image-news-right">
+					<a href="#" title="外交部:敦促日本不要给中日关系制造新的干扰">
+						<h2>外交部:敦促日本不要给中日关系制造新的干扰</h2>
+					</a>
+					<a href="#">凤凰网</a>
+					<span>12-29&nbsp;&nbsp;10:56</span>
+				</div>
+			</div>
+			<div class="news">
+				<a href="#" title="被刷屏的英语神翻译走红：简直就是英语16级的水准啊">
+					<h2>被刷屏的英语神翻译走红：简直就是英语16级的水准啊</h2>
+				</a>
+				<a href="#">搜狐教育</a>
+				<span>12-29&nbsp;&nbsp;10:56</span>
+				<span class="hot">热点</span>
+			</div>
+			<div class="news">
+				<a href="#">
+					<h2>央行：在岸人民币对美元汇率平稳运行 未“破7”_新浪新闻</h2>
+				</a>
+				<a href="#" class="newsSrc">新浪新闻</a>
+				<span>12-29&nbsp;&nbsp;01:22</span>
+				<span class="hot">热点</span>
+			</div>
+			<div class="news">
+				<a href="#">
+					<h2>郎咸平忠告:比特币大骗局就在你的亲人朋友身边</h2>
+				</a>
+				<a href="#" class="newsSrc">搜狐网</a>
+				<span>12-29&nbsp;&nbsp;01:22</span>
+			</div>
+			<div class="image-news news">
+				<a href="#" title="BBC：安倍刚访毕珍珠港 日本女防相参拜靖国神社">
+					<img src="newimgs/imgs01.jpeg" alt="BBC：安倍刚访毕珍珠港 日本女防相参拜靖国神社">
+				</a>
+				<div class="image-news-right">
+					<a href="#" title="BBC：安倍刚访毕珍珠港 日本女防相参拜靖国神社">
+						<h2>BBC：安倍刚访毕珍珠港 日本女防相参拜靖国神社</h2>
+					</a>
+					<a href="#">凤凰网</a>
+					<span>12-29&nbsp;&nbsp;10:56</span>
+					<span class="hot">热点</span>
+				</div>
+			</div>
+			<div class="image-news news">
+				<a href="#" title="最高龄大熊猫盼盼去世 相当于人类百岁">
+					<img src="newimgs/imgs02.jpeg" alt="最高龄大熊猫盼盼去世 相当于人类百岁">
+				</a>
+				<div class="image-news-right">
+					<a href="#" title="最高龄大熊猫盼盼去世 相当于人类百岁">
+						<h2>最高龄大熊猫盼盼去世 相当于人类百岁</h2>
+					</a>
+					<a href="#">凤凰网</a>
+					<span>12-29&nbsp;&nbsp;10:56</span>
+					<span class="hot">热点</span>
+				</div>
+			</div>
+			<div class="image-news news">
+				<a href="#" title="外交部:敦促日本不要给中日关系制造新的干扰">
+					<img src="newimgs/imgs03.jpeg" alt="外交部:敦促日本不要给中日关系制造新的干扰">
+				</a>
+				<div class="image-news-right">
+					<a href="#" title="外交部:敦促日本不要给中日关系制造新的干扰">
+						<h2>外交部:敦促日本不要给中日关系制造新的干扰</h2>
+					</a>
+					<a href="#">凤凰网</a>
+					<span>12-29&nbsp;&nbsp;10:56</span>
+					<span class="hot">热点</span>
+				</div>
+			</div>
+			<div class="news">
+				<a href="#" title="被刷屏的英语神翻译走红：简直就是英语16级的水准啊">
+					<h2>被刷屏的英语神翻译走红：简直就是英语16级的水准啊</h2>
+				</a>
+				<a href="#">搜狐教育</a>
+				<span>12-29&nbsp;&nbsp;10:56</span>
+				<span class="hot">热点</span>
+			</div>
+		</div>
+		<div class="right fr">
+			<h4>时事热点</h4>
+			<a href="#">女歌手本兮逝世</a>
+			<a href="#">遭色诱陷传销点</a>
+			<a href="#">美少女模特大赛</a>
+			<a href="#">最高龄大熊猫逝世</a>
+			<a href="#">宋小宝书法卖8万</a>
+			<a href="#">台湾购46亿武器</a>
+			<a href="#">元旦高速不免费</a>
+			<a href="#">津巴布韦大象抵债</a>
+			<a href="#">女歌手本兮逝世</a>
+			<a href="#">遭色诱陷传销点</a>
+			<a href="#">美少女模特大赛</a>
+			<a href="#">最高龄大熊猫逝世</a>
+			<a href="#">宋小宝书法卖8万</a>
+			<a href="#">台湾购46亿武器</a>
+			<a href="#">元旦高速不免费</a>
+			<a href="#">津巴布韦大象抵债</a>
+		</div>
+	</div>
+	<!-- 导航navigation -->
+	<div class="navigation page">
+		<img src="imgs/page02.jpg" alt="">
+	</div> 
+	<!-- 视频video -->
+	<div class="video page">
+		<img src="imgs/page03.jpg" alt="">
+	</div>
+	<!-- 购物 -->
+	<div class="shopping page">
+		<img src="imgs/page04.jpg" alt="">
+	</div>
+</div>
+<!-- 返回顶部 -->
+<div class="container goTop">
+	<div id="backTop">
+	   <div class="wrap">
+	   	    <i class="triangle"></i>
+	   		<span id="backText">返回顶部</span>
+	   </div>
+	</div>
+</div>
+<!-- 页脚 -->
+<footer>
+	<p>
+		<a href="#">设为首页</a>
+		&copy;&nbsp;&nbsp;2016 Baidu <a href="#">使用百度前必读</a>
+		<a href="#">意见反馈</a> 京ICP证030173号&nbsp;&nbsp;
+	</p>
+	<p>京公网安备11000002000001号</p>
+</footer>
+	<script type="text/javascript" src="script/jquery.js"></script>
+	<script type="text/javascript" src="script/index.js"></script>
+</body>
+</html>

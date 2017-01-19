@@ -1,0 +1,1408 @@
+@charset "utf-8";
+@background: #f5f5f5;
+@fontFamily: Verdana,
+"Lantinghei SC",
+"Hiragino Sans GB",
+"Microsoft Yahei",
+Helvetica,
+arial,
+sans-serif;
+.MP-0 {
+    margin: 0;
+    padding: 0;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+body {
+    background-color: @background;
+    font-family: @fontFamily;
+    .MP-0;
+}
+
+ul,
+li {
+    list-style: none;
+    .MP-0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a,
+dd,
+div,
+dl,
+i,
+img,
+input,
+li,
+p,
+span,
+ul {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+
+/* web大前端 */
+
+@w-1000: 1000px;
+@Auto: 0 auto;
+.float(l) {
+    float: left;
+}
+
+.float(r) {
+    float: right;
+}
+
+.pos(r) {
+    position: relative;
+}
+
+.pos(a) {
+    position: absolute;
+}
+
+.web-banner {
+    height: 80px;
+    width: 100%;
+    /*最小宽度定义1000px*/
+    min-width: @w-1000;
+    background: url(../img/web-banner.jpg) no-repeat center;
+    /*定义图片尺寸*/
+    background-size: 1920px 80px;
+    .MP-0;
+}
+
+.web-wraper {
+    width: @w-1000;
+    margin: @Auto;
+    padding-top: 18px;
+    .pos(r);
+    ul {
+        width: @w-1000;
+    }
+    li {
+        .float(l);
+        width: 178px;
+        height: 49px;
+        background: url(../img/btn.png) no-repeat center;
+        margin-left: 8px;
+        .pos(r);
+        left: 200px;
+        .cursor;
+        /* 光标 */
+        transition: all .5s;
+        /* 过渡 */
+        &:hover {
+            background: url(../img/btn-hover.png);
+        }
+    }
+    .new-icon {
+        margin-left: 1px;
+        width: 34px;
+        height: 34px;
+        .pos(a);
+    }
+    a {
+        display: block;
+        font-size: 15px;
+        color: #1e5294;
+        text-align: center;
+        line-height: 45px;
+    }
+}
+
+
+/* 极客学院头部导航条 */
+
+@navHeight: 60px;
+.header {
+    min-width: @w-1000;
+    .MP-0;
+    height: @navHeight;
+    background: #fff;
+    border-bottom: 1px solid #ececec;
+    .content {
+        width: @w-1000;
+        margin: @Auto;
+        height: @navHeight;
+        line-height: @navHeight;
+        .pos(r);
+    }
+    .logo {
+        display: inline-block;
+        width: 115px;
+        height: @navHeight;
+        .float(l);
+        padding-top: 10px;
+    }
+    nav {
+        display: inline-block;
+        height: @navHeight;
+        .float(l);
+    }
+}
+
+
+/* 箭头 */
+
+.arrow {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+}
+
+
+/* 导航文字 */
+
+@green: #35b558;
+.header-nav {
+    li {
+        .float(l);
+        .pos(r);
+        // left: 50px;
+        font-size: 14px;
+        display: inline-block;
+        margin-left: 55px;
+        .cursor;
+        // 导航文字hover
+        &:hover {
+            color: @green;
+        }
+        .tabColor {
+            color: @green;
+        }
+        .arrow {
+            margin-left: 5px;
+            margin-bottom: 2px;
+        }
+        &:hover .arrow {
+            margin-bottom: -2px;
+            border-top: 1px solid @green;
+            border-left: 1px solid @green;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            animation: arrow 1s ease normal;
+            -webkit-animation: arrow 1s ease normal;
+            -moz-animation: arrow 1s ease normal;
+            -o-animation: arrow 1s ease normal;
+        }
+    }
+}
+
+// 箭头hover的动画效果
+.arrowKeyframes {
+    form,
+    to {}
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes arrow {
+    .arrowKeyframes;
+}
+
+@-webkit-keyframes arrow {
+    .arrowKeyframes;
+}
+
+@-moz-keyframes arrow {
+    .arrowKeyframes;
+}
+
+@-o-keyframes arrow {
+    .arrowKeyframes;
+}
+
+
+/* 二级菜单 */
+
+.arrow-submit {
+    display: none;
+    width: 280px;
+    .pos(a);
+    z-index: 1000;
+    top: 60px;
+    left: 0px;
+    font-size: 12px;
+    background-color: #fff;
+    color: #666;
+}
+
+.arrow-submit {
+    h3 {
+        margin: 10px 0;
+        padding: 0 15px;
+        background: #fafafa;
+        height: 28px;
+        line-height: 28px;
+        font-weight: 300;
+        /*字体粗细*/
+    }
+    a {
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 15px;
+        color: #666;
+        &:hover {
+            color: @green;
+        }
+    }
+}
+
+.hiddenNavA {
+    height: 40px;
+    line-height: 40px;
+}
+
+.arrow-botton-vip {
+    padding: 10px 0;
+}
+
+.arrow-botton-vip a {
+    .hiddenNavA
+}
+
+.hiddenNavicon {
+    background: url(../img/allicon.png) 0 0 no-repeat;
+    background-size: 64px 64px;
+    height: 14px;
+    width: 14px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: -2px;
+}
+
+.arrow-botton-web b,
+.arrow-botton-vip b {
+    .hiddenNavicon
+}
+
+.arrow-botton-web .python-icon,
+.arrow-botton-web .go-icon,
+.arrow-botton-web .ios-icon {
+    background: url(../img/allicon3.png) 0 0 no-repeat;
+    background-size: 16px 128px;
+}
+
+.arrow-botton-web {
+    .web-icon {
+        /*web前端工程师图标*/
+        background-position: -15px -27px;
+    }
+    .python-icon {
+        /*python web工程师图标*/
+        background-position: 0px 0px;
+    }
+    .go-icon {
+        /*go语言工程师*/
+        background-position: 0px -32px;
+    }
+    .ios-icon {
+        /*ios工程师*/
+        background-position: 0px -70px;
+    }
+}
+
+.arrow-botton-vip {
+    .kck-icon {
+        /*课程库*/
+        background-position: 0px -12px;
+    }
+    .zy-icon {
+        /*职业路径图*/
+        background-position: -45px 0px;
+    }
+    .zs-icon {
+        /*知识体系图*/
+        background-position: -29px -12px;
+    }
+    .xl-icon {
+        /*系类课程*/
+        background: url(../img/xlkc2.png) no-repeat 0 0;
+        background-size: 12px 12px;
+    }
+    .kc-icon {
+        /*课程标签*/
+        background-position: -13px -12px;
+    }
+    .vip-icon {
+        /*vip会员购买*/
+        background-position: -14px 0px;
+    }
+    .jswd-icon {
+        /*技术问答*/
+        background-position: 0px -25px;
+    }
+    .wiki-icon {
+        /*wiki*/
+        background-position: -28px -25px;
+    }
+    .sq-icon {
+        /*社群*/
+        background-position: 0px 2px;
+    }
+    .zyxz-icon {
+        /*资源下载*/
+        background-position: -28px 2px;
+    }
+    span {
+        float: right;
+        color: #bbb;
+    }
+}
+
+
+/*右侧图标*/
+
+.icon-size {
+    background-size: 17px 17px;
+    background-position: 0px 25px;
+}
+
+.icon-box {
+    .float(r);
+    text-align: right;
+    width: 150px;
+    height: 60px;
+    margin-right: 15px;
+    .boxWH {
+        width: 17px;
+        height: 60px;
+        display: inline-block;
+        .cursor;
+        margin-left: 25px;
+    }
+    .ss-icon {
+        /*搜索图标*/
+        background: url(../img/ss-icon.png) 0 0 no-repeat;
+        .icon-size;
+        &:hover {
+            /*搜索图标hover*/
+            background: url(../img/ss-icon-hover.png) 0 0 no-repeat;
+            .icon-size;
+        }
+    }
+    .app-icon {
+        /*app下载图标*/
+        background: url(../img/app-icon.png) 0 0 no-repeat;
+        .icon-size;
+        &:hover {
+            /*app下载图标hover*/
+            background: url(../img/app-icon-hover.png) 0 0 no-repeat;
+            .icon-size;
+        }
+    }
+    .login-icon {
+        /*登陆资料*/
+        background: url(../img/login-icon.png) 0 0 no-repeat;
+        .icon-size;
+    }
+}
+
+
+/* 搜索框 */
+
+.input-icon {
+    background-size: 17px 17px;
+    background-position: 0px 22px;
+}
+
+.ss-submit {
+    display: none;
+    .pos(a);
+    left: 150px;
+    top: 0;
+    .cursor;
+    width: 840px;
+    min-width: 600px;
+    height: 59px;
+    background: #fff;
+    b {
+        display: inline-block;
+        width: 17px;
+        height: 60px;
+    }
+    input {
+        /*搜索框*/
+        min-width: 450px;
+        height: 30px;
+        outline: 0;
+        font-size: 13px;
+        float: left;
+        position: relative;
+        top: 15px;
+        left: 30px;
+        border: 0;
+    }
+    .a-icon {
+        width: 200px;
+        height: 60px;
+        position: absolute;
+        top: 0px;
+        left: 550px;
+        a {
+            color: #808080;
+            font-size: 12px;
+            background: #f5f5f5;
+            margin-left: 10px;
+        }
+    }
+    .input-ss {
+        /*搜索图标*/
+        background: url(../img/ss-icon.png) 0 0 no-repeat;
+        .input-icon;
+        .float(l);
+    }
+    .input-del {
+        /*x图标*/
+        background: url(../img/close-icon.png) 0 0 no-repeat;
+        .input-icon;
+    }
+}
+
+
+/* 搜索框显示隐藏样式 */
+
+.scale {
+    transform-origin: right center;
+    -moz-transform-origin: right center;
+    display: block!important;
+    transform: scale(1, 1) !important;
+    opacity: 1!important;
+    animation: scalerun 0.8s ease normal;
+    -moz-animation: scalerun 2s line normal;
+    -webkit-animation: scalerun 0.8s ease normal;
+}
+
+.keyframes {
+    0% {
+        opacity: 0;
+        transform: scale(0.1, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes scalerun {
+    .keyframes;
+}
+
+@-moz-keyframes scalerun {
+    .keyframes;
+}
+
+@-webkit-keyframes scalerun {
+    .keyframes;
+}
+
+@-o-keyframes scalerun {
+    .keyframes;
+}
+
+
+/*app下拉二维码*/
+
+.app-submit {
+    display: none;
+    width: 115px;
+    height: 160px;
+    .pos(a);
+    top: 60px;
+    right: 15px;
+    z-index: 1;
+    .app-arrow {
+        width: 15px;
+        height: 15px;
+        display: block;
+        background: #fff;
+        border-top: 1px solid #ececec;
+        border-left: 1px solid #ececec;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        position: absolute;
+        top: -8px;
+        left: 50px;
+    }
+}
+
+.app-icon:hover .app-submit {
+    display: block;
+}
+
+
+/*账号登陆下拉*/
+
+.login-icon {
+    .login-submit {
+        display: none;
+        width: 120px;
+        .pos(a);
+        z-index: 1200;
+        top: 48px;
+        right: 10px;
+        background: #fff;
+        font-size: 12px;
+        color: #666;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    &:hover .login-submit {
+        display: block;
+    }
+}
+
+.login-submit {
+    dd {
+        text-align: left;
+        font-size: 12px;
+        line-height: 35px;
+        margin: 0;
+        padding-left: 10px;
+        b {
+            background: url(../img/allicon2.png) no-repeat 0 0;
+            background-size: 64px 64px;
+            width: 14px;
+            height: 14px;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        &:hover {
+            background: #ececec;
+        }
+    }
+    a {
+        color: #666;
+        display: block;
+        height: 35px;
+        &:hover {
+            color: @green;
+            background: #ececec;
+        }
+    }
+    .zc,
+    .dl {
+        display: inline-block;
+    }
+    .a-center {
+        text-align: center;
+    }
+    .login-arrow {
+        width: 15px;
+        height: 15px;
+        display: block;
+        background: #fff;
+        border-top: 1px solid #ececec;
+        border-left: 1px solid #ececec;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        position: absolute;
+        top: -9px;
+        left: 98px;
+    }
+    .xxzx-icon {
+        /*学习中心*/
+        background-position: -15px -13px;
+    }
+    .grzy-icon {
+        /*个人主页*/
+        background-position: -44px -0px;
+    }
+    .xxtz-icon {
+        /*消息通知*/
+        background-position: -14px -28px;
+    }
+    .zhsz-icon {
+        /*账号设置*/
+        background-position: -28px 1px;
+    }
+}
+
+
+/* 中间内容 */
+
+
+/* 轮播图 */
+
+@marginT20: 20px;
+.center {
+    .center-t20 {
+        margin-top: @marginT20!important;
+        width: @w-1000;
+        margin: @Auto;
+        clear: both;
+    }
+    .jk-banner {
+        width: 750px;
+        height: 330px;
+        background: #fedcbd;
+        overflow: hidden;
+        .float(l);
+        margin-right: 10px;
+    }
+    .jk-login {
+        /*登录框*/
+        width: 240px;
+        height: 160px;
+        border: 1px solid #e9e9e9;
+        background: #fff;
+        box-sizing: border-box;
+        .float(l);
+    }
+    .user {
+        height: 57px;
+        width: 180px;
+        .pos(r);
+        left: 30px;
+        top: 30px;
+    }
+    .user-IMG {
+        width: 57px;
+        height: 57px;
+        float: left;
+        margin-right: 15px;
+        border-radius: 50%;
+    }
+    .hello {
+        .float(l);
+        font-size: 12px;
+        color: #555;
+        width: 108px;
+        height: 16px;
+        line-height: 16px;
+        margin-top: 8px;
+        overflow: hidden;
+    }
+    .welcome {
+        .float(l);
+        font-size: 12px;
+        color: #555;
+        width: 108px;
+        height: 16px;
+        line-height: 16px;
+        margin-top: 8px;
+        overflow: hidden;
+        margin-top: 10px;
+    }
+    .login-ing {
+        margin-left: 30px;
+    }
+    .login {
+        margin-right: 10px;
+    }
+    .login,
+    .registered {
+        font-size: 14px;
+        display: inline-block;
+        width: 85px;
+        height: 32px;
+        border: 1px solid #35b558;
+        line-height: 32px;
+        text-align: center;
+        margin-top: 45px;
+        border-radius: 5px;
+        transition: background .8s;
+        -webkit-transition: background .8s;
+        -moz-transition: background .8s;
+        -o-transition: background .8s;
+        &:hover {
+            background: @green;
+            color: #fff;
+        }
+    }
+    .jk-huofong {
+        /*你不知道的js*/
+        width: 240px;
+        height: 160px;
+        .float(l);
+        margin-top: 10px;
+        overflow: hidden;
+    }
+}
+
+
+/*就业班*/
+
+.jiuyeban-size {
+    border: 1px solid #f0f0f0;
+    background-size: 130px 65px;
+}
+
+.center {
+    .jk-jiuye {
+        .float(l);
+        height: 130px;
+        width: 100%;
+        margin-top: 20px;
+        background: #fff;
+        .pos(r);
+    }
+    .jiuyeban {
+        .float(l);
+        width: 250px;
+        height: 130px;
+        border: 1px solid #f0f0f0;
+        color: #555;
+        text-align: center;
+        padding-top: 90px;
+        font-size: 12px;
+        transition: color .5s;
+        -webkit-transition: color .5s;
+        -moz-transition: color .5s;
+        -o-transition: color .5s;
+        &:hover {
+            color: @green;
+        }
+        &:first-child b {
+            /*就业标识*/
+            background: url(../img/tag_8332cd6.png) no-repeat center;
+            background-size: 52px 52px;
+            width: 52px;
+            height: 52px;
+            display: inline-block;
+            .pos(a);
+            top: 0;
+            left: 0;
+        }
+        &:first-child {
+            /*php*/
+            background: url(../img/jphp_d405f8a.png) no-repeat center 20px;
+            .jiuyeban-size;
+        }
+        &:nth-child(2) {
+            /*web*/
+            background: url(../img/jweb_95cd305.png) no-repeat center 20px;
+            .jiuyeban-size;
+        }
+        &:nth-child(3) {
+            /*Android*/
+            background: url(../img/jandroid_aa0f1c1.png) no-repeat center 20px;
+            .jiuyeban-size;
+        }
+        &:nth-child(4) {
+            /*ios*/
+            background: url(../img/jios_e6eb57b.png) no-repeat center 20px;
+            .jiuyeban-size;
+        }
+    }
+}
+
+
+/*学习链接*/
+
+.jk-xxlj {
+    clear: both;
+    width: @w-1000;
+    height: 270px;
+    margin: @Auto;
+    box-sizing: border-box;
+    margin-top: @marginT20;
+    margin-bottom: 40px;
+    ul {
+        width: 100%;
+        height: 100%;
+        li {
+            margin-top: 20px;
+            .float(l);
+            width: 235px;
+            height: 100%;
+            margin-right: 20px;
+            border: 1px solid #e9e9e9;
+            &:hover {
+                border: 1px solid #e9e9e9;
+                box-shadow: 0 2px 6px #ccc;
+                /*hover阴影*/
+                transition: box-shadow .3s;
+            }
+            &:last-child {
+                margin-right: 0px;
+            }
+            a {
+                display: block;
+                height: 100%;
+            }
+            img {
+                width: 100%;
+                height: 155px;
+            }
+        }
+    }
+}
+
+.xxlj-m {
+    padding: 3px 14px;
+    height: 113px;
+    .pos(r);
+    top: -3px;
+    background: #fff;
+    .xxlj-one {
+        width: 100%;
+        overflow: hidden;
+        font-size: 12px;
+        color: #555;
+        line-height: 18px;
+        height: 30px;
+    }
+    .xxlj-two {
+        font-size: 12px;
+        color: #999;
+        height: 16px;
+        line-height: 16px;
+        .MP-0;
+        margin-bottom: 5px;
+    }
+    .xxlj-three {
+        font-size: 17px;
+        color: #ff5c00;
+        vertical-align: bottom;
+        .MP-0;
+        padding: 5px 0;
+        &:before {
+            content: "￥";
+            font-size: 14px;
+            margin-right: 3px;
+        }
+    }
+    .xxlj-four {
+        font-size: 12px;
+        color: #999;
+        text-decoration: line-through;
+        vertical-align: bottom;
+        /*底对齐*/
+    }
+    .xxlj-five {
+        font-size: 12px;
+        color: #999;
+        display: inline-block;
+        height: 14px;
+    }
+}
+
+
+/*职业学院*/
+
+.jk-college {
+    clear: both;
+    width: @w-1000;
+    height: 310px;
+    margin: @Auto;
+    h2 {
+        font-size: 18px;
+        color: #555;
+        height: 18px;
+        line-height: 18px;
+        margin-bottom: 20px;
+        font-weight: 400;
+    }
+    ul li {
+        float: left;
+        background: #ccc;
+        width: 240px;
+        height: 130px;
+        position: relative;
+        margin-left: 10px;
+        a {
+            display: inline-block;
+            width: 100%;
+            height: 100%
+        }
+        img {
+            display: inline-block;
+            width: 240px;
+            height: 130px;
+            overflow: hidden;
+        }
+        span {
+            display: inline-block;
+            .pos(a);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            color: #fff;
+            font-size: 14px;
+            padding-top: 88px;
+        }
+        b {
+            display: inline-block;
+            .pos(a);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: 0;
+            /*透明度0*/
+            transition: opacity .8s;
+        }
+        &:hover b {
+            opacity: .2;
+        }
+    }
+    .zy-web {
+        width: 500px;
+        height: 270px;
+        margin-left: 0px;
+        img {
+            width: 500px;
+            height: 270px;
+            display: inline-block;
+        }
+    }
+    .zy-python,
+    .zy-go {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* 图标 */
+
+.college-size {
+    background-size: 36px 36px;
+}
+
+.jk-college {
+    .zy-web span {
+        /*web前端工程师*/
+        font-size: 20px;
+        padding-top: 180px;
+        background: url(http://s1.jikexueyuan.com/index/images/cweb_2d70d0b.png) no-repeat center 70px;
+        background-size: 55px 84px;
+    }
+    .zy-python span {
+        /*python web工程师*/
+        background: url(http://s1.jikexueyuan.com/index/images/cpython_5ed9df4.png) no-repeat center 33px;
+        .college-size;
+    }
+    .zy-go span {
+        /*go语言工程师*/
+        background: url(http://s1.jikexueyuan.com/index/images/cgo_e66208d.png) no-repeat center 33px;
+        .college-size;
+    }
+    .zy-ios span {
+        /*ios工程师*/
+        background: url(http://s1.jikexueyuan.com/index/images/cios_dc0ca8e.png) no-repeat center 33px;
+        .college-size;
+    }
+    .zy-more span {
+        /*更多职业*/
+        background: url(http://s1.jikexueyuan.com/index/images/cmore_1bdb357.png) no-repeat center 33px;
+        .college-size;
+    }
+}
+
+
+/*会员课程*/
+
+.fontHeight {
+    font-size: 12px;
+    height: 15px;
+    line-height: 15px;
+}
+
+.jk-vip {
+    width: @w-1000;
+    height: 420px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    h2 {
+        font-size: 18px;
+        color: #555;
+        height: 18px;
+        line-height: 18px;
+        margin-bottom: 20px;
+        font-weight: 400;
+    }
+    ul {
+        width: 100%;
+        height: 310px;
+    }
+    li {
+        .float(l);
+        width: 158px;
+        height: 150px;
+        border: 1px solid #e9e9e9;
+        background: #FFF;
+        margin-right: 10px;
+        transition: box-shadow .5s;
+        &:hover {
+            border: 1px solid #e9e9e9;
+            box-shadow: 0 2px 6px #ccc;
+            transition: box-shadow
+        }
+        &:nth-child(6),
+        &:last-child {
+            margin-right: 0px;
+        }
+        &:nth-child(n+7) {
+            margin-top: 10px;
+        }
+        a {
+            display: block;
+            height: 100%;
+            text-align: center;
+        }
+        img {
+            display: inline-block;
+            width: 55px;
+            height: 55px;
+            margin-top: 25px;
+        }
+        p {
+            color: #555;
+            .fontHeight;
+        }
+        span {
+            display: block;
+            color: @green;
+            .fontHeight;
+        }
+    }
+}
+
+
+/*会员全部课程*/
+
+.jk-vip {
+    .vipAdd {
+        display: inline-block;
+        margin-top: 38px;
+        height: 32px;
+        width: 120px;
+        line-height: 30px;
+        border: 1px solid #35b558;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 14px;
+        color: #35b558;
+        .pos(r);
+        left: 50%;
+        margin-left: -60px;
+        transition: background .8s;
+        -webkit-transition: background .8s;
+        -moz-transition: background .8s;
+        -o-transition: background .8s;
+        &:hover {
+            background: @green;
+            color: #fff;
+        }
+    }
+}
+
+
+/*学员故事*/
+
+.jk-story {
+    width: @w-1000;
+    height: 300px;
+    margin: @Auto;
+    h2 {
+        font-size: 18px;
+        color: #555;
+        height: 18px;
+        line-height: 18px;
+        margin-bottom: 20px;
+        font-weight: 400;
+    }
+    ul {
+        width: 100%;
+        height: 200px;
+    }
+    li {
+        .float(l);
+        width: 320px;
+        height: 200px;
+        position: relative;
+        margin-left: 20px;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    a {
+        display: block;
+        height: 100%;
+    }
+}
+
+.story-content {
+    width: 100%;
+    height: 121px;
+    border: 1px solid #e9e9e9;
+    background: #fff;
+    .pos(r);
+    &:hover {
+        box-shadow: 0 2px 6px #ccc;
+        /*hover阴影*/
+        transition: box-shadow .5s;
+    }
+    &:after {
+        content: " ";
+        display: inline-block;
+        .arrow;
+        background-color: #fff;
+        border-top: 1px solid #e9e9e9;
+        border-left: 1px solid #e9e9e9;
+        position: absolute;
+        bottom: -5px;
+        left: 40px;
+    }
+    p {
+        height: 100px;
+        overflow: hidden;
+        font-size: 12px;
+        color: #555;
+        line-height: 20px;
+        padding: 20px 25px;
+        text-align: left;
+        &:before {
+            content: " ";
+            display: inline-block;
+            width: 14px;
+            height: 10px;
+            background: url(http://s1.jikexueyuan.com/index/images/storyicon_4a5e270.png) no-repeat center;
+            background-size: 14px 10px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        &:after {
+            content: " ";
+            display: inline-block;
+            width: 14px;
+            height: 10px;
+            background: url(http://s1.jikexueyuan.com/index/images/storyicon_4a5e270.png) no-repeat center;
+            background-size: 14px 10px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+        }
+    }
+}
+
+.story-info {
+    height: 80px;
+    padding-left: 95px;
+    padding-top: 15px;
+    .pos(r);
+    img {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        border-radius: 50%;
+        border: 1px solid #e9e9e9;
+    }
+    p {
+        font-size: 12px;
+        color: #555;
+        overflow: hidden;
+        text-align: left;
+    }
+    span {
+        display: block;
+        font-size: 12px;
+        color: #999;
+        text-align: left;
+    }
+}
+
+
+/*底部*/
+
+.footer {
+    width: 100%;
+    min-width: 1000px;
+    height: 300px;
+    border-top: 1px solid #e4e4e4;
+    background: #fff;
+    margin-top: 40px;
+}
+
+.footer-block {
+    background: #fff;
+    .block-one {
+        position: relative;
+        width: 1000px;
+        margin: 0 auto;
+        height: 215px;
+        border-bottom: 1px solid #f5f5f5;
+        padding-left: 225px;
+        padding-top: 25px;
+        box-sizing: border-box;
+    }
+    .jk-logo {
+        position: absolute;
+        left: 0;
+        top: 25px;
+        display: inline-block;
+        width: 160px;
+        img {
+            width: 109px;
+            height: 40px;
+            display: block;
+        }
+        p {
+            font-size: 12px;
+            color: #999;
+            margin-top: 20px;
+        }
+    }
+    dl {
+        width: 135px;
+        color: #808080;
+        .float(l);
+    }
+    dt {
+        font-size: 14px;
+        line-height: 30px;
+    }
+    dd {
+        font-size: 12px;
+        line-height: 30px;
+        a {
+            color: #999999;
+            // .pos(r);
+            // left: -40px;
+            &:hover {
+                color: @green;
+            }
+        }
+    }
+}
+
+.jk-contact {
+    position: absolute;
+    right: 0;
+    top: 25px;
+    display: inline-block;
+    width: 175px;
+    text-align: left;
+    p {
+        color: #808080;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+}
+
+.contact {
+    .pos(r);
+    display: inline-block;
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    color: #808080;
+    font-size: 12px;
+    border: 1px solid #eeeeee;
+    margin-bottom: 10px;
+    padding-left: 40px;
+    cursor: pointer;
+    img {
+        display: block;
+        width: 115px;
+        height: 153px;
+        .pos(a);
+        top: -157px;
+        left: 12px;
+    }
+}
+
+.imgnone {
+    display: none;
+}
+
+.imgblock {
+    &:hover img {
+        display: block;
+    }
+}
+
+.ios-block {
+    background: url(http://e.jikexueyuan.com/headerandfooter/images/icon-down-ios.png)no-repeat 0 0;
+    background-size: 30px 30px;
+    img {
+        .imgnone;
+    }
+    .imgblock;
+}
+
+.and-block {
+    background: url(http://e.jikexueyuan.com/headerandfooter/images/icon-down-and.png)no-repeat 0 0;
+    background-size: 30px 30px;
+    img {
+        .imgnone;
+    }
+    .imgblock;
+}
+
+
+/*注册信息*/
+
+.registered-footer {
+    font-size: 12px;
+    color: #999;
+    width: @w-1000;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px 0;
+    a {
+        color: #999;
+        font-weight: 400;
+        &:hover {
+            color: @green;
+        }
+    }
+    .weib {
+        background: url(http://e.jikexueyuan.com/headerandfooter/images/icon-down-sina.png)no-repeat 0 0;
+        background-size: 18px 15px;
+        float: right;
+        width: 20px;
+        height: 15px;
+        margin-left: 10px;
+    }
+    .weix {
+        background: url(http://e.jikexueyuan.com/headerandfooter/images/icon-down-wechat.png)no-repeat 0 0;
+        background-size: 18px 15px;
+        float: right;
+        width: 20px;
+        height: 15px;
+    }
+    .jk-cx {
+        display: block;
+        margin: 15px auto 0;
+    }
+}
